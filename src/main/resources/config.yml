@@ -1,0 +1,108 @@
+#=======================================================
+configVersion: 0.1
+#DO NOT CHANGE PLEASE.
+#=======================================================
+#Permssion: staffmodegui2.update
+Update:
+  Enabled: true
+#Enables if there is a message on-join when the plugin is outdated.
+#=======================================================
+defaultMessages:
+  noPermission: "&c&lNo Permission!"
+
+mainMenuReturn:
+  title: "&7Return to main menu"
+  lore: "&7Click to return to main menu."
+  message: "&7Returned to Main Menu!"
+#=======================================================
+#Whitelist Menu
+whitelistMenu: #Permission Needed: staffmodegui2.whitelistmenu
+  title: "&8Whitelist Menu"
+  lore: "&7Control the server whitelist"
+  openGUI: "&7Opened the whitelist control panel."
+#Whitelist Menu Items
+  titleItemON: "&bWhitelist ON"
+  loreItemON: "&7Click to toggle the whitelist ON"
+  messageItemON: "&7You toggled the whitelist ON."
+  titleItemOFF: "&bWhitelist OFF"
+  loreItemOFF: "&7Click to toggle the whitelist OFF."
+  messageItemOFF: "&7You toggled the whitelist OFF."
+#=======================================================
+timeMenu:
+  title: "&8Time Control"
+  lore: "&7Control the server time"
+  openGUI: "&7Opened the time control panel."
+#Time Menu Items
+  time12AMTitle: "&b12AM"
+  time12AMLore: "&7Click to change the server time to 12AM"
+  messageTime12AM: "&7Changed the server time to 12AM"
+  time1AMTitle: "&b1AM"
+  time1AMLore: "&7Click to change the server time to 1AM"
+  messageTime1AM: "&7Changed the server time to 1AM"
+  time2AMTitle: "&b2AM"
+  time2AMLore: "&7Click to change the server time to 2AM"
+  messageTime2AM: "&7Changed the server time to 2AM"
+  time3AMTitle: "&b3AM"
+  time3AMLore: "&7Click to change the server time to 3AM"
+  messageTime3AM: "&7Changed the server time to 3AM"
+  time4AMTitle: "&b4AM"
+  time4AMLore: "&7Click to change the server time to 4AM"
+  messageTime4AM: "&7Changed the server time to 4AM"
+  time5AMTitle: "&b5AM"
+  time5AMLore: "&7Click to change the server time to 5AM"
+  messageTime5AM: "&7Changed the server time to 5AM"
+  time6AMTitle: "&b6AM"
+  time6AMLore: "&7Click to change the server time to 6AM"
+  messageTime6AM: "&7Changed the server time to 6AM"
+  time7AMTitle: "&b7AM"
+  time7AMLore: "&7Click to change the server time to 7AM"
+  messageTime7AM: "&7Changed the server time to 7AM"
+  time8AMTitle: "&b8AM"
+  time8AMLore: "&7Click to change the server time to 8AM"
+  messageTime8AM: "&7Changed the server time to 8AM"
+  time9AMTitle: "&b9AM"
+  time9AMLore: "&7Click to change the server time to 9AM"
+  messageTime9AM: "&7Changed the server time to 9AM"
+  time10AMTitle: "&b10AM"
+  time10AMLore: "&7Click to change the server time to 10AM"
+  messageTime10AM: "&7Changed the server time to 10AM"
+  time11AMTitle: "&b11AM"
+  time11AMLore: "&7Click to change the server time to 11AM"
+  messageTime11AM: "&7Changed the server time to 11AM"
+  time12PMTitle: "&b12PM"
+  time12PMLore: "&7Click to change the server time to 12PM"
+  messageTime12PM: "&7Changed the server time to 12PM"
+  time1PMTitle: "&b1PM"
+  time1PMLore: "&7Click to change the server time to 1PM"
+  messageTime1PM: "&7Changed the server time to 1PM"
+  time2PMTitle: "&b2PM"
+  time2PMLore: "&7Click to change the server time to 2PM"
+  messageTime2PM: "&7Changed the server time to 2PM"
+  time3PMTitle: "&b13PM"
+  time3PMLore: "&7Click to change the server time to 3PM"
+  messageTime3PM: "&7Changed the server time to 3PM"
+  time4PMTitle: "&b14PM"
+  time4PMLore: "&7Click to change the server time to 4PM"
+  messageTime4PM: "&7Changed the server time to 4PM"
+  time5PMTitle: "&b5PM"
+  time5PMLore: "&7Click to change the server time to 5PM"
+  messageTime5PM: "&7Changed the server time to 5PM"
+  time6PMTitle: "&b16PM"
+  time6PMLore: "&7Click to change the server time to 6PM"
+  messageTime6PM: "&7Changed the server time to 6PM"
+  time7PMTitle: "&b17PM"
+  time7PMLore: "&7Click to change the server time to 7PM"
+  messageTime7PM: "&7Changed the server time to 7PM"
+  time8PMTitle: "&b18PM"
+  time8PMLore: "&7Click to change the server time to 8PM"
+  messageTime8PM: "&7Changed the server time to 8PM"
+  time9PMTitle: "&b19PM"
+  time9PMLore: "&7Click to change the server time to 9PM"
+  messageTime9PM: "&7Changed the server time to 9PM"
+  time10PMTitle: "&b110PM"
+  time10PMLore: "&7Click to change the server time to 10PM"
+  messageTime10PM: "&7Changed the server time to 10PM"
+  time11PMTitle: "&b11PM"
+  time11PMLore: "&7Click to change the server time to 11PM"
+  messageTime11PM: "&7Changed the server time to 11PM"
+#=======================================================
