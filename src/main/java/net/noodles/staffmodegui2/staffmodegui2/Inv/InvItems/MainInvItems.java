@@ -38,6 +38,15 @@ public class MainInvItems {
                 .toItemStack();
     }
 
+    public static ItemStack weatherMenu() {
+        return new ItemBuilder(Material.WATER_BUCKET)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("weatherMenu.title").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("weatherMenu.lore").replace("&", "§")
+                ))
+                .toItemStack();
+    }
+
 
 
 

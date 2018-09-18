@@ -28,7 +28,7 @@ whitelistMenu: #Permission Needed: staffmodegui2.whitelistmenu
   loreItemOFF: "&7Click to toggle the whitelist OFF."
   messageItemOFF: "&7You toggled the whitelist OFF."
 #=======================================================
-timeMenu:
+timeMenu: #Permission Needed: staffmodegui2.timemenu
   title: "&8Time Control"
   lore: "&7Control the server time"
   openGUI: "&7Opened the time control panel."
@@ -105,4 +105,16 @@ timeMenu:
   time11PMTitle: "&b11PM"
   time11PMLore: "&7Click to change the server time to 11PM"
   messageTime11PM: "&7Changed the server time to 11PM"
+#=======================================================
+weatherMenu: #Permission Needed: staffmodegui2.weathermenu
+  title: "&8Weather Control"
+  lore: "&7Control the server weather"
+  openGUI: "&7Opened the weather control panel."
+#Weather Menu Items
+  titleClear: "&bClear Weather"
+  loreClear: "&7Click to toggle the weather to clear"
+  weatherClearMessage: "&7Set weather to clear!"
+  titleStorm: "&bStormy Weather"
+  loreStorm: "&7Click to toggle the weather to storm"
+  weatherStormMessage: "&7Set weather to storm!"
 #=======================================================

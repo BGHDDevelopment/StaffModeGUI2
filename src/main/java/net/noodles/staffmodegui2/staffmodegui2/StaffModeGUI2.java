@@ -3,6 +3,7 @@ package net.noodles.staffmodegui2.staffmodegui2;
 import net.noodles.staffmodegui2.staffmodegui2.Events.UpdateNotification;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.MainInv;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.TimeInv;
+import net.noodles.staffmodegui2.staffmodegui2.Inv.WeatherInv;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.WhitelistInv;
 import net.noodles.staffmodegui2.staffmodegui2.commands.StaffModeCommand;
 import net.noodles.staffmodegui2.staffmodegui2.commands.UpdateCommand;
@@ -31,6 +32,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
     private MainInv mainInv;
     private WhitelistInv whitelistInv;
     private TimeInv timeInv;
+    private WeatherInv weatherInv;
 
 
 
@@ -54,7 +56,8 @@ public final class StaffModeGUI2 extends JavaPlugin {
                 new UpdateNotification(this),
                 new MainInv(this),
                 new TimeInv(this),
-                new WhitelistInv(this)
+                new WhitelistInv(this),
+                new WeatherInv(this)
 
         );
         Logger.log(Logger.LogLevel.INFO, "Listeners Registered!");
@@ -66,6 +69,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
         this.mainInv = new MainInv(this);
         this.whitelistInv = new WhitelistInv(this);
         this.timeInv = new TimeInv(this);
+        this.weatherInv = new WeatherInv(this);
         Logger.log(Logger.LogLevel.INFO, "Inventory's Registered!");
         Logger.log(Logger.LogLevel.INFO, "Loading Config's...");
         this.createConfig();
@@ -84,7 +88,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
                 Logger.log(Logger.LogLevel.WARNING,("Please Update Here: " + Settings.PLUGIN_URL));
                 Logger.log(Logger.LogLevel.OUTLINE,  "********************");
             } else {
-                Logger.log(Logger.LogLevel.SUCCESS, "StaffModeSGUI2 is up to date!");
+                Logger.log(Logger.LogLevel.SUCCESS, "StaffModeGUI2 is up to date!");
             }
         }
     }
@@ -155,6 +159,10 @@ public final class StaffModeGUI2 extends JavaPlugin {
 
     public TimeInv getTimeInv() {
         return timeInv;
+    }
+
+    public WeatherInv getWeatherInv() {
+        return weatherInv;
     }
 
 

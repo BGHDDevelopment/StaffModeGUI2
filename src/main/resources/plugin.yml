@@ -2,7 +2,7 @@ name: StaffModeGUI2
 version: ${project.version}
 main: net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2
 authors: [BGHDDevelopment, Noodles]
-description: StaffModeGUI Plugin
+description: A StaffModeGUI Plugin
 website: stephanbaumharvey.com
 commands:
   staffmodeupdate:
