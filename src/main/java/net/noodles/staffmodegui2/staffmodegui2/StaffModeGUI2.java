@@ -168,6 +168,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
     public GamemodeInv getGamemodeInv() {
         return gamemodeInv;
     }
+
     public FlyInv getFlyInv() { 
         return flyInv; 
 }

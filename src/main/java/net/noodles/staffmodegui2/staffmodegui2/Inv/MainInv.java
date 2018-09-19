@@ -99,7 +99,6 @@ public class MainInv implements Listener {
             }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("weatherMenu.openGUI").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getWeatherInv().getInventory());
-        }
         } else if (event.getCurrentItem().isSimilar(MainInvItems.flyMenu())) {
             if(!player.hasPermission("staffmodegui.flymenu")) {
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
