@@ -57,8 +57,16 @@ public class MainInvItems {
 
     }
 
+    public static ItemStack flyMenu() {
+        return new ItemBuilder(Material.BLAZE_ROD)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("flyMenu.title").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("flyMenu.lore").replace("&", "§")
+                ))
+                .toItemStack();
 
 
 
 
+}
 }
