@@ -32,11 +32,11 @@ public class UpdateCommand implements CommandExecutor {
             return false;
         }
         if (sender instanceof Player) {
-            if (args.length > 1 && NumberUtils.isNumber("00000")) {
+            if (args.length > 1 && NumberUtils.isNumber("60960")) {
                 UpdateLocale locale = new UpdateLocale();
                 locale.setFileName("StaffModeGUI2");
                 locale.setPluginName("StaffModeGUI2");
-                new Updater((Player) sender, StaffModeGUI2.getInstance(), Integer.valueOf("00000"), locale, false, false).update();
+                new Updater((Player) sender, StaffModeGUI2.getInstance(), Integer.valueOf("60960"), locale, false, false).update();
             }
         }
 

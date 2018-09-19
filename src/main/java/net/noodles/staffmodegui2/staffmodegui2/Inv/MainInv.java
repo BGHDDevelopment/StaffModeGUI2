@@ -76,25 +76,25 @@ public class MainInv implements Listener {
         event.setCancelled(true);
         // CLICK EVENTS
         if (event.getCurrentItem().isSimilar(MainInvItems.whitelistMenu())) {
-            if(!player.hasPermission("staffmodegui2.whitelistmenu")) {
+            if(!player.hasPermission("staffmodegui.whitelistmenu")) {
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
             }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.openGUI").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getWhitelistInv().getInventory());
         } else if (event.getCurrentItem().isSimilar(MainInvItems.timeMenu())) {
-            if(!player.hasPermission("staffmodegui2.timemenu")) {
+            if(!player.hasPermission("staffmodegui.timemenu")) {
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
             }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("timeMenu.openGUI").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getTimeInv().getInventory());
         } else if (event.getCurrentItem().isSimilar(MainInvItems.gamemodeMenu())) {
-            if(!player.hasPermission("staffmodegui2.gamemodemenu")) {
+            if(!player.hasPermission("staffmodegui.gamemodemenu")) {
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
             }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("gamemodeMenu.openGUI").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getGamemodeInv().getInventory());
-        } else if (event.getCurrentItem().isSimilar(MainInvItems.gamemodeMenu())) {
-            if(!player.hasPermission("staffmodegui2.weathermenu")) {
+        } else if (event.getCurrentItem().isSimilar(MainInvItems.weatherMenu())) {
+            if(!player.hasPermission("staffmodegui.weathermenu")) {
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
             }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("weatherMenu.openGUI").replace("&", "§"));

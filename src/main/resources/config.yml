@@ -1,8 +1,8 @@
 #=======================================================
-configVersion: 0.1
+configVersion: 0.2
 #DO NOT CHANGE PLEASE.
 #=======================================================
-#Permssion: staffmodegui2.update
+#Permssion: staffmodegui.update
 Update:
   Enabled: true
 #Enables if there is a message on-join when the plugin is outdated.
@@ -16,7 +16,7 @@ mainMenuReturn:
   message: "&7Returned to Main Menu!"
 #=======================================================
 #Whitelist Menu
-whitelistMenu: #Permission Needed: staffmodegui2.whitelistmenu
+whitelistMenu: #Permission Needed: staffmodegui.whitelistmenu
   title: "&8Whitelist Menu"
   lore: "&7Control the server whitelist"
   openGUI: "&7Opened the whitelist control panel."
@@ -28,7 +28,7 @@ whitelistMenu: #Permission Needed: staffmodegui2.whitelistmenu
   loreItemOFF: "&7Click to toggle the whitelist OFF."
   messageItemOFF: "&7You toggled the whitelist OFF."
 #=======================================================
-timeMenu: #Permission Needed: staffmodegui2.timemenu
+timeMenu: #Permission Needed: staffmodegui.timemenu
   title: "&8Time Control"
   lore: "&7Control the server time"
   openGUI: "&7Opened the time control panel."
@@ -106,7 +106,7 @@ timeMenu: #Permission Needed: staffmodegui2.timemenu
   time11PMLore: "&7Click to change the server time to 11PM"
   messageTime11PM: "&7Changed the server time to 11PM"
 #=======================================================
-weatherMenu: #Permission Needed: staffmodegui2.weathermenu
+weatherMenu: #Permission Needed: staffmodegui.weathermenu
   title: "&8Weather Control"
   lore: "&7Control the server weather"
   openGUI: "&7Opened the weather control panel."
@@ -119,7 +119,7 @@ weatherMenu: #Permission Needed: staffmodegui2.weathermenu
   weatherStormMessage: "&7Set weather to storm!"
 #=======================================================
 #Gamemode Menu Messages
-gamemodeMenu: #Permssion Needed: staffmodegui2.gamemodemenu
+gamemodeMenu: #Permssion Needed: staffmodegui.gamemodemenu
   title: '&8Gamemode Menu'
   lore: '&7Control your Gamemode'
   openGUI: '&7Opened The Gamemode Menu!'
