@@ -33,7 +33,6 @@ public class UpdateNotification implements Listener {
                         p.sendMessage(ChatColor.RED + "StaffModeGUI2 is outdated!");
                         p.sendMessage(ChatColor.GREEN + "Newest version: " + this.checker.getLatestVersion());
                         p.sendMessage(ChatColor.RED + "Your version: " + Settings.VERSION);
-                        p.sendMessage(ChatColor.GREEN + "Update using /staffmodeupdate");
                         p.sendMessage(ChatColor.GRAY + "********************");
                     }
                 }

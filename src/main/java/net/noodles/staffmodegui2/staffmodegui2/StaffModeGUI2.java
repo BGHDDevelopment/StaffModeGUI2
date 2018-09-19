@@ -3,7 +3,6 @@ package net.noodles.staffmodegui2.staffmodegui2;
 import net.noodles.staffmodegui2.staffmodegui2.Events.UpdateNotification;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.*;
 import net.noodles.staffmodegui2.staffmodegui2.commands.StaffModeCommand;
-import net.noodles.staffmodegui2.staffmodegui2.commands.UpdateCommand;
 import net.noodles.staffmodegui2.staffmodegui2.util.Glow;
 import net.noodles.staffmodegui2.staffmodegui2.util.Logger;
 import net.noodles.staffmodegui2.staffmodegui2.util.Settings;
@@ -61,7 +60,6 @@ public final class StaffModeGUI2 extends JavaPlugin {
         Logger.log(Logger.LogLevel.INFO, "Listeners Registered!");
         Logger.log(Logger.LogLevel.INFO, "Registering Commands...");
         new StaffModeCommand();
-        new UpdateCommand();
         Logger.log(Logger.LogLevel.INFO, "Commands Registered!");
         Logger.log(Logger.LogLevel.INFO, "Loading Inventory's...");
         this.mainInv = new MainInv(this);
