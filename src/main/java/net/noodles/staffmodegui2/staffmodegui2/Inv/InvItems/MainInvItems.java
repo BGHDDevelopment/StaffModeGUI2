@@ -47,6 +47,16 @@ public class MainInvItems {
                 .toItemStack();
     }
 
+    public static ItemStack gamemodeMenu() {
+        return new ItemBuilder(Material.COBBLESTONE)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("gamemodeMenu.title").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("gamemodeMenu.lore").replace("&", "§")
+                ))
+                .toItemStack();
+
+    }
+
 
 
 

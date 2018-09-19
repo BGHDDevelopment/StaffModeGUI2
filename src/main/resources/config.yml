@@ -118,3 +118,22 @@ weatherMenu: #Permission Needed: staffmodegui2.weathermenu
   loreStorm: "&7Click to toggle the weather to storm"
   weatherStormMessage: "&7Set weather to storm!"
 #=======================================================
+#Gamemode Menu Messages
+gamemodeMenu: #Permssion Needed: staffmodegui2.gamemodemenu
+  title: '&8Gamemode Menu'
+  lore: '&7Control your Gamemode'
+  openGUI: '&7Opened The Gamemode Menu!'
+  #Gamemode Menu Items
+  titleCreative: "&bCreative"
+  loreItemCreative: "&7Click to toggle Gamemode Creative"
+  messageItemCreative: "&7Gamemode changed to Creative!"
+  titleSurvival: "&bSurvival"
+  loreItemSurvival: "&7Click to toggle Gamemode Survival."
+  messageItemSurvival: "&7Gamemode changed to Creative!"
+  titleSpectator: "&bSpectator"
+  loreItemSpectator: "&7Click to toggle Gamemode Spectator."
+  messageItemSpectator: "&7Gamemode changed to Spectator!"
+  titleAdventure: "&bAdventure"
+  loreItemAdventure: "&7Click to toggle Gamemode Adventure."
+  messageItemAdventure: "&7Gamemode changed to Adventure!"
+#=======================================================

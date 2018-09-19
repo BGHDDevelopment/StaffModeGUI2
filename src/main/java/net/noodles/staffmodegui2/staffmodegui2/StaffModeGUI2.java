@@ -1,10 +1,7 @@
 package net.noodles.staffmodegui2.staffmodegui2;
 
 import net.noodles.staffmodegui2.staffmodegui2.Events.UpdateNotification;
-import net.noodles.staffmodegui2.staffmodegui2.Inv.MainInv;
-import net.noodles.staffmodegui2.staffmodegui2.Inv.TimeInv;
-import net.noodles.staffmodegui2.staffmodegui2.Inv.WeatherInv;
-import net.noodles.staffmodegui2.staffmodegui2.Inv.WhitelistInv;
+import net.noodles.staffmodegui2.staffmodegui2.Inv.*;
 import net.noodles.staffmodegui2.staffmodegui2.commands.StaffModeCommand;
 import net.noodles.staffmodegui2.staffmodegui2.commands.UpdateCommand;
 import net.noodles.staffmodegui2.staffmodegui2.util.Glow;
@@ -33,6 +30,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
     private WhitelistInv whitelistInv;
     private TimeInv timeInv;
     private WeatherInv weatherInv;
+    private GamemodeInv gamemodeInv;
 
 
 
@@ -70,6 +68,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
         this.whitelistInv = new WhitelistInv(this);
         this.timeInv = new TimeInv(this);
         this.weatherInv = new WeatherInv(this);
+        this.gamemodeInv = new GamemodeInv(this);
         Logger.log(Logger.LogLevel.INFO, "Inventory's Registered!");
         Logger.log(Logger.LogLevel.INFO, "Loading Config's...");
         this.createConfig();
@@ -163,6 +162,10 @@ public final class StaffModeGUI2 extends JavaPlugin {
 
     public WeatherInv getWeatherInv() {
         return weatherInv;
+    }
+
+    public GamemodeInv getGamemodeInv() {
+        return gamemodeInv;
     }
 
 
