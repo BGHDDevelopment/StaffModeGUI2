@@ -3,14 +3,10 @@ package net.noodles.staffmodegui2.staffmodegui2;
 import net.noodles.staffmodegui2.staffmodegui2.Events.UpdateNotification;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.*;
 import net.noodles.staffmodegui2.staffmodegui2.commands.StaffModeCommand;
-import net.noodles.staffmodegui2.staffmodegui2.util.Glow;
-import net.noodles.staffmodegui2.staffmodegui2.util.Logger;
-import net.noodles.staffmodegui2.staffmodegui2.util.Settings;
+import net.noodles.staffmodegui2.staffmodegui2.util.*;
 import net.noodles.staffmodegui2.staffmodegui2.util.UpdateChecker.UpdateChecker;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.Listener;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -46,12 +42,13 @@ public final class StaffModeGUI2 extends JavaPlugin {
         Logger.log(Logger.LogLevel.INFO, "Registering Managers...");
         this.plugin = this;
         instance = this;
+        MetricsLite metrics = new MetricsLite(this);
         this.registerGlow();
         Logger.log(Logger.LogLevel.INFO, "Managers Registered!");
         Logger.log(Logger.LogLevel.INFO, "Registering Listeners...");
         registerListener(
-                new UpdateNotification(this)
-/*                new MainInv(this),
+/*              new UpdateNotification(this)
+                new MainInv(this),
                 new TimeInv(this),
                 new WhitelistInv(this),
                 new WeatherInv(this),
