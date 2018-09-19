@@ -137,3 +137,16 @@ gamemodeMenu: #Permssion Needed: staffmodegui.gamemodemenu
   loreItemAdventure: "&7Click to toggle Gamemode Adventure."
   messageItemAdventure: "&7Gamemode changed to Adventure!"
 #=======================================================
+#Fly Menu Messages
+flyMenu: #Permission Needed: staffmodegui.flymenu
+  title: '&8Fly Menu'
+  lore: '&7Control your Flight'
+  openGUI: '&7Opened The Fly Menu!'
+  #Fly Menu Items
+  titleItemON: "&aFly ON"
+  loreItemON: "&7Toggle Fly ON"
+  messageItemON: "&aFly ON!"
+  titleItemOFF: "&cFly OFF"
+  loreItemOFF: "&7Toggle Fly OFF"
+  messageItemOFF: "&cFly OFF!"
+#========================================================
