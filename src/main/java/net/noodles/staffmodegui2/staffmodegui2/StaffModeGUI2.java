@@ -30,7 +30,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
     private TimeInv timeInv;
     private WeatherInv weatherInv;
     private GamemodeInv gamemodeInv;
-
+    private FlyInv flyInv;
 
 
     @Override
@@ -54,7 +54,9 @@ public final class StaffModeGUI2 extends JavaPlugin {
 /*                new MainInv(this),
                 new TimeInv(this),
                 new WhitelistInv(this),
-                new WeatherInv(this)*/
+                new WeatherInv(this),
+                new GamemodeInv(this),
+                new FlyInv(this)*/
 
         );
         Logger.log(Logger.LogLevel.INFO, "Listeners Registered!");
@@ -67,6 +69,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
         this.timeInv = new TimeInv(this);
         this.weatherInv = new WeatherInv(this);
         this.gamemodeInv = new GamemodeInv(this);
+        this.flyInv = new FlyInv(this);
         Logger.log(Logger.LogLevel.INFO, "Inventory's Registered!");
         Logger.log(Logger.LogLevel.INFO, "Loading Config's...");
         this.createConfig();
@@ -165,7 +168,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
     public GamemodeInv getGamemodeInv() {
         return gamemodeInv;
     }
-
-
+    public FlyInv getFlyInv() { 
+        return flyInv; 
 }
-
+}
