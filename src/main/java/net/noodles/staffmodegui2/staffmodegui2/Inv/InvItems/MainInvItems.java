@@ -64,7 +64,14 @@ public class MainInvItems {
                         StaffModeGUI2.getPlugin().getConfig().getString("flyMenu.lore").replace("&", "§")
                 ))
                 .toItemStack();
-
+    }
+    public static ItemStack vanishMenu() {
+        return new ItemBuilder(Material.BEDROCK)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.title").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.lore").replace("&", "§")
+                ))
+                .toItemStack();
 
 
 
