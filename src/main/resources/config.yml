@@ -1,5 +1,5 @@
 #=======================================================
-configVersion: 0.6
+configVersion: 0.7
 #DO NOT CHANGE PLEASE.
 #=======================================================
 #Permssion: staffmodegui.update
@@ -149,4 +149,17 @@ flyMenu: #Permission Needed: staffmodegui.flymenu
   titleItemOFF: "&cFly OFF"
   loreItemOFF: "&7Toggle Fly OFF"
   messageItemOFF: "&cFly OFF!"
+#========================================================
+#Vanish Menu Messages
+vanishMenu: #Permsission Needed: staffmodegui.vanishmenu
+  title: '&8Vanish Menu'
+  lore: '&7Control your Vanish'
+  openGUI: '&7Opened The Vanish Menu!'
+  #Vanish Menu Items
+  titleItemON: "&aVanish ON"
+  loreItemON: "&7Toggle Vanish ON"
+  messageItemON: "&aVanish ON!"
+  titleItemOFF: "&cVanish OFF"
+  loreItemOFF: "&7Toggle Vanish OFF"
+  messageItemOFF: "&cVanish OFF!"
 #========================================================
