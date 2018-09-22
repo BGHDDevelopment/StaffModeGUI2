@@ -3,6 +3,7 @@ package net.noodles.staffmodegui2.staffmodegui2;
 import net.noodles.staffmodegui2.staffmodegui2.Events.UpdateNotification;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.*;
 import net.noodles.staffmodegui2.staffmodegui2.commands.StaffModeCommand;
+import net.noodles.staffmodegui2.staffmodegui2.commands.StaffModeDev;
 import net.noodles.staffmodegui2.staffmodegui2.util.*;
 import net.noodles.staffmodegui2.staffmodegui2.util.UpdateChecker.UpdateChecker;
 import org.bukkit.enchantments.Enchantment;
@@ -61,6 +62,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
         Logger.log(Logger.LogLevel.INFO, "Listeners Registered!");
         Logger.log(Logger.LogLevel.INFO, "Registering Commands...");
         new StaffModeCommand();
+        new StaffModeDev();
         Logger.log(Logger.LogLevel.INFO, "Commands Registered!");
         Logger.log(Logger.LogLevel.INFO, "Loading Inventory's...");
         this.mainInv = new MainInv(this);

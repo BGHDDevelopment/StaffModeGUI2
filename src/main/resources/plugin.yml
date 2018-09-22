@@ -5,5 +5,5 @@ authors: [BGHDDevelopment, Noodles]
 description: A StaffModeGUI Plugin
 website: stephanbaumharvey.com
 commands:
-  staffmodeupdate:
+  staffmodedev:
   staffmode:
