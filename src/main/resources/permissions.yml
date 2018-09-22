@@ -1,0 +1,22 @@
+permissions:
+  staffmodegui.whitelistmenu:
+    description: Gives you access to the Whitelist Menu
+    default: op
+  staffmodegui.timemenu:
+    description: Gives you access to the Time Menu
+    default: op
+  staffmodegui.gamemodemenu:
+    description: Gives you access to the Gamemode Menu
+    default: op
+  staffmodegui.weathermenu:
+    description: Gives you access to the Weather Menu
+    default: op
+  staffmodegui.flymenu:
+    description: Gives you access to the Flight Menu
+    default: op
+  staffmodegui.vanishmenu:
+    description: Gives you access to the Vanish Menu
+    default: op
+  staffmodegui.mobmenu:
+    description: Gives you access to the Mob Menu
+    default: op
