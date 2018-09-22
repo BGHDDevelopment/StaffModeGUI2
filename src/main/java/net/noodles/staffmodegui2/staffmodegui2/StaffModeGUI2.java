@@ -56,7 +56,8 @@ public final class StaffModeGUI2 extends JavaPlugin {
                 new WeatherInv(this),
                 new GamemodeInv(this),
                 new FlyInv(this),
-                new VanishInv(this)*/
+                new VanishInv(this),
+                new MobInv(this)*/
 
         );
         Logger.log(Logger.LogLevel.INFO, "Listeners Registered!");
@@ -72,6 +73,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
         this.gamemodeInv = new GamemodeInv(this);
         this.flyInv = new FlyInv(this);
         this.vanishInv = new VanishInv(this);
+        this.mobInv = new MobInv(this);
         Logger.log(Logger.LogLevel.INFO, "Inventory's Registered!");
         Logger.log(Logger.LogLevel.INFO, "Loading Config's...");
         this.createConfig();
@@ -177,4 +179,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
    public VanishInv getVanishInv() { 
         return vanishInv; 
 }
+   public MobInv getMobInv() {
+        return mobInv;
+   }
 }
