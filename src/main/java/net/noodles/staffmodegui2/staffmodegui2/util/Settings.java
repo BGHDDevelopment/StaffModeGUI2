@@ -11,7 +11,7 @@ public class Settings {
     public static String DEV_MESSAGE3 = ChatColor.GRAY + "https://goo.gl/87ZgJz";
     public static String PLUGIN_URL = "https://spigotmc.org/resources/60960";
     public static String SUPPORT_DISCORD_URL = "https://discord.gg/VB8kB8P";
-    public static String VERSION = "0.9";
+    public static String VERSION = "0.10";
 
 
 
