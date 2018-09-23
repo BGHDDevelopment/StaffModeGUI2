@@ -111,7 +111,13 @@ public class MainInv implements Listener {
         }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.openGUI").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getVanishInv().getInventory());
-      }
+        } else if (event.getCurrentItem().isSimilar(MainInvItems.mobMenu())) {
+            if(!player.hasPermission("staffmodegui.mobmenu")) {
+                player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
+            }
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.openGUI").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getMobInv().getInventory());
+        }
 
 
     }

@@ -73,7 +73,15 @@ public class MainInvItems {
                 ))
                 .toItemStack();
 
+    }
+    public static ItemStack mobMenu() {
+        return new ItemBuilder(Material.MOB_SPAWNER)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.title").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.lore").replace("&", "§")
+                ))
+                .toItemStack();
+    }
 
 
-}
 }

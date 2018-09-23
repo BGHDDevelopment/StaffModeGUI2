@@ -29,6 +29,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
     private GamemodeInv gamemodeInv;
     private FlyInv flyInv;
     private VanishInv vanishInv;
+    private MobInv mobInv;
 
 
     @Override
