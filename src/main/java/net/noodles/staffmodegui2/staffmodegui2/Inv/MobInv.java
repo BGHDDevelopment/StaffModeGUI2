@@ -92,101 +92,102 @@ public class MobInv implements Listener {
         event.setCancelled(true);
         if (event.getCurrentItem().isSimilar(MobInvItems.mobCreeper())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.CREEPER);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemCreeper").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemCreeper").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobSkeleton())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.SKELETON);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemSkeleton").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemSkeleton").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobSpider())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.SPIDER);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemSpider").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemSpider").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobZombie())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.ZOMBIE);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemZombie").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemZombie").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobSlime())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.SLIME);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemSlime").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemSlime").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobGhast())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.GHAST);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemGhast").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemGhast").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobZombiePig())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.PIG_ZOMBIE);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemZombiePig").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemZombiePig").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobEnderman())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.ENDERMAN);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemEnderman").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemEnderman").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobCaveSpider())) {
-            player.getWorld().spawnEntity(player.getLocation(), EntityType.CAVE_SPIDER);            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.message").replace("&", "ง"));
+            player.getWorld().spawnEntity(player.getLocation(), EntityType.CAVE_SPIDER);
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.message").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobSilverFish())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.SILVERFISH);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemSilverFish").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemSilverFish").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobBlaze())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.BLAZE);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemBlaze").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemBlaze").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobMagmaCube())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.MAGMA_CUBE);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemMagmaCube").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemMagmaCube").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobBat())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.BAT);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemBat").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemBat").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobWitch())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.WITCH);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemWitch").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemWitch").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobPig())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.PIG);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemPig").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemPig").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobSheep())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.SHEEP);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemSheep").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemSheep").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobCow())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.COW);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemCow").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemCow").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobChicken())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.CHICKEN);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemChicken").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemChicken").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobSquid())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.SQUID);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemSquid").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemSquid").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobWolf())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.WOLF);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemWolf").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemWolf").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobMushroom())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.MUSHROOM_COW);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemMushroom").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemMushroom").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobOcelot())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.OCELOT);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemOcelot").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemOcelot").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobHorse())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemHorse").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemHorse").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MobInvItems.mobVillager())) {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.VILLAGER);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemVillager").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemVillager").replace("&", "ยง"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "ง"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "ยง"));
             player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
 
         }

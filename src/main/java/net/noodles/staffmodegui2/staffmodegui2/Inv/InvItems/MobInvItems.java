@@ -11,108 +11,108 @@ public class MobInvItems {
 
     public static ItemStack mobCreeper() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemCreeper").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemCreeper").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemCreeper").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemCreeper").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobSkeleton() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemSkeleton").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemSkeleton").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemSkeleton").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemSkeleton").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobSpider() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemSpider").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemSpider").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemSpider").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemSpider").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobZombie() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemZombie").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemZombie").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemZombie").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemZombie").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobSlime() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemSlime").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemSlime").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemSlime").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemSlime").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobGhast() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemGhast").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemGhast").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemGhast").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemGhast").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobZombiePig() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemZombiePig").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemZombiePig").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemZombiePig").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemZombiePig").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobEnderman() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemEnderman").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemEnderman").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemEnderman").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemEnderman").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobCaveSpider() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemCaveSpider").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemCaveSpider").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemCaveSpider").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemCaveSpider").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobSilverFish() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemSilverFish").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemSilverFish").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemSilverFish").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemSilverFish").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobBlaze() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemBlaze").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemBlaze").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemBlaze").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemBlaze").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobMagmaCube() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemMagmaCube").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemMagmaCube").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemMagmaCube").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemMagmaCube").replace("&", "ยง")
                 ))
                 .toItemStack();
 
@@ -120,108 +120,108 @@ public class MobInvItems {
 
     public static ItemStack mobBat() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemBat").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemBat").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemBat").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemBat").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobWitch() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemWitch").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemWitch").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemWitch").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemWitch").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobPig() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemPig").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemPig").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemPig").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemPig").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobSheep() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemSheep").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemSheep").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemSheep").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemSheep").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobCow() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemCow").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemCow").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemCow").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemCow").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobChicken() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemChicken").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemChicken").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemChicken").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemChicken").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobSquid() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemSquid").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemSquid").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemSquid").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemSquid").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobWolf() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemWolf").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemWolf").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemWolf").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemWolf").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobMushroom() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemMushroom").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemMushroom").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemMushroom").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemMushroom").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobOcelot() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemOcelot").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemOcelot").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemOcelot").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemOcelot").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobHorse() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemHorse").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemHorse").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemHorse").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemHorse").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
 
     public static ItemStack mobVillager() {
         return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemVillager").replace("&", "ง"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.titleItemVillager").replace("&", "ยง"))
                 .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemVillager").replace("&", "ง")
+                        StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.loreItemVillager").replace("&", "ยง")
                 ))
                 .toItemStack();
     }
