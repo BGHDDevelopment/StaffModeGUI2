@@ -42,7 +42,7 @@ public class MainInv implements Listener {
         inv.setItem(29, MainInvItems.gamemodeMenu());
         inv.setItem(31, MainInvItems.flyMenu());
         inv.setItem(33, MainInvItems.vanishMenu());
-        //inv.setItem(47, MainInvItems.weatherMenu());
+        inv.setItem(47, MainInvItems.mobMenu());
         //inv.setItem(49, MainInvItems.weatherMenu());
         //inv.setItem(51, MainInvItems.weatherMenu());
 
