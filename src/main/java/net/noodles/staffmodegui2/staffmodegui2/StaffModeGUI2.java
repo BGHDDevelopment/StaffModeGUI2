@@ -46,7 +46,6 @@ public final class StaffModeGUI2 extends JavaPlugin {
         this.plugin = this;
         instance = this;
         MetricsLite metrics = new MetricsLite(this);
-        this.registerGlow();
         Logger.log(Logger.LogLevel.INFO, "Managers Registered!");
         Logger.log(Logger.LogLevel.INFO, "Registering Listeners...");
         registerListener(
@@ -110,22 +109,6 @@ public final class StaffModeGUI2 extends JavaPlugin {
     }
 
 
-    public void registerGlow() {
-        try {
-            Field f = Enchantment.class.getDeclaredField("acceptingNew");
-            f.setAccessible(true);
-            f.set(null, true);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            Glow glow = new Glow(70);
-            Enchantment.registerEnchantment(glow);
-        } catch (IllegalArgumentException ex) {
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
     public static StaffModeGUI2 getPlugin() {

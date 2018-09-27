@@ -34,30 +34,30 @@ public class MobInv implements Listener {
     public Inventory getInventory() {
         Inventory inv = Bukkit.createInventory(null, getSize(), getTitle());
 
-        inv.setItem(1, MobInvItems.mobCreeper());
-        inv.setItem(2, MobInvItems.mobSkeleton());
-        inv.setItem(3, MobInvItems.mobSpider());
-        inv.setItem(4, MobInvItems.mobZombie());
-        inv.setItem(5, MobInvItems.mobSlime());
-        inv.setItem(6, MobInvItems.mobGhast());
-        inv.setItem(7, MobInvItems.mobZombiePig());
-        inv.setItem(8, MobInvItems.mobEnderman());
-        inv.setItem(9, MobInvItems.mobCaveSpider());
-        inv.setItem(10, MobInvItems.mobSilverFish());
-        inv.setItem(11, MobInvItems.mobBlaze());
-        inv.setItem(12, MobInvItems.mobMagmaCube());
-        inv.setItem(13, MobInvItems.mobBat());
-        inv.setItem(14, MobInvItems.mobWitch());
-        inv.setItem(15, MobInvItems.mobPig());
-        inv.setItem(16, MobInvItems.mobSheep());
-        inv.setItem(17, MobInvItems.mobCow());
-        inv.setItem(18, MobInvItems.mobChicken());
-        inv.setItem(19, MobInvItems.mobSquid());
-        inv.setItem(20, MobInvItems.mobWolf());
-        inv.setItem(21, MobInvItems.mobMushroom());
-        inv.setItem(22, MobInvItems.mobOcelot());
-        inv.setItem(23, MobInvItems.mobHorse());
-        inv.setItem(24, MobInvItems.mobVillager());
+        inv.setItem(0, MobInvItems.mobCreeper());
+        inv.setItem(1, MobInvItems.mobSkeleton());
+        inv.setItem(2, MobInvItems.mobSpider());
+        inv.setItem(3, MobInvItems.mobZombie());
+        inv.setItem(4, MobInvItems.mobSlime());
+        inv.setItem(5, MobInvItems.mobGhast());
+        inv.setItem(6, MobInvItems.mobZombiePig());
+        inv.setItem(7, MobInvItems.mobEnderman());
+        inv.setItem(8, MobInvItems.mobCaveSpider());
+        inv.setItem(9, MobInvItems.mobSilverFish());
+        inv.setItem(10, MobInvItems.mobBlaze());
+        inv.setItem(11, MobInvItems.mobMagmaCube());
+        inv.setItem(12, MobInvItems.mobBat());
+        inv.setItem(13, MobInvItems.mobWitch());
+        inv.setItem(14, MobInvItems.mobPig());
+        inv.setItem(15, MobInvItems.mobSheep());
+        inv.setItem(16, MobInvItems.mobCow());
+        inv.setItem(17, MobInvItems.mobChicken());
+        inv.setItem(18, MobInvItems.mobSquid());
+        inv.setItem(19, MobInvItems.mobWolf());
+        inv.setItem(20, MobInvItems.mobMushroom());
+        inv.setItem(21, MobInvItems.mobOcelot());
+        inv.setItem(22, MobInvItems.mobHorse());
+        inv.setItem(23, MobInvItems.mobVillager());
         inv.setItem(26, MainInvItems.mainMenuReturn());
 
         for (int i = 0; i < 27; ++i) {

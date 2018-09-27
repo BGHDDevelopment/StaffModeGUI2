@@ -39,6 +39,7 @@ public class StaffModeDev implements CommandExecutor {
         p.sendMessage(ChatColor.GRAY + "Plugin Version - " + Settings.VERSION);
         p.sendMessage(ChatColor.GRAY + "Config Version - " + StaffModeGUI2.getPlugin().getConfig().getString("configVersion").replace("&", "§"));
         p.sendMessage(ChatColor.GRAY + "Is a update available?");
+        //FIX THIS
         if (this.checker.isConnected()) {
             if (this.checker.hasUpdate()) {
                 p.sendMessage(ChatColor.RED + "Update " + this.checker.getLatestVersion() + " Available.");
