@@ -41,6 +41,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
         Logger.log(Logger.LogLevel.INFO, "Spigot Link: " + Settings.PLUGIN_URL);
         Logger.log(Logger.LogLevel.INFO, "Support Link: " + Settings.SUPPORT_DISCORD_URL);
         Logger.log(Logger.LogLevel.OUTLINE,  "********************");
+
         Logger.log(Logger.LogLevel.INFO, "Plugin Loading...");
         Logger.log(Logger.LogLevel.INFO, "Registering Managers...");
         this.plugin = this;
@@ -49,15 +50,8 @@ public final class StaffModeGUI2 extends JavaPlugin {
         Logger.log(Logger.LogLevel.INFO, "Managers Registered!");
         Logger.log(Logger.LogLevel.INFO, "Registering Listeners...");
         registerListener(
-/*              new UpdateNotification(this)
-                new MainInv(this),
-                new TimeInv(this),
-                new WhitelistInv(this),
-                new WeatherInv(this),
-                new GamemodeInv(this),
-                new FlyInv(this),
-                new VanishInv(this),
-                new MobInv(this)*/
+                new UpdateNotification(this)
+
 
         );
         Logger.log(Logger.LogLevel.INFO, "Listeners Registered!");

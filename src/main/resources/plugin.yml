@@ -7,3 +7,5 @@ website: stephanbaumharvey.com
 commands:
   staffmodedev:
   staffmode:
+    aliases: [sm, smgui]
+
