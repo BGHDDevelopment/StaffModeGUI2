@@ -82,6 +82,13 @@ public class MainInvItems {
                 ))
                 .toItemStack();
     }
-
+    public static ItemStack trollMenu() {
+        return new ItemBuilder(Material.CACTUS)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.title").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.lore").replace("&", "§")
+                ))
+                .toItemStack();
+    }
 
 }
