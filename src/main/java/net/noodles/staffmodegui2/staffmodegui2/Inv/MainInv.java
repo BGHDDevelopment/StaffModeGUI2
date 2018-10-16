@@ -43,7 +43,7 @@ public class MainInv implements Listener {
         inv.setItem(31, MainInvItems.flyMenu());
         inv.setItem(33, MainInvItems.vanishMenu());
         inv.setItem(47, MainInvItems.mobMenu());
-        //inv.setItem(49, MainInvItems.weatherMenu());
+        inv.setItem(49, MainInvItems.trollMenu());
         //inv.setItem(51, MainInvItems.weatherMenu());
 
 
@@ -118,7 +118,14 @@ public class MainInv implements Listener {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.openGUI").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getMobInv().getInventory());
         }
+        } else if (event.getCurrentItem().isSimilar(MainInvItems.trollMenu())) {
+            if (!player.hasPermission("staffmodegui.trollmenu")) {
+                player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
+            }
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.openGUI").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getTrollInv().getInventory());
 
+        }
 
     }
 }
