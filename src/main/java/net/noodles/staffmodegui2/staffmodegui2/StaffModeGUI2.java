@@ -30,7 +30,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
     private FlyInv flyInv;
     private VanishInv vanishInv;
     private MobInv mobInv;
-
+    private TrollInv trollInv;
 
     @Override
     public void onEnable() {
@@ -68,6 +68,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
         this.flyInv = new FlyInv(this);
         this.vanishInv = new VanishInv(this);
         this.mobInv = new MobInv(this);
+        this.trollInv = new TrollInv(this);
         Logger.log(Logger.LogLevel.INFO, "Inventory's Registered!");
         Logger.log(Logger.LogLevel.INFO, "Loading Config's...");
         this.createConfig();
@@ -160,4 +161,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
    public MobInv getMobInv() {
         return mobInv;
    }
+}
+   public TrollInv getTrollInv() {
+        return trollInv;
 }
