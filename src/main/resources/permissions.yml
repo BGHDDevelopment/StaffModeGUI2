@@ -20,3 +20,6 @@ permissions:
   staffmodegui.mobmenu:
     description: Gives you access to the Mob Menu
     default: op
+  staffmodegui.trollmenu:
+    description: Gives you access to the Troll Menu
+    default: op
