@@ -242,3 +242,31 @@ mobMenu: #Permission Needed: staffmodegui.mobmenu
   loreItemVillager: "&7Click to spawn a Villager."
   messageItemVillager: "&7Spawned a Villager!"
 #=========================================================
+#Troll Menu Messages
+trollMenu: #Permission Needed: staffmodegui.trollmenu
+  title: '&8Troll Menu'
+  lore: '&7Troll your friends!'
+  openGUI: '&7Opened The Troll Menu!'
+  #Troll Menu Items
+  titleItemLightningTroll: "&bLightning Troll"
+  loreItemLightningTroll: "&7Strike all online players with Lightning!"
+  messageItemLightningTroll: "&bLightning Troll!"
+  titleItemSlownessTroll: "&bSlowness Troll"
+  loreItemSlownessTroll: "&7Give all online players Slowness &c&lForever!"
+  messageItemSlownessTroll: "&bSlowness Troll!"
+  titleItemWeaknessTroll: "&bWeakness Troll"
+  loreItemWeaknessTroll: "&7Give all online players Weakness &c&lForever!"
+  messageItemWeaknessTroll: "&bWeakness Troll!"
+  titleItemBlindnessTroll: "&bBlindness Troll"
+  loreItemBlindnessTroll: "&7Give all online players Blindness &c&lForever!"
+  messageItemBlindnessTroll: "&bBlindness Troll!"
+  titleItemNauseaTroll: "&bNausea Troll"
+  loreItemNauseaTroll: "&7Give all online players Nausea!"
+  messageItemNauseaTroll: "&bJump Troll!"
+  titleItemCowTroll: "&bCow Troll"
+  loreItemCowTroll: "&7Spawns a Cow on all online players!"
+  messageItemCowTroll: "&bSlowness Troll!"
+  titleItemJumpTroll: "&7Jump Troll"
+  loreItemJumpTroll: "&7Give all online players Jump Boost &c&lForever!"
+  messageItemJumpTroll: "&bJump Troll!"
+#========================================================
