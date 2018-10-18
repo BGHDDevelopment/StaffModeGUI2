@@ -1,17 +1,13 @@
 package net.noodles.staffmodegui2.staffmodegui2;
 
-import net.noodles.staffmodegui2.staffmodegui2.Events.UpdateNotification;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.*;
 import net.noodles.staffmodegui2.staffmodegui2.commands.StaffModeCommand;
 import net.noodles.staffmodegui2.staffmodegui2.commands.StaffModeDev;
 import net.noodles.staffmodegui2.staffmodegui2.util.*;
 import net.noodles.staffmodegui2.staffmodegui2.util.UpdateChecker.UpdateChecker;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-
 import java.io.File;
-import java.lang.reflect.Field;
 import java.util.Arrays;
 
 public final class StaffModeGUI2 extends JavaPlugin {
@@ -34,14 +30,13 @@ public final class StaffModeGUI2 extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Logger.log(Logger.LogLevel.OUTLINE,  "********************");
+        Logger.log(Logger.LogLevel.OUTLINE, "********************");
         Logger.log(Logger.LogLevel.INFO, "Initializing StaffModeGUI2 Version: " + Settings.VERSION);
         Logger.log(Logger.LogLevel.INFO, "Created by: " + Settings.DEVELOPER_NAME);
         Logger.log(Logger.LogLevel.INFO, "Website: " + Settings.DEVELOPER_URL);
         Logger.log(Logger.LogLevel.INFO, "Spigot Link: " + Settings.PLUGIN_URL);
         Logger.log(Logger.LogLevel.INFO, "Support Link: " + Settings.SUPPORT_DISCORD_URL);
-        Logger.log(Logger.LogLevel.OUTLINE,  "********************");
-
+        Logger.log(Logger.LogLevel.OUTLINE, "********************");
         Logger.log(Logger.LogLevel.INFO, "Plugin Loading...");
         Logger.log(Logger.LogLevel.INFO, "Registering Managers...");
         this.plugin = this;
@@ -50,7 +45,6 @@ public final class StaffModeGUI2 extends JavaPlugin {
         Logger.log(Logger.LogLevel.INFO, "Managers Registered!");
         Logger.log(Logger.LogLevel.INFO, "Registering Listeners...");
         registerListener(
-                new UpdateNotification(this)
 
 
         );
@@ -75,23 +69,22 @@ public final class StaffModeGUI2 extends JavaPlugin {
         Logger.log(Logger.LogLevel.INFO, "Config's Registered!");
         Logger.log(Logger.LogLevel.SUCCESS, "StaffModeGUI2 Version: " + Settings.VERSION + " Loaded.");
         this.setEnabled(true);
-        Logger.log(Logger.LogLevel.OUTLINE,  "********************");
+        Logger.log(Logger.LogLevel.OUTLINE, "********************");
         Logger.log(Logger.LogLevel.INFO, "Checking for updates...");
         this.checker = new UpdateChecker(this);
         if (this.checker.isConnected()) {
             if (this.checker.hasUpdate()) {
-                Logger.log(Logger.LogLevel.OUTLINE,  "********************");
-                Logger.log(Logger.LogLevel.WARNING,("StaffModeGUI2 is outdated!"));
-                Logger.log(Logger.LogLevel.WARNING,("Newest version: " + this.checker.getLatestVersion()));
-                Logger.log(Logger.LogLevel.WARNING,("Your version: " + Settings.VERSION));
-                Logger.log(Logger.LogLevel.WARNING,("Please Update Here: " + Settings.PLUGIN_URL));
-                Logger.log(Logger.LogLevel.OUTLINE,  "********************");
+                Logger.log(Logger.LogLevel.OUTLINE, "********************");
+                Logger.log(Logger.LogLevel.WARNING, ("StaffModeGUI2 is outdated!"));
+                Logger.log(Logger.LogLevel.WARNING, ("Newest version: " + this.checker.getLatestVersion()));
+                Logger.log(Logger.LogLevel.WARNING, ("Your version: " + Settings.VERSION));
+                Logger.log(Logger.LogLevel.WARNING, ("Please Update Here: " + Settings.PLUGIN_URL));
+                Logger.log(Logger.LogLevel.OUTLINE, "********************");
             } else {
                 Logger.log(Logger.LogLevel.SUCCESS, "StaffModeGUI2 is up to date!");
             }
         }
     }
-
 
 
     @Override
@@ -104,22 +97,21 @@ public final class StaffModeGUI2 extends JavaPlugin {
     }
 
 
-
-    @SuppressWarnings({ "rawtypes", "unchecked" })
+    @SuppressWarnings({"rawtypes", "unchecked"})
     public static StaffModeGUI2 getPlugin() {
         return (StaffModeGUI2) getPlugin((Class) StaffModeGUI2.class);
     }
 
-    private void createConfig(){
-        try{
-            if(!getDataFolder().exists()) getDataFolder().mkdirs();
+    private void createConfig() {
+        try {
+            if (!getDataFolder().exists()) getDataFolder().mkdirs();
 
             File file = new File(getDataFolder(), "config.yml");
-            if(!file.exists()){
+            if (!file.exists()) {
                 saveDefaultConfig();
             }
 
-        }catch(Exception exception){
+        } catch (Exception exception) {
             getLogger().info(exception.getMessage());
         }
     }
@@ -152,16 +144,19 @@ public final class StaffModeGUI2 extends JavaPlugin {
         return gamemodeInv;
     }
 
-    public FlyInv getFlyInv() { 
-        return flyInv; 
-}
-   public VanishInv getVanishInv() { 
-        return vanishInv; 
-}
-   public MobInv getMobInv() {
+    public FlyInv getFlyInv() {
+        return flyInv;
+    }
+
+    public VanishInv getVanishInv() {
+        return vanishInv;
+    }
+
+    public MobInv getMobInv() {
         return mobInv;
-   }
-}
-   public TrollInv getTrollInv() {
+    }
+
+    public TrollInv getTrollInv() {
         return trollInv;
+    }
 }
