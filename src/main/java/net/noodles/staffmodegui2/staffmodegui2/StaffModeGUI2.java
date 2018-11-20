@@ -45,8 +45,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
         Logger.log(Logger.LogLevel.INFO, "Managers Registered!");
         Logger.log(Logger.LogLevel.INFO, "Registering Listeners...");
         registerListener(
-
-
+                //NOT NEEDED
         );
         Logger.log(Logger.LogLevel.INFO, "Listeners Registered!");
         Logger.log(Logger.LogLevel.INFO, "Registering Commands...");

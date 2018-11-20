@@ -13,14 +13,12 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class GamemodeInv implements Listener {
 
     private StaffModeGUI2 main;
-
 
     public GamemodeInv(StaffModeGUI2 main) {
         this.main = main;
@@ -51,7 +49,6 @@ public class GamemodeInv implements Listener {
         return inv;
     }
 
-
     private ItemStack Glass() {
         ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
         ItemMeta stonem = stone.getItemMeta();
@@ -59,7 +56,6 @@ public class GamemodeInv implements Listener {
         stone.setItemMeta(stonem);
         return stone;
     }
-
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {

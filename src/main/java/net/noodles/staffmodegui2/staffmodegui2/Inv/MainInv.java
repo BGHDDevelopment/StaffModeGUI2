@@ -2,7 +2,6 @@ package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
-import net.noodles.staffmodegui2.staffmodegui2.util.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -13,9 +12,6 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-
-import java.util.Arrays;
-
 
 public class MainInv implements Listener {
 
@@ -44,15 +40,12 @@ public class MainInv implements Listener {
         inv.setItem(33, MainInvItems.vanishMenu());
         inv.setItem(47, MainInvItems.mobMenu());
         inv.setItem(49, MainInvItems.trollMenu());
-        //inv.setItem(51, MainInvItems.weatherMenu());
-
-
+        //inv.setItem(51, MainInvItems.Menu());
         for (int i = 0; i < 54; ++i) {
             if (inv.getItem(i) == null) {
                 inv.setItem(i, Glass());
             }
         }
-
         return inv;
     }
 
