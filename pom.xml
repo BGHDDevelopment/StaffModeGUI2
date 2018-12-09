@@ -6,7 +6,7 @@
 
     <groupId>net.noodles.staffmodegui2</groupId>
     <artifactId>StaffModeGUI2</artifactId>
-    <version>0.14</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>StaffModeGUI2</name>

@@ -1,5 +1,5 @@
 #=======================================================
-configVersion: 0.14
+configVersion: 1.0
 #DO NOT CHANGE PLEASE.
 #=======================================================
 #Permssion: staffmodegui.update
@@ -11,7 +11,7 @@ defaultMessages:
   noPermission: "&c&lNo Permission!"
 
 mainMenuReturn:
-  title: "&7Return to main menu"
+  title: "&7Main Menu"
   lore: "&7Click to return to main menu."
   message: "&7Returned to Main Menu!"
 #=======================================================
@@ -78,10 +78,10 @@ timeMenu: #Permission Needed: staffmodegui.timemenu
   time2PMTitle: "&b2PM"
   time2PMLore: "&7Click to change the server time to 2PM"
   messageTime2PM: "&7Changed the server time to 2PM"
-  time3PMTitle: "&b13PM"
+  time3PMTitle: "&b3PM"
   time3PMLore: "&7Click to change the server time to 3PM"
   messageTime3PM: "&7Changed the server time to 3PM"
-  time4PMTitle: "&b14PM"
+  time4PMTitle: "&b4PM"
   time4PMLore: "&7Click to change the server time to 4PM"
   messageTime4PM: "&7Changed the server time to 4PM"
   time5PMTitle: "&b5PM"

@@ -35,9 +35,9 @@ public class StaffModeDev implements CommandExecutor {
 
             return false;
         }
-        p.sendMessage(ChatColor.GRAY + "Hello Noodles_YT!");
-        p.sendMessage(ChatColor.GRAY + "Plugin Version - " + Settings.VERSION);
-        p.sendMessage(ChatColor.GRAY + "Config Version - " + StaffModeGUI2.getPlugin().getConfig().getString("configVersion").replace("&", "§"));
+        p.sendMessage(ChatColor.WHITE + "Hello Noodles_YT!");
+        p.sendMessage(ChatColor.GRAY + "Plugin Version - " + ChatColor.WHITE + Settings.VERSION);
+        p.sendMessage(ChatColor.GRAY + "Config Version - " + ChatColor.WHITE + StaffModeGUI2.getPlugin().getConfig().getString("configVersion").replace("&", "§"));
         p.sendMessage(ChatColor.GRAY + "End of log.");
         return true;
     }

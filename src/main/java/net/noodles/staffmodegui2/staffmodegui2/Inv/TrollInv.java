@@ -28,7 +28,7 @@ public class TrollInv implements Listener {
     }
 
     private int getSize() {
-        return 10;
+        return 9;
     }
     public Inventory getInventory() {
         Inventory inv = Bukkit.createInventory(null, getSize(), getTitle());
@@ -39,9 +39,9 @@ public class TrollInv implements Listener {
         inv.setItem(3, TrollInvItems.BlindnessTroll());
         inv.setItem(4, TrollInvItems.CowTroll());
         inv.setItem(5, TrollInvItems.JumpTroll());
-        inv.setItem(9, MainInvItems.mainMenuReturn());
+        inv.setItem(8, MainInvItems.mainMenuReturn());
 
-        for (int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 9; ++i) {
             if (inv.getItem(i) == null) {
                 inv.setItem(i, Glass());
             }
