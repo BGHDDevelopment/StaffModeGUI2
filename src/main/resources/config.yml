@@ -119,7 +119,7 @@ weatherMenu: #Permission Needed: staffmodegui.weathermenu
   weatherStormMessage: "&7Set weather to storm!"
 #=======================================================
 #Gamemode Menu Messages
-gamemodeMenu: #Permssion Needed: staffmodegui.gamemodemenu
+gamemodeMenu: #Permission Needed: staffmodegui.gamemodemenu
   title: '&8Gamemode Menu'
   lore: '&7Control your Gamemode'
   openGUI: '&7Opened The Gamemode Menu!'
