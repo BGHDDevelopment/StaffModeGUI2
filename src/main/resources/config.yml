@@ -8,7 +8,7 @@ Update:
 #Enables if there is a message on-join when the plugin is outdated.
 #=======================================================
 defaultMessages:
-  noPermission: "&c&lNo Permission!"
+  noPermission: "&cSorry you don't have permission!"
 
 mainMenuReturn:
   title: "&7Main Menu"
@@ -20,7 +20,7 @@ whitelistMenu: #Permission Needed: staffmodegui.whitelistmenu
   title: "&8Whitelist Menu"
   lore: "&7Control the server whitelist"
   openGUI: "&7Opened the whitelist control panel."
-#Whitelist Menu Items
+  #Whitelist Menu Items
   titleItemON: "&bWhitelist ON"
   loreItemON: "&7Click to toggle the whitelist ON"
   messageItemON: "&7You toggled the whitelist ON."
@@ -32,7 +32,7 @@ timeMenu: #Permission Needed: staffmodegui.timemenu
   title: "&8Time Control"
   lore: "&7Control the server time"
   openGUI: "&7Opened the time control panel."
-#Time Menu Items
+  #Time Menu Items
   time12AMTitle: "&b12AM"
   time12AMLore: "&7Click to change the server time to 12AM"
   messageTime12AM: "&7Changed the server time to 12AM"
@@ -87,19 +87,19 @@ timeMenu: #Permission Needed: staffmodegui.timemenu
   time5PMTitle: "&b5PM"
   time5PMLore: "&7Click to change the server time to 5PM"
   messageTime5PM: "&7Changed the server time to 5PM"
-  time6PMTitle: "&b16PM"
+  time6PMTitle: "&b6PM"
   time6PMLore: "&7Click to change the server time to 6PM"
   messageTime6PM: "&7Changed the server time to 6PM"
-  time7PMTitle: "&b17PM"
+  time7PMTitle: "&b7PM"
   time7PMLore: "&7Click to change the server time to 7PM"
   messageTime7PM: "&7Changed the server time to 7PM"
-  time8PMTitle: "&b18PM"
+  time8PMTitle: "&b8PM"
   time8PMLore: "&7Click to change the server time to 8PM"
   messageTime8PM: "&7Changed the server time to 8PM"
-  time9PMTitle: "&b19PM"
+  time9PMTitle: "&b9PM"
   time9PMLore: "&7Click to change the server time to 9PM"
   messageTime9PM: "&7Changed the server time to 9PM"
-  time10PMTitle: "&b110PM"
+  time10PMTitle: "&b10PM"
   time10PMLore: "&7Click to change the server time to 10PM"
   messageTime10PM: "&7Changed the server time to 10PM"
   time11PMTitle: "&b11PM"
@@ -110,7 +110,7 @@ weatherMenu: #Permission Needed: staffmodegui.weathermenu
   title: "&8Weather Control"
   lore: "&7Control the server weather"
   openGUI: "&7Opened the weather control panel."
-#Weather Menu Items
+  #Weather Menu Items
   titleClear: "&bClear Weather"
   loreClear: "&7Click to toggle the weather to clear"
   weatherClearMessage: "&7Set weather to clear!"
