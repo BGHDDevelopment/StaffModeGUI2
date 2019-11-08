@@ -1,8 +1,8 @@
-package net.noodles.staffmodegui2.Inv;
+package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
-import net.noodles.staffmodegui2.Inv.InvItems.ExtraMobInvItems;
-import net.noodles.staffmodegui2.Inv.InvItems.MainInvItems;
-import net.noodles.staffmodegui2.StaffModeGUI2;
+import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.ExtraMobInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
