@@ -1,7 +1,7 @@
-package net.noodles.staffmodegui2.Inv;
+package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
-import net.noodles.staffmodegui2.Inv.InvItems.FeedAndHealInvItems;
-import net.noodles.staffmodegui2.Inv.InvItems.MainInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.FeedAndHealInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
