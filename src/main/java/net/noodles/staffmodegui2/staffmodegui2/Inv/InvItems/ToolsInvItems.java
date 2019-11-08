@@ -41,8 +41,8 @@ public class ToolsInvItems {
     }
     public static ItemStack feedAndHealMenu() {
         return new ItemBuilder(Material.BREAD)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("feedAndHealMenu.titleFeedAndHealMenu").replace("&", "§"))
-                .setLore(StaffModeGUI2.getPlugin().getConfig().getString("feedAndHealMenu.loreItemFeedAndHealMenu").replace ("&", "§"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("feedAndHealMenu.title").replace("&", "§"))
+                .setLore(StaffModeGUI2.getPlugin().getConfig().getString("feedAndHealMenu.lore").replace ("&", "§"))
                 .toItemStack();
     }
 }
