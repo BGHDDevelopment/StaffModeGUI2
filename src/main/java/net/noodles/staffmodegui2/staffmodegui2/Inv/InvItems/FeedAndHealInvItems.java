@@ -11,9 +11,9 @@ public class FeedAndHealInvItems {
 
     public static ItemStack Heal() {
         return new ItemBuilder ( Material.SPONGE)
-                .setName( StaffModeGUI2.getPlugin().getConfig().getString("flyMenu.titleItemHeal").replace("&", "§"))
+                .setName( StaffModeGUI2.getPlugin().getConfig().getString("feedAndHealMenu.titleItemHeal").replace("&", "§"))
                 .setLore( Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("flyMenu.loreItemHeal").replace("&", "§")
+                        StaffModeGUI2.getPlugin().getConfig().getString("feedAndHealMenu.loreItemHeal").replace("&", "§")
                 ))
                 .toItemStack();
     }
