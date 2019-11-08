@@ -300,10 +300,10 @@ toolsMenu: #Permission Needed: staffmodegui.toolsmenu
   lore: '&7(Vanish, Toggle Fly, Inv Clear, Clear Chat, Feed, Heal)'
   openGUI: '&7Opened The Tools Menu!'
   # Tools Menu Items
-  titleInvClear: "&bInv Clear"
+  titleItemInvClear: "&bInv Clear"
   loreItemInvClear: "&7Clears you're inventory!"
   messageItemInvClear: "&bInventory cleared!"
-  titleClearChat: "&bClear Chat"
+  titleItemClearChat: "&bClear Chat"
   loreItemClearChat: "&7Clears the chat"
   messageItemClearChat: "&7Chat cleared"
 #========================================================
@@ -313,7 +313,7 @@ serverManagerMenu: #Permission Needed: staffmodegui.servermanagermenu
   lore: '&7(Whitelist, Weather, Clear Mobs)'
   openGUI: '&7Opened The Server Manager Menu!'
   # Server Manager Menu Items
-  titleClearMobs: "&bClear Mobs"
+  titleItemClearMobs: "&bClear Mobs"
   loreItemClearMobs: "&7Clears all mobs/monsters!"
   messageItemClearMobs: "&bCleared all mobs!"
 #========================================================
@@ -323,10 +323,10 @@ feedAndHealMenu: #Permission Needed: staffmodegui.feedandhealmenu
   lore: '&7(Feed, Heal)'
   openGUI: '&7Opened The Feed And Heal Menu!'
   # Feed And Heal Menu Items
-  titleHeal: "&bHeal"
+  titleItemHeal: "&bHeal"
   loreItemHeal: "&7Heals you!"
   messageItemHeal: "&bYou're health has been set to max!"
-  titleFeed: "&bFeed"
+  titleItemFeed: "&bFeed"
   loreItemFeed: "&7Feeds you're hunger!"
   messageItemFeed: "&bYou're hunger has been set to max!"
 #========================================================
@@ -354,7 +354,7 @@ effectsMenu: #Permission Needed: staffmodegui.effectsmenu
 #========================================================
 # Speed Menu Messages
 speedMenu: #Permission Needed: staffmodegui.speedmenu
-  title: '&bSpeed Menu'
+  title: '&8Speed Menu'
   lore: '&7Speed Effects'
   openGUI: '&7Opened The Speed Effects Menu!'
   # Speed Menu Items
@@ -385,7 +385,7 @@ speedMenu: #Permission Needed: staffmodegui.speedmenu
 #========================================================
 # Strength Menu Messages
 strengthMenu: #Permission Needed: staffmodegui.strengthmenu
-  title: '&bStrength Menu'
+  title: '&8Strength Menu'
   lore: '&7Strength Effects'
   openGUI: '&7Opened The Strength Effects Menu!'
   # Strength Menu Items
@@ -416,7 +416,7 @@ strengthMenu: #Permission Needed: staffmodegui.strengthmenu
 #========================================================
 # Jump Menu Messages
 jumpMenu: #Permission Needed: staffmodegui.jumpmenu
-  title: '&bJump Menu'
+  title: '&8Jump Menu'
   lore: '&7Jump Effects'
   openGUI: '&7Opened The Jump Effects Menu!'
   # Jump Menu Items
