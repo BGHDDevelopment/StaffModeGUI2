@@ -323,8 +323,6 @@ feedAndHealMenu: #Permission Needed: staffmodegui.feedandhealmenu
   lore: '&7(Feed, Heal)'
   openGUI: '&7Opened The Feed And Heal Menu!'
   # Feed And Heal Menu Items
-  titleFeedAndHealMenu: "&bFeedAndHealMenu"
-  loreItemFeedAndHealMenu: "&7Sets you're Hunger and Health"
   titleHeal: "&bHeal"
   loreItemHeal: "&7Heals you!"
   messageItemHeal: "&bYou're health has been set to max!"
