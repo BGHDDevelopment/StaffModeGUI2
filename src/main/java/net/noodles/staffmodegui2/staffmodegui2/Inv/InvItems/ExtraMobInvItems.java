@@ -1,56 +1,102 @@
-package net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems;
+package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
+import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.ExtraMobInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
-import net.noodles.staffmodegui2.staffmodegui2.util.ItemBuilder;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.Arrays;
+public class ExtraMobInv implements Listener {
+    @SuppressWarnings("unused")
+    private StaffModeGUI2 main;
 
-public class ExtraMobInvItems {
-
-    public static ItemStack mobIron() {
-        return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.titleItemIron").replace("&", "§"))
-                .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.loreItemIron").replace("&", "§")
-                ))
-                .toItemStack();
+    public ExtraMobInv(StaffModeGUI2 main) {
+        this.main = main;
+        main.getServer().getPluginManager().registerEvents( this, main);
     }
 
-    public static ItemStack mobSnow() {
-        return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.titleItemSnow").replace("&", "§"))
-                .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.loreItemSnow").replace("&", "§")
-                ))
-                .toItemStack();
+    private String getTitle() {
+        return ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Extra Mobs";
     }
 
-    public static ItemStack mobGiant() {
-        return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.titleItemGiant").replace("&", "§"))
-                .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.loreItemGiant").replace("&", "§")
-                ))
-                .toItemStack();
+    private int getSize() {
+        return 9;
+    }
+    public Inventory getInventory() {
+        Inventory inv = Bukkit.createInventory(null, getSize(), getTitle());
+
+        inv.setItem(0, ExtraMobInvItems.mobIron());
+        inv.setItem(1, ExtraMobInvItems.mobSnow());
+        inv.setItem(2, ExtraMobInvItems.mobGiant());
+        inv.setItem(3, ExtraMobInvItems.mobWither());
+        inv.setItem(4, ExtraMobInvItems.mobDragon());
+        inv.setItem(8, ExtraMobInvItems.menuReturn());
+
+        for (int i = 0; i < 9; ++i) {
+            if (inv.getItem(i) == null) {
+                inv.setItem(i, Glass());
+            }
+        }
+
+        return inv;
     }
 
-    public static ItemStack mobWither() {
-        return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.titleItemWither").replace("&", "§"))
-                .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.loreItemWither").replace("&", "§")
-                ))
-                .toItemStack();
+
+    private ItemStack Glass() {
+        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
+        ItemMeta stonem = stone.getItemMeta();
+        stonem.setDisplayName("");
+        stone.setItemMeta(stonem);
+        return stone;
     }
 
-    public static ItemStack mobDragon() {
-        return new ItemBuilder(Material.MOB_SPAWNER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.titleItemDragon").replace("&", "§"))
-                .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.loreItemDragon").replace("&", "§")
-                ))
-                .toItemStack();
+
+    @EventHandler
+    public void onInventoryClick(InventoryClickEvent event) {
+        Player player = (Player) event.getWhoClicked();
+
+        if (event.getClickedInventory() == null) return;
+        if (!event.getClickedInventory().getTitle().equals(getTitle())) return;
+
+        if (event.getCurrentItem() == null) return;
+        if (event.getCurrentItem().getType() == Material.AIR) return;
+
+        event.setCancelled(true);
+        if (event.getCurrentItem().isSimilar(ExtraMobInvItems.mobIron())) {
+            player.getWorld().spawnEntity(player.getLocation(), EntityType.IRON_GOLEM);
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.messageItemIron").replace("&", "§"));
+            player.closeInventory();
+        } else if (event.getCurrentItem().isSimilar(ExtraMobInvItems.mobSnow())) {
+            player.getWorld().spawnEntity(player.getLocation(), EntityType.SNOWMAN);
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.messageItemSnow").replace("&", "§"));
+            player.closeInventory();
+        } else if (event.getCurrentItem().isSimilar(ExtraMobInvItems.mobGiant())) {
+            player.getWorld().spawnEntity(player.getLocation(), EntityType.GIANT);
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.messageItemGiant").replace("&", "§"));
+            player.closeInventory();
+        } else if (event.getCurrentItem().isSimilar(ExtraMobInvItems.mobWither())) {
+            player.getWorld().spawnEntity(player.getLocation(), EntityType.WITHER);
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.messageItemWither").replace("&", "§"));
+            player.closeInventory();
+        } else if (event.getCurrentItem().isSimilar(ExtraMobInvItems.mobDragon())) {
+            player.getWorld().spawnEntity(player.getLocation(), EntityType.ENDER_DRAGON);
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.messageItemDragon").replace("&", "§"));
+            player.closeInventory();
+        } else if (event.getCurrentItem().isSimilar(ExtraMobInvItems.menuReturn())) {
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message2").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getMobInv().getInventory());
+
+        }
     }
+
+
 }
