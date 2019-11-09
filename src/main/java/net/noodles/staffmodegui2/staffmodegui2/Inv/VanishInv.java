@@ -36,7 +36,7 @@ public class VanishInv implements Listener {
 
         inv.setItem(2, VanishInvItems.VanishON());
         inv.setItem(6, VanishInvItems.VanishOFF());
-        inv.setItem(8, MainInvItems.mainMenuReturn());
+        inv.setItem(8, VanishInvItems.menuReturn());
 
         for (int i = 0; i < 9; ++i) {
             if (inv.getItem(i) == null) {
@@ -76,17 +76,16 @@ public class VanishInv implements Listener {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.messageItemON").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(VanishInvItems.VanishOFF())) {
-                for (Player players : Bukkit.getOnlinePlayers()) {
-                    players.showPlayer(player);
-                    player.setAllowFlight(false);
-                    player.setFlying(false);
-                }
+            for (Player players : Bukkit.getOnlinePlayers()) {
+                players.showPlayer(player);
+                player.setAllowFlight(false);
+                player.setFlying(false);
+            }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.messageItemOFF").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
-            player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
-
+        } else if (event.getCurrentItem().isSimilar(VanishInvItems.menuReturn())) {
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message3").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getToolsInv().getInventory());
         }
     }
 }
