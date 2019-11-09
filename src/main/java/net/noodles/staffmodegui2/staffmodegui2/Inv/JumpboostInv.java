@@ -41,7 +41,7 @@ public class JumpboostInv implements Listener {
         inv.setItem(5, JumpboostInvItems.jump6());
         inv.setItem(6, JumpboostInvItems.jump7());
         inv.setItem(7, JumpboostInvItems.jump8());
-        inv.setItem(8, MainInvItems.mainMenuReturn());
+        inv.setItem(8, JumpboostInvItems.menuReturn());
 
         for (int i = 0; i < 9; ++i) {
             if (inv.getItem(i) == null) {
@@ -113,9 +113,9 @@ public class JumpboostInv implements Listener {
             player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 180000000, 8));
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpboostMenu.messageItemJump8").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
-            player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
+        } else if (event.getCurrentItem().isSimilar(JumpboostInvItems.menuReturn())) {
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message4").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getEffectsInv().getInventory());
 
         }
     }
