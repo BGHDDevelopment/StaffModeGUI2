@@ -1,7 +1,7 @@
-package net.noodles.staffmodegui2.Inv;
+package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
-import net.noodles.staffmodegui2.Inv.InvItems.MainInvItems;
-import net.noodles.staffmodegui2.Inv.InvItems.SpeedInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.SpeedInvItems;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -11,7 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import net.noodles.staffmodegui2.StaffModeGUI2;
+import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -113,9 +113,9 @@ public class SpeedInv implements Listener {
             player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 180000000, 8));
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("speedMenu.messageItemSpeed8").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
-            player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
+        } else if (event.getCurrentItem().isSimilar(SpeedInvItems.menuReturn())) {
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message4").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getEffectsInv().getInventory());
 
         }
     }
