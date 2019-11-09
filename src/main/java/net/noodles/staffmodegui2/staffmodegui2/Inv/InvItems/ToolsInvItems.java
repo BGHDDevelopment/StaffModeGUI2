@@ -35,7 +35,7 @@ public class ToolsInvItems {
     }
     public static ItemStack chatClear() {
         return new ItemBuilder(Material.PAPER)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.titleClearChat").replace("&", "§"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.titleItemClearChat").replace("&", "§"))
                 .setLore(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.loreItemClearChat").replace ("&", "§"))
                 .toItemStack();
     }
