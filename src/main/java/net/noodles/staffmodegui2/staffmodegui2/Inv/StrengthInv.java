@@ -1,7 +1,7 @@
-package net.noodles.staffmodegui2.Inv;
+package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
-import net.noodles.staffmodegui2.Inv.InvItems.MainInvItems;
-import net.noodles.staffmodegui2.Inv.InvItems.StrengthInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.StrengthInvItems;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -11,7 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import net.noodles.staffmodegui2.StaffModeGUI2;
+import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -41,7 +41,7 @@ public class StrengthInv implements Listener {
         inv.setItem(5, StrengthInvItems.strength6());
         inv.setItem(6, StrengthInvItems.strength7());
         inv.setItem(7, StrengthInvItems.strength8());
-        inv.setItem(8, MainInvItems.mainMenuReturn());
+        inv.setItem(8, StrengthInvItems.menuReturn());
 
         for (int i = 0; i < 9; ++i) {
             if (inv.getItem(i) == null) {
@@ -113,9 +113,9 @@ public class StrengthInv implements Listener {
             player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 180000000, 8));
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.messageItemStrength8").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
-            player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
+        } else if (event.getCurrentItem().isSimilar(StrengthInvItems.menuReturn())) {
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message4").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getEffectsInv().getInventory());
 
         }
     }
