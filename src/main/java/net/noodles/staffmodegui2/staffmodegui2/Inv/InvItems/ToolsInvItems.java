@@ -29,7 +29,7 @@ public class ToolsInvItems {
 
     public static ItemStack invClear() {
         return new ItemBuilder(Material.DEAD_BUSH)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.titleInvClear").replace("&", "§"))
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.titleItemInvClear").replace("&", "§"))
                 .setLore(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.loreItemInvClear").replace ("&", "§"))
         .toItemStack();
     }
