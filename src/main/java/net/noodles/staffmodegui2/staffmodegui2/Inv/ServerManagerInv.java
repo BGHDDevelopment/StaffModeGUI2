@@ -1,7 +1,6 @@
 package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.ServerManagerInvItems;
-import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.ToolsInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -12,7 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import net.noodles.staffmodegui2.StaffModeGUI2;
+import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class ServerManagerInv implements Listener {
@@ -70,11 +69,17 @@ public class ServerManagerInv implements Listener {
         if (event.getCurrentItem().getType() == Material.AIR) return;
         event.setCancelled(true);
         if (event.getCurrentItem().isSimilar(ServerManagerInvItems.whitelistMenu())) {
-            if(!player.hasPermission("staffmodegui.whitelistmenu")) {
-                player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
+            if (!player.hasPermission ( "staffmodegui.whitelistmenu" )) {
+                player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) );
             }
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.openGUI").replace("&", "§"));
-            player.openInventory(StaffModeGUI2.getInstance().getWhitelistInv ().getInventory());
+            player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "whitelistMenu.openGUI" ).replace ( "&" , "§" ) );
+            player.openInventory ( StaffModeGUI2.getInstance ().getWhitelistInv ().getInventory () );
+        } else if (event.getCurrentItem().isSimilar(ServerManagerInvItems.weatherMenu ())) {
+                if(!player.hasPermission("staffmodegui.weathermenu")) {
+                    player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
+                }
+                player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("weatherMenu.openGUI").replace("&", "§"));
+                player.openInventory(StaffModeGUI2.getInstance().getWeatherInv ().getInventory());
         } else if (event.getCurrentItem().isSimilar(ServerManagerInvItems.clearMobs ())) {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.messageItemClearMobs").replace("&", "§"));
             player.getInventory().clear();
