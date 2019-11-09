@@ -11,7 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import net.noodles.staffmodegui2.StaffModeGUI2;
+import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class ToolsInv implements Listener {
@@ -94,6 +94,12 @@ public class ToolsInv implements Listener {
             Bukkit.broadcastMessage(StaffModeGUI2.getPlugin ().getConfig ().getString ( "toolsMenu.messageItemClearChat").replace ( "&" , "§" ) );
             Bukkit.broadcastMessage(" ");
             event.getWhoClicked().closeInventory();
+        } else if (event.getCurrentItem().isSimilar(ToolsInvItems.feedAndHealMenu())) {
+            if (!player.hasPermission ( "staffmodegui.feedandhealmenu" )) {
+                player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) );
+            }
+            player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "feedAndHealMenu.openGUI" ).replace ( "&" , "§" ) );
+            player.openInventory ( StaffModeGUI2.getInstance ().getFeedAndHealInv ().getInventory () );
         } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
