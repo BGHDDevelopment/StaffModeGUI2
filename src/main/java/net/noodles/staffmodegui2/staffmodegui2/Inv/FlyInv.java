@@ -33,7 +33,7 @@ public class FlyInv implements Listener {
 
         inv.setItem(2, FlyInvItems.FlyON());
         inv.setItem(6, FlyInvItems.FlyOFF());
-        inv.setItem(8, MainInvItems.mainMenuReturn());
+        inv.setItem(8, FlyInvItems.menuReturn());
 
         for (int i = 0; i < 9; ++i) {
             if (inv.getItem(i) == null) {
@@ -75,10 +75,9 @@ public class FlyInv implements Listener {
             player.setFlying(false);
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("flyMenu.messageItemOFF").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
-            player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
-
+        } else if (event.getCurrentItem().isSimilar(FlyInvItems.menuReturn())) {
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message3").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getToolsInv().getInventory());
         }
     }
 
