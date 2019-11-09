@@ -9,6 +9,14 @@ import java.util.Arrays;
 
 public class WeatherInvItems {
 
+    public static ItemStack menuReturn() {
+        return new ItemBuilder(Material.BOOK)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.title1").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.lore1").replace("&", "§")
+                ))
+                .toItemStack();
+    }
 
     public static ItemStack weatherClear() {
         return new ItemBuilder(Material.SAND)
