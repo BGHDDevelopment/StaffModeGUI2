@@ -20,6 +20,30 @@ permissions:
   staffmodegui.mobmenu:
     description: Gives you access to the Mob Menu
     default: op
+  staffmodegui.extramobmenu:
+    description: Gives you access to the Extra Mob Menu
+    default: op
   staffmodegui.trollmenu:
     description: Gives you access to the Troll Menu
+    default: op
+  staffmodegui.toolsmenu:
+    description: Gives you access to the Tools Menu
+    defualt: op
+  staffmodegui.servermanagermenu:
+    description: Gives you access to the Server Manager Menu
+    default: op
+  staffmodegui.feedandhealmenu:
+    description: Gives you access to the Feed And Heal Menu
+    default: op
+  staffmodegui.effectsmenu:
+    description: Gives you access to the Effects Menu
+    default: op
+  staffmodegui.speedmenu:
+    description: Gives you access to the Speed Menu
+    default: op
+  staffmodegui.strengthmenu:
+    description: Gives you access to the Strength Menu
+    default: op
+  staffmodegui.jumpmenu:
+    description: Gives you access to the Jump Menu
     default: op

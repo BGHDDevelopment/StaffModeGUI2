@@ -20,17 +20,8 @@ public class MainInvItems {
                 .toItemStack();
     }
 
-    public static ItemStack whitelistMenu() {
-        return new ItemBuilder(Material.COMMAND)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.title").replace("&", "§"))
-                .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.lore").replace("&", "§")
-                ))
-                .toItemStack();
-    }
-
     public static ItemStack timeMenu() {
-        return new ItemBuilder(Material.DAYLIGHT_DETECTOR)
+        return new ItemBuilder(Material.COMPASS)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("timeMenu.title").replace("&", "§"))
                 .setLore(Arrays.asList(
                         StaffModeGUI2.getPlugin().getConfig().getString("timeMenu.lore").replace("&", "§")
@@ -38,38 +29,11 @@ public class MainInvItems {
                 .toItemStack();
     }
 
-    public static ItemStack weatherMenu() {
-        return new ItemBuilder(Material.WATER_BUCKET)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("weatherMenu.title").replace("&", "§"))
-                .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("weatherMenu.lore").replace("&", "§")
-                ))
-                .toItemStack();
-    }
-
     public static ItemStack gamemodeMenu() {
-        return new ItemBuilder(Material.COBBLESTONE)
+        return new ItemBuilder(Material.BLAZE_ROD)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("gamemodeMenu.title").replace("&", "§"))
                 .setLore(Arrays.asList(
                         StaffModeGUI2.getPlugin().getConfig().getString("gamemodeMenu.lore").replace("&", "§")
-                ))
-                .toItemStack();
-
-    }
-
-    public static ItemStack flyMenu() {
-        return new ItemBuilder(Material.BLAZE_ROD)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("flyMenu.title").replace("&", "§"))
-                .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("flyMenu.lore").replace("&", "§")
-                ))
-                .toItemStack();
-    }
-    public static ItemStack vanishMenu() {
-        return new ItemBuilder(Material.BEDROCK)
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.title").replace("&", "§"))
-                .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.lore").replace("&", "§")
                 ))
                 .toItemStack();
 
@@ -90,5 +54,28 @@ public class MainInvItems {
                 ))
                 .toItemStack();
     }
-
+    public static ItemStack toolsMenu() {
+        return new ItemBuilder(Material.COMMAND)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.title").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.lore").replace("&", "§")
+                ))
+                .toItemStack();
+    }
+    public static ItemStack serverManagerMenu() {
+        return new ItemBuilder(Material.REDSTONE)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("serverManagerMenu.title").replace("&", "§"))
+                .setLore(Arrays.asList (
+                        StaffModeGUI2.getPlugin().getConfig().getString("serverManagerMenu.lore").replace("&", "§")
+                ))
+                .toItemStack ();
+    }
+    public static ItemStack effectsMenu() {
+        return new ItemBuilder(Material.BREWING_STAND_ITEM)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("effectsMenu.title").replace("&", "§"))
+                .setLore(Arrays.asList (
+                        StaffModeGUI2.getPlugin().getConfig().getString("effectsMenu.lore").replace("&", "§")
+                ))
+                .toItemStack ();
+    }
 }

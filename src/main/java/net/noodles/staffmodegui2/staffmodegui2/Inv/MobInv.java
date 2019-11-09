@@ -58,6 +58,7 @@ public class MobInv implements Listener {
         inv.setItem(21, MobInvItems.mobOcelot());
         inv.setItem(22, MobInvItems.mobHorse());
         inv.setItem(23, MobInvItems.mobVillager());
+        inv.setItem(24, MobInvItems.extraMobMenu());
         inv.setItem(26, MainInvItems.mainMenuReturn());
 
         for (int i = 0; i < 27; ++i) {
@@ -186,6 +187,12 @@ public class MobInv implements Listener {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.VILLAGER);
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemVillager").replace("&", "§"));
             player.closeInventory();
+        } else if (event.getCurrentItem().isSimilar( MobInvItems.extraMobMenu())) {
+            if(!player.hasPermission("staffmodegui.extramobmenu")) {
+                player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
+            }
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.openGUI").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getExtraMobInv().getInventory());
         } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());

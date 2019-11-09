@@ -1,11 +1,11 @@
 #=======================================================
 configVersion: 1.0
-#DO NOT CHANGE PLEASE.
+# DO NOT CHANGE PLEASE.
 #=======================================================
-#Permssion: staffmodegui.update
+# Permission Needed: staffmodegui.update
 Update:
   Enabled: true
-#Enables if there is a message on-join when the plugin is outdated.
+# Enables if there is a message on-join when the plugin is outdated.
 #=======================================================
 defaultMessages:
   noPermission: "&cSorry you don't have permission!"
@@ -15,12 +15,12 @@ mainMenuReturn:
   lore: "&7Click to return to main menu."
   message: "&7Returned to Main Menu!"
 #=======================================================
-#Whitelist Menu
-whitelistMenu: #Permission Needed: staffmodegui.whitelistmenu
+# Whitelist Menu
+whitelistMenu: # Permission Needed: staffmodegui.whitelistmenu
   title: "&8Whitelist Menu"
   lore: "&7Control the server whitelist"
   openGUI: "&7Opened the whitelist control panel."
-  #Whitelist Menu Items
+  # Whitelist Menu Items
   titleItemON: "&bWhitelist ON"
   loreItemON: "&7Click to toggle the whitelist ON"
   messageItemON: "&7You toggled the whitelist ON."
@@ -28,11 +28,12 @@ whitelistMenu: #Permission Needed: staffmodegui.whitelistmenu
   loreItemOFF: "&7Click to toggle the whitelist OFF."
   messageItemOFF: "&7You toggled the whitelist OFF."
 #=======================================================
-timeMenu: #Permission Needed: staffmodegui.timemenu
+# Time Menu
+timeMenu: # Permission Needed: staffmodegui.timemenu
   title: "&8Time Control"
   lore: "&7Control the server time"
   openGUI: "&7Opened the time control panel."
-  #Time Menu Items
+  # Time Menu Items
   time12AMTitle: "&b12AM"
   time12AMLore: "&7Click to change the server time to 12AM"
   messageTime12AM: "&7Changed the server time to 12AM"
@@ -106,11 +107,12 @@ timeMenu: #Permission Needed: staffmodegui.timemenu
   time11PMLore: "&7Click to change the server time to 11PM"
   messageTime11PM: "&7Changed the server time to 11PM"
 #=======================================================
-weatherMenu: #Permission Needed: staffmodegui.weathermenu
+# Weather Menu
+weatherMenu: # Permission Needed: staffmodegui.weathermenu
   title: "&8Weather Control"
   lore: "&7Control the server weather"
   openGUI: "&7Opened the weather control panel."
-  #Weather Menu Items
+  # Weather Menu Items
   titleClear: "&bClear Weather"
   loreClear: "&7Click to toggle the weather to clear"
   weatherClearMessage: "&7Set weather to clear!"
@@ -118,12 +120,12 @@ weatherMenu: #Permission Needed: staffmodegui.weathermenu
   loreStorm: "&7Click to toggle the weather to storm"
   weatherStormMessage: "&7Set weather to storm!"
 #=======================================================
-#Gamemode Menu Messages
-gamemodeMenu: #Permission Needed: staffmodegui.gamemodemenu
+# Gamemode Menu Messages
+gamemodeMenu: # Permission Needed: staffmodegui.gamemodemenu
   title: '&8Gamemode Menu'
   lore: '&7Control your Gamemode'
   openGUI: '&7Opened The Gamemode Menu!'
-  #Gamemode Menu Items
+  # Gamemode Menu Items
   titleCreative: "&bCreative"
   loreItemCreative: "&7Click to toggle Gamemode Creative"
   messageItemCreative: "&7Gamemode changed to Creative!"
@@ -137,12 +139,12 @@ gamemodeMenu: #Permission Needed: staffmodegui.gamemodemenu
   loreItemAdventure: "&7Click to toggle Gamemode Adventure."
   messageItemAdventure: "&7Gamemode changed to Adventure!"
 #=======================================================
-#Fly Menu Messages
-flyMenu: #Permission Needed: staffmodegui.flymenu
-  title: '&8Fly Menu'
+# Fly Menu Messages
+flyMenu: # Permission Needed: staffmodegui.flymenu
+  title: '&bFly Menu'
   lore: '&7Control your Flight'
   openGUI: '&7Opened The Fly Menu!'
-  #Fly Menu Items
+  # Fly Menu Items
   titleItemON: "&aFly ON"
   loreItemON: "&7Toggle Fly ON"
   messageItemON: "&aFly ON!"
@@ -150,12 +152,12 @@ flyMenu: #Permission Needed: staffmodegui.flymenu
   loreItemOFF: "&7Toggle Fly OFF"
   messageItemOFF: "&cFly OFF!"
 #========================================================
-#Vanish Menu Messages
-vanishMenu: #Permsission Needed: staffmodegui.vanishmenu
-  title: '&8Vanish Menu'
+# Vanish Menu Messages
+vanishMenu: # Permsission Needed: staffmodegui.vanishmenu
+  title: '&bVanish Menu'
   lore: '&7Control your Vanish'
   openGUI: '&7Opened The Vanish Menu!'
-  #Vanish Menu Items
+  # Vanish Menu Items
   titleItemON: "&aVanish ON"
   loreItemON: "&7Toggle Vanish ON"
   messageItemON: "&aVanish ON!"
@@ -163,12 +165,12 @@ vanishMenu: #Permsission Needed: staffmodegui.vanishmenu
   loreItemOFF: "&7Toggle Vanish OFF"
   messageItemOFF: "&cVanish OFF!"
 #========================================================
-#Mob Menu Messages
-mobMenu: #Permission Needed: staffmodegui.mobmenu
+# Mob Menu Messages
+mobMenu: # Permission Needed: staffmodegui.mobmenu
   title: '&8Mob Menu'
   lore: '&7Control your Mob Population'
   openGUI: '&7Opened The Mob Menu!'
-  #Mob Menu Items
+  # Mob Menu Items
   titleItemCreeper: "&bCreeper"
   loreItemCreeper: "&7Click to spawn a Creeper"
   messageItemCreeper: "&7Spawned a Creeper!"
@@ -241,13 +243,35 @@ mobMenu: #Permission Needed: staffmodegui.mobmenu
   titleItemVillager: "&bVillager"
   loreItemVillager: "&7Click to spawn a Villager."
   messageItemVillager: "&7Spawned a Villager!"
+#========================================================
+# Extra Mob Menu Messages
+extraMobMenu: # Permission Needed: staffmodegui.extramobmenu
+  title: '&8Extra Mob Menu'
+  lore: '&7Dangerous mobs'
+  openGUI: '&7Opened The Extra Mob Menu!'
+  # Extra Mob Menu Items
+  titleItemIron: "&bIron Golem"
+  loreItemIron: "&7Click to spawn an Iron Golem."
+  messageItemIron: "&7Spawned an Iron Golem!"
+  titleItemSnow: "&bSnowman"
+  loreItemSnow: "&7Click to spawn a Snowman."
+  messageItemSnow: "&7Spawned a Snowman!"
+  titleItemGiant: "&bGiant"
+  loreItemGiant: "&7Click to spawn a Giant."
+  messageItemGiant: "&7Spawned a Giant!"
+  titleItemWither: "&bWither"
+  loreItemWither: "&7Click to spawn a Wither."
+  messageItemWither: "&7Spawned a Wither!"
+  titleItemDragon: "&bEnder Dragon"
+  loreItemDragon: "&7Click to spawn an Ender Dragon."
+  messageItemDragon: "&7Spawned an Ender Dragon!"
 #=========================================================
-#Troll Menu Messages
+# Troll Menu Messages
 trollMenu: #Permission Needed: staffmodegui.trollmenu
   title: '&8Troll Menu'
   lore: '&7Troll your friends!'
   openGUI: '&7Opened The Troll Menu!'
-  #Troll Menu Items
+  # Troll Menu Items
   titleItemLightningTroll: "&bLightning Troll"
   loreItemLightningTroll: "&7Strike all online players with Lightning!"
   messageItemLightningTroll: "&bLightning Troll!"
@@ -269,4 +293,155 @@ trollMenu: #Permission Needed: staffmodegui.trollmenu
   titleItemJumpTroll: "&7Jump Troll"
   loreItemJumpTroll: "&7Give all online players Jump Boost &c&lForever!"
   messageItemJumpTroll: "&bJump Troll!"
+#========================================================
+# Tools Menu Messages
+toolsMenu: #Permission Needed: staffmodegui.toolsmenu
+  title: '&8Tools Menu'
+  lore: '&7(Vanish, Toggle Fly, Inv Clear, Clear Chat, Feed, Heal)'
+  openGUI: '&7Opened The Tools Menu!'
+  # Tools Menu Items
+  titleItemInvClear: "&bInv Clear"
+  loreItemInvClear: "&7Clears you're inventory!"
+  messageItemInvClear: "&bInventory cleared!"
+  titleItemClearChat: "&bClear Chat"
+  loreItemClearChat: "&7Clears the chat"
+  messageItemClearChat: "&7Chat cleared"
+#========================================================
+# Server Manager Menu Messages
+serverManagerMenu: #Permission Needed: staffmodegui.servermanagermenu
+  title: '&8Server Manager Menu'
+  lore: '&7(Whitelist, Weather, Clear Mobs)'
+  openGUI: '&7Opened The Server Manager Menu!'
+  # Server Manager Menu Items
+  titleItemClearMobs: "&bClear Mobs"
+  loreItemClearMobs: "&7Clears all mobs/monsters!"
+  messageItemClearMobs: "&bCleared all mobs!"
+#========================================================
+# Feed And Heal Menu Messages
+feedAndHealMenu: #Permission Needed: staffmodegui.feedandhealmenu
+  title: '&8Feed And Heal Menu'
+  lore: '&7(Feed, Heal)'
+  openGUI: '&7Opened The Feed And Heal Menu!'
+  # Feed And Heal Menu Items
+  titleItemHeal: "&bHeal"
+  loreItemHeal: "&7Heals you!"
+  messageItemHeal: "&bYou're health has been set to max!"
+  titleItemFeed: "&bFeed"
+  loreItemFeed: "&7Feeds you're hunger!"
+  messageItemFeed: "&bYou're hunger has been set to max!"
+#========================================================
+# Effects Menu Messages
+effectsMenu: #Permission Needed: staffmodegui.effectsmenu
+  title: '&8Effects Menu'
+  lore: '&7Potions'
+  openGUI: '&7Opened The Effects Menu!'
+  # Effects Menu Items
+  titleItemWaterBreathing: "&bWater Breathing"
+  loreItemWaterBreathing: "&7Ability to breath under water!"
+  messageItemWaterBreathing: "&bWater Breathing effect applied!"
+  titleItemInvis: "&bInvisibility"
+  loreItemInvis: "&7Ability to be invisible!"
+  messageItemInvis: "&bInvisibility effect applied!"
+  titleItemSlowness: "&bSlowness"
+  loreItemSlowness: "&7Ability to walk slower!"
+  messageItemSlowness: "&7Slowness effect applied!"
+  titleItemRemoveEffects: "&bRemove Effects"
+  loreItemRemoveEffects: "&7Remove all active potion effects!"
+  messageItemRemoveEffects: "&7Potion effects removed!"
+  titleItemNightVision: "&bNight Vision"
+  loreItemNightVision: "&7Ability to see in the night!"
+  messageItemNightVision: "&7Night Vision effect applied!"
+#========================================================
+# Speed Menu Messages
+speedMenu: #Permission Needed: staffmodegui.speedmenu
+  title: '&8Speed Menu'
+  lore: '&7Speed Effects'
+  openGUI: '&7Opened The Speed Effects Menu!'
+  # Speed Menu Items
+  titleItemSpeed1: "&bSpeed 1"
+  loreItemSpeed1: "&7Ability to run faster!"
+  messageItemSpeed1: "&bSpeed 1 effect applied!"
+  titleItemSpeed2: "&bSpeed 2"
+  loreItemSpeed2: "&7Ability to run faster!"
+  messageItemSpeed2: "&bSpeed 2 effect applied!"
+  titleItemSpeed3: "&bSpeed 3"
+  loreItemSpeed3: "&7Ability to run faster!"
+  messageItemSpeed3: "&7Speed 3 effect applied!"
+  titleItemSpeed4: "&bSpeed 4"
+  loreItemSpeed4: "&7Ability to run faster!"
+  messageItemSpeed4: "&7Speed 4 effect applied!"
+  titleItemSpeed5: "&bSpeed 5"
+  loreItemSpeed5: "&7Ability to run faster!"
+  messageItemSpeed5: "&7Speed 5 effect applied!"
+  titleItemSpeed6: "&bSpeed 6"
+  loreItemSpeed6: "&7Ability to run faster!"
+  messageItemSpeed6: "&7Speed 6 effect applied!"
+  titleItemSpeed7: "&bSpeed 7"
+  loreItemSpeed7: "&7Ability to run faster!"
+  messageItemSpeed7: "&7Speed 7 effect applied!"
+  titleItemSpeed8: "&bSpeed 8"
+  loreItemSpeed8: "&7Ability to run faster!"
+  messageItemSpeed8: "&7Speed 8 effect applied!"
+#========================================================
+# Strength Menu Messages
+strengthMenu: #Permission Needed: staffmodegui.strengthmenu
+  title: '&8Strength Menu'
+  lore: '&7Strength Effects'
+  openGUI: '&7Opened The Strength Effects Menu!'
+  # Strength Menu Items
+  titleItemStrength1: "&bStrength 1"
+  loreItemStrength1: "&7Ability to deal more damage!"
+  messageItemSpeed1: "&bStrength 1 effect applied!"
+  titleItemStrength2: "&bStrength 2"
+  loreItemStrength2: "&7Ability to deal more damage!"
+  messageItemStrength2: "&bStrength 2 effect applied!"
+  titleItemStrength3: "&bStrength 3"
+  loreItemStrength3: "&7Ability to deal more damage!"
+  messageItemStrength3: "&7Strength 3 effect applied!"
+  titleItemStrength4: "&bStrength 4"
+  loreItemStrength4: "&7Ability to deal more damage!"
+  messageItemStrength4: "&7Strength 4 effect applied!"
+  titleItemStrength5: "&bSStrength 5"
+  loreItemStrength5: "&7Ability to deal more damage!"
+  messageItemStrength5: "&7Strength 5 effect applied!"
+  titleItemStrength6: "&bStrength 6"
+  loreItemStrength6: "&7Ability to deal more damage!"
+  messageItemStrength6: "&7Strength 6 effect applied!"
+  titleItemStrength7: "&bStrength 7"
+  loreItemStrength7: "&7Ability to deal more damage!"
+  messageItemStrength7: "&7Strength 7 effect applied!"
+  titleItemStrength8: "&bStrength 8"
+  loreItemStrength8: "&7Ability to deal more damage!"
+  messageItemStrength8: "&7Strength 8 effect applied!"
+#========================================================
+# Jump Menu Messages
+jumpMenu: #Permission Needed: staffmodegui.jumpmenu
+  title: '&8Jump Menu'
+  lore: '&7Jump Effects'
+  openGUI: '&7Opened The Jump Effects Menu!'
+  # Jump Menu Items
+  titleItemJump1: "&bJump 1"
+  loreItemJump1: "&7Ability to jump higher!"
+  messageItemJump1: "&bJump 1 effect applied!"
+  titleItemJump2: "&bJump 2"
+  loreItemJump2: "&7Ability to jump higher!"
+  messageItemJump2: "&bJump 2 effect applied!"
+  titleItemJump3: "&bJump 3"
+  loreItemJump3: "&7Ability to jump higher!"
+  messageItemJump3: "&7Jump 3 effect applied!"
+  titleItemJump4: "&bJump 4"
+  loreItemJump4: "&7Ability to jump higher!"
+  messageItemJump4: "&7Jump 4 effect applied!"
+  titleItemJump5: "&bJump 5"
+  loreItemJump5: "&7Ability to jump higher!"
+  messageItemJump5: "&7Jump 5 effect applied!"
+  titleItemJump6: "&bJump 6"
+  loreItemJump6: "&7Ability to jump higher!"
+  messageItemJump6: "&7Jump 6 effect applied!"
+  titleItemJump7: "&bJump 7"
+  loreItemJump7: "&7Ability to jump higher!"
+  messageItemJump7: "&7Jump 7 effect applied!"
+  titleItemJump8: "&bJump 8"
+  loreItemJump8: "&7Ability to jump higher!"
+  messageItemJump8: "&7Jump 8 effect applied!"
 #========================================================
