@@ -1,7 +1,5 @@
 package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
-import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
-import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.TimeInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.WeatherInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
@@ -38,7 +36,7 @@ public class WeatherInv implements Listener {
 
         inv.setItem(2, WeatherInvItems.weatherClear());
         inv.setItem(6, WeatherInvItems.weatherStorm());
-        inv.setItem(8, MainInvItems.mainMenuReturn());
+        inv.setItem(8, WeatherInvItems.menuReturn());
 
 
         for (int i = 0; i < 9; ++i) {
@@ -81,9 +79,9 @@ public class WeatherInv implements Listener {
             player.closeInventory();
             World world = player.getWorld();
             world.setStorm(true);
-        } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
-            player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
+        } else if (event.getCurrentItem().isSimilar(WeatherInvItems.menuReturn())) {
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message1").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getServerManagerInv().getInventory());
 
         }
     }
