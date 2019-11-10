@@ -1,86 +1,39 @@
-package net.noodles.staffmodegui2.staffmodegui2.Inv;
+package net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems;
 
-import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.WhitelistInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
+import net.noodles.staffmodegui2.staffmodegui2.util.ItemBuilder;
 import org.bukkit.Material;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.Arrays;
 
-public class WhitelistInv implements Listener {
+public class WhitelistInvItems {
 
-    private StaffModeGUI2 main;
-
-    public WhitelistInv(StaffModeGUI2 main) {
-        this.main = main;
-        main.getServer().getPluginManager().registerEvents(this, main);
+    public static ItemStack menuReturn() {
+        return new ItemBuilder(Material.BOOK)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.title1").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.lore1").replace("&", "§")
+                ))
+                .toItemStack();
     }
 
-    private String getTitle() {
-        return ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Whitelist Control";
+    public static ItemStack whitelistON() {
+        return new ItemBuilder(Material.EMERALD_BLOCK)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.titleItemON").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.loreItemON").replace("&", "§")
+                ))
+                .toItemStack();
     }
 
-    private int getSize() {
-        return 9;
+    public static ItemStack whitelistOFF() {
+        return new ItemBuilder(Material.REDSTONE_BLOCK)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.titleItemOFF").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.loreItemOFF").replace("&", "§")
+                ))
+                .toItemStack();
     }
-    public Inventory getInventory() {
-        Inventory inv = Bukkit.createInventory(null, getSize(), getTitle());
-
-        inv.setItem(2, WhitelistInvItems.whitelistON());
-        inv.setItem(6, WhitelistInvItems.whitelistOFF());
-        inv.setItem(8, WhitelistInvItems.menuReturn());
-
-        for (int i = 0; i < 9; ++i) {
-            if (inv.getItem(i) == null) {
-                inv.setItem(i, Glass());
-            }
-        }
-
-        return inv;
-    }
-
-
-    private ItemStack Glass() {
-        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
-        ItemMeta stonem = stone.getItemMeta();
-        stonem.setDisplayName("");
-        stone.setItemMeta(stonem);
-        return stone;
-    }
-
-
-    @EventHandler
-    public void onInventoryClick(InventoryClickEvent event) {
-        Player player = (Player) event.getWhoClicked();
-
-        if (event.getClickedInventory() == null) return;
-        if (!event.getClickedInventory().getTitle().equals(getTitle())) return;
-
-        if (event.getCurrentItem() == null) return;
-        if (event.getCurrentItem().getType() == Material.AIR) return;
-
-        event.setCancelled(true);
-        if (event.getCurrentItem().isSimilar(WhitelistInvItems.whitelistON())) {
-            Bukkit.getServer().setWhitelist(true);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.messageItemON").replace("&", "§"));
-            player.closeInventory();
-        } else if (event.getCurrentItem().isSimilar(WhitelistInvItems.whitelistOFF())) {
-            Bukkit.getServer().setWhitelist(false);
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.messageItemOFF").replace("&", "§"));
-            player.closeInventory();
-        } else if (event.getCurrentItem().isSimilar(WhitelistInvItems.menuReturn())) {
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message1").replace("&", "§"));
-            player.openInventory(StaffModeGUI2.getInstance().getServerManagerInv().getInventory());
-
-        }
-    }
-
 
 }
