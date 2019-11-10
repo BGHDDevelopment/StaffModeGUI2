@@ -11,13 +11,40 @@ defaultMessages:
   noPermission: "&cSorry you don't have permission!"
 
 mainMenuReturn:
+  # Main Menu return title
   title: "&7Main Menu"
+  # Server Manager return title
+  title1: "&7Server Manager Menu"
+  # Mob Menu return title
+  title2: "&7Mob Menu"
+  # Tools Menu return title
+  title3: "&7Tools Menu"
+  # Effects Menu return title
+  title4: "&7Effects Menu"
+  # Main Menu return lore
   lore: "&7Click to return to main menu."
+  # Server Manager return lore
+  lore1: "&7Click to return to server manager menu."
+  # Mob Menu return lore
+  lore2: "&7Click to return to mob menu."
+  # Tools Menu return lore
+  lore3: "&7Click to return to tools menu."
+  # Effects Menu return lore
+  lore4: "&7Click to return to effects menu."
+  # Main Menu return message(All menus in the main gui)
   message: "&7Returned to Main Menu!"
+  # Server Manager return message(Whitelist & Weather Menus)
+  message1: "&7Returned to the Server Manager Menu!"
+  # Mob Menu return message(Extra Mob Menu)
+  message2: "&7Returned to the Mob Menu!"
+  # Tools Menu return message(Fly, Vanish, FeedAndHeal Menus)
+  message3: "&7Returned to the Tools Menu!"
+  # Effects Menu return message
+  message4: "&7Returned to the Effects Menu!"
 #=======================================================
-# Whitelist Menu
+# Whitelist Menu Messages
 whitelistMenu: # Permission Needed: staffmodegui.whitelistmenu
-  title: "&8Whitelist Menu"
+  title: "&8Whitelist Control"
   lore: "&7Control the server whitelist"
   openGUI: "&7Opened the whitelist control panel."
   # Whitelist Menu Items
@@ -28,7 +55,7 @@ whitelistMenu: # Permission Needed: staffmodegui.whitelistmenu
   loreItemOFF: "&7Click to toggle the whitelist OFF."
   messageItemOFF: "&7You toggled the whitelist OFF."
 #=======================================================
-# Time Menu
+# Time Menu Messages
 timeMenu: # Permission Needed: staffmodegui.timemenu
   title: "&8Time Control"
   lore: "&7Control the server time"
@@ -107,7 +134,7 @@ timeMenu: # Permission Needed: staffmodegui.timemenu
   time11PMLore: "&7Click to change the server time to 11PM"
   messageTime11PM: "&7Changed the server time to 11PM"
 #=======================================================
-# Weather Menu
+# Weather Menu Messages
 weatherMenu: # Permission Needed: staffmodegui.weathermenu
   title: "&8Weather Control"
   lore: "&7Control the server weather"
@@ -122,7 +149,7 @@ weatherMenu: # Permission Needed: staffmodegui.weathermenu
 #=======================================================
 # Gamemode Menu Messages
 gamemodeMenu: # Permission Needed: staffmodegui.gamemodemenu
-  title: '&8Gamemode Menu'
+  title: '&8Gamemode Control'
   lore: '&7Control your Gamemode'
   openGUI: '&7Opened The Gamemode Menu!'
   # Gamemode Menu Items
@@ -141,7 +168,7 @@ gamemodeMenu: # Permission Needed: staffmodegui.gamemodemenu
 #=======================================================
 # Fly Menu Messages
 flyMenu: # Permission Needed: staffmodegui.flymenu
-  title: '&bFly Menu'
+  title: '&bFlight Control'
   lore: '&7Control your Flight'
   openGUI: '&7Opened The Fly Menu!'
   # Fly Menu Items
@@ -153,8 +180,8 @@ flyMenu: # Permission Needed: staffmodegui.flymenu
   messageItemOFF: "&cFly OFF!"
 #========================================================
 # Vanish Menu Messages
-vanishMenu: # Permsission Needed: staffmodegui.vanishmenu
-  title: '&bVanish Menu'
+vanishMenu: # Permission Needed: staffmodegui.vanishmenu
+  title: '&bVanish Control'
   lore: '&7Control your Vanish'
   openGUI: '&7Opened The Vanish Menu!'
   # Vanish Menu Items
@@ -167,7 +194,7 @@ vanishMenu: # Permsission Needed: staffmodegui.vanishmenu
 #========================================================
 # Mob Menu Messages
 mobMenu: # Permission Needed: staffmodegui.mobmenu
-  title: '&8Mob Menu'
+  title: '&8Mob Control'
   lore: '&7Control your Mob Population'
   openGUI: '&7Opened The Mob Menu!'
   # Mob Menu Items
@@ -246,7 +273,7 @@ mobMenu: # Permission Needed: staffmodegui.mobmenu
 #========================================================
 # Extra Mob Menu Messages
 extraMobMenu: # Permission Needed: staffmodegui.extramobmenu
-  title: '&8Extra Mob Menu'
+  title: '&8Extra Mob Control'
   lore: '&7Dangerous mobs'
   openGUI: '&7Opened The Extra Mob Menu!'
   # Extra Mob Menu Items
@@ -401,7 +428,7 @@ strengthMenu: #Permission Needed: staffmodegui.strengthmenu
   titleItemStrength4: "&bStrength 4"
   loreItemStrength4: "&7Ability to deal more damage!"
   messageItemStrength4: "&7Strength 4 effect applied!"
-  titleItemStrength5: "&bSStrength 5"
+  titleItemStrength5: "&bStrength 5"
   loreItemStrength5: "&7Ability to deal more damage!"
   messageItemStrength5: "&7Strength 5 effect applied!"
   titleItemStrength6: "&bStrength 6"
