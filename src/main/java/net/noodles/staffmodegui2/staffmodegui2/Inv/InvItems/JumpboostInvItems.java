@@ -8,6 +8,16 @@ import org.bukkit.inventory.ItemStack;
 import java.util.Arrays;
 
 public class JumpboostInvItems {
+
+    public static ItemStack menuReturn() {
+        return new ItemBuilder(Material.BOOK)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.title4").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.lore4").replace("&", "§")
+                ))
+                .toItemStack();
+    }
+
     public static ItemStack jump1() {
         return new ItemBuilder ( Material.GLASS_BOTTLE)
                 .setName( StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.titleItemJump1").replace("&", "§"))
