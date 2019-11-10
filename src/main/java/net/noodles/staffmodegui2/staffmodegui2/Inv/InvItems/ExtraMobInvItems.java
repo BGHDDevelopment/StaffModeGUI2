@@ -9,6 +9,15 @@ import java.util.Arrays;
 
 public class ExtraMobInvItems {
 
+    public static ItemStack menuReturn() {
+        return new ItemBuilder(Material.BOOK)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.title2").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.lore2").replace("&", "§")
+                ))
+                .toItemStack();
+    }
+
     public static ItemStack mobIron() {
         return new ItemBuilder(Material.MOB_SPAWNER)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.titleItemIron").replace("&", "§"))

@@ -39,7 +39,7 @@ public class ExtraMobInv implements Listener {
         inv.setItem(2, ExtraMobInvItems.mobGiant());
         inv.setItem(3, ExtraMobInvItems.mobWither());
         inv.setItem(4, ExtraMobInvItems.mobDragon());
-        inv.setItem(8, MainInvItems.mainMenuReturn());
+        inv.setItem(8, ExtraMobInvItems.menuReturn());
 
         for (int i = 0; i < 9; ++i) {
             if (inv.getItem(i) == null) {
@@ -91,9 +91,9 @@ public class ExtraMobInv implements Listener {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.ENDER_DRAGON);
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.messageItemDragon").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
-            player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
+        } else if (event.getCurrentItem().isSimilar(ExtraMobInvItems.menuReturn())) {
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message2").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getMobInv().getInventory());
 
         }
     }

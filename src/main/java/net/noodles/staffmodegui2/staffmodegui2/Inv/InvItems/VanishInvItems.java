@@ -9,6 +9,15 @@ import java.util.Arrays;
 
 public class VanishInvItems {
 
+    public static ItemStack menuReturn() {
+        return new ItemBuilder(Material.BOOK)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.title3").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.lore3").replace("&", "§")
+                ))
+                .toItemStack();
+    }
+
     public static ItemStack VanishON() {
         return new ItemBuilder(Material.EMERALD_BLOCK)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.titleItemON").replace("&", "§"))
