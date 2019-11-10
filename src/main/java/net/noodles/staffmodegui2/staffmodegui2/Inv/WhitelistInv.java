@@ -1,9 +1,7 @@
 package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
-import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.WhitelistInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
-import net.noodles.staffmodegui2.staffmodegui2.util.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -14,8 +12,6 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-
-import java.util.Arrays;
 
 
 public class WhitelistInv implements Listener {
@@ -37,9 +33,9 @@ public class WhitelistInv implements Listener {
     public Inventory getInventory() {
         Inventory inv = Bukkit.createInventory(null, getSize(), getTitle());
 
-       inv.setItem(2, WhitelistInvItems.whitelistON());
-       inv.setItem(6, WhitelistInvItems.whitelistOFF());
-       inv.setItem(8, MainInvItems.mainMenuReturn());
+        inv.setItem(2, WhitelistInvItems.whitelistON());
+        inv.setItem(6, WhitelistInvItems.whitelistOFF());
+        inv.setItem(8, WhitelistInvItems.menuReturn());
 
         for (int i = 0; i < 9; ++i) {
             if (inv.getItem(i) == null) {
@@ -79,9 +75,9 @@ public class WhitelistInv implements Listener {
             Bukkit.getServer().setWhitelist(false);
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.messageItemOFF").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
-            player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
+        } else if (event.getCurrentItem().isSimilar(WhitelistInvItems.menuReturn())) {
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message1").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getServerManagerInv().getInventory());
 
         }
     }
