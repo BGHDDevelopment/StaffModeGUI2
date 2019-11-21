@@ -41,7 +41,7 @@ public class SpeedInv implements Listener {
         inv.setItem(5, SpeedInvItems.speed6());
         inv.setItem(6, SpeedInvItems.speed7());
         inv.setItem(7, SpeedInvItems.speed8());
-        inv.setItem(8, MainInvItems.mainMenuReturn());
+        inv.setItem(8, SpeedInvItems.menuReturn());
 
         for (int i = 0; i < 9; ++i) {
             if (inv.getItem(i) == null) {

@@ -55,7 +55,7 @@ whitelistMenu: # Permission Needed: staffmodegui.whitelistmenu
   loreItemOFF: "&7Click to toggle the whitelist OFF."
   messageItemOFF: "&7You toggled the whitelist OFF."
 #=======================================================
-# Time Menu
+# Time Menu Messages
 timeMenu: # Permission Needed: staffmodegui.timemenu
   title: "&8Time Control"
   lore: "&7Control the server time"
@@ -428,7 +428,7 @@ strengthMenu: #Permission Needed: staffmodegui.strengthmenu
   titleItemStrength4: "&bStrength 4"
   loreItemStrength4: "&7Ability to deal more damage!"
   messageItemStrength4: "&7Strength 4 effect applied!"
-  titleItemStrength5: "&bSStrength 5"
+  titleItemStrength5: "&bStrength 5"
   loreItemStrength5: "&7Ability to deal more damage!"
   messageItemStrength5: "&7Strength 5 effect applied!"
   titleItemStrength6: "&bStrength 6"

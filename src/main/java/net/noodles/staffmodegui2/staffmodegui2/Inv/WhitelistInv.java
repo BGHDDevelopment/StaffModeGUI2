@@ -1,7 +1,5 @@
 package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
-import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.ServerManagerInvItems;
-import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.WeatherInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.WhitelistInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
@@ -77,7 +75,7 @@ public class WhitelistInv implements Listener {
             Bukkit.getServer().setWhitelist(false);
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.messageItemOFF").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem().isSimilar(ServerManagerInvItems.menuReturn())) {
+        } else if (event.getCurrentItem().isSimilar(WhitelistInvItems.menuReturn())) {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message1").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getServerManagerInv().getInventory());
 
