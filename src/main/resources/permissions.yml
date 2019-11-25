@@ -1,4 +1,10 @@
 permissions:
+  staffmodegui.open:
+    description: Gives you access to /staffmode
+    default: op
+  staffmodegui.reload:
+    description: Gives you access to /staffmode reload
+    default: op
   staffmodegui.whitelistmenu:
     description: Gives you access to the Whitelist Menu
     default: op
