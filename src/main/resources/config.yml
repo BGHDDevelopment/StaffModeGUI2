@@ -44,9 +44,9 @@ mainMenuReturn:
 #=======================================================
 # Whitelist Menu Messages
 whitelistMenu: # Permission Needed: staffmodegui.whitelistmenu
-  title: "&8Whitelist Control"
-  lore: "&7Control the server whitelist"
-  openGUI: "&7Opened the whitelist control panel."
+  title: '&bWhitelist Control"
+  lore: '&7Control the server whitelist'
+  openGUI: '&7Opened the whitelist control panel.'
   # Whitelist Menu Items
   titleItemON: "&bWhitelist ON"
   loreItemON: "&7Click to toggle the whitelist ON"
@@ -57,9 +57,9 @@ whitelistMenu: # Permission Needed: staffmodegui.whitelistmenu
 #=======================================================
 # Time Menu Messages
 timeMenu: # Permission Needed: staffmodegui.timemenu
-  title: "&8Time Control"
-  lore: "&7Control the server time"
-  openGUI: "&7Opened the time control panel."
+  title: '&8Time Control'
+  lore: '&7Control the server time'
+  openGUI: '&7Opened the time control panel.'
   # Time Menu Items
   time12AMTitle: "&b12AM"
   time12AMLore: "&7Click to change the server time to 12AM"
@@ -136,9 +136,9 @@ timeMenu: # Permission Needed: staffmodegui.timemenu
 #=======================================================
 # Weather Menu Messages
 weatherMenu: # Permission Needed: staffmodegui.weathermenu
-  title: "&8Weather Control"
-  lore: "&7Control the server weather"
-  openGUI: "&7Opened the weather control panel."
+  title: '&bWeather Control'
+  lore: '&7Control the server weather'
+  openGUI: '&7Opened the weather control panel.'
   # Weather Menu Items
   titleClear: "&bClear Weather"
   loreClear: "&7Click to toggle the weather to clear"
@@ -273,7 +273,7 @@ mobMenu: # Permission Needed: staffmodegui.mobmenu
 #========================================================
 # Extra Mob Menu Messages
 extraMobMenu: # Permission Needed: staffmodegui.extramobmenu
-  title: '&8Extra Mob Control'
+  title: '&bExtra Mob Control'
   lore: '&7Dangerous mobs'
   openGUI: '&7Opened The Extra Mob Menu!'
   # Extra Mob Menu Items
@@ -346,7 +346,7 @@ serverManagerMenu: #Permission Needed: staffmodegui.servermanagermenu
 #========================================================
 # Feed And Heal Menu Messages
 feedAndHealMenu: #Permission Needed: staffmodegui.feedandhealmenu
-  title: '&8Feed And Heal Menu'
+  title: '&bFeed And Heal Menu'
   lore: '&7(Feed, Heal)'
   openGUI: '&7Opened The Feed And Heal Menu!'
   # Feed And Heal Menu Items
@@ -381,7 +381,7 @@ effectsMenu: #Permission Needed: staffmodegui.effectsmenu
 #========================================================
 # Speed Menu Messages
 speedMenu: #Permission Needed: staffmodegui.speedmenu
-  title: '&8Speed Menu'
+  title: '&bSpeed Menu'
   lore: '&7Speed Effects'
   openGUI: '&7Opened The Speed Effects Menu!'
   # Speed Menu Items
@@ -412,7 +412,7 @@ speedMenu: #Permission Needed: staffmodegui.speedmenu
 #========================================================
 # Strength Menu Messages
 strengthMenu: #Permission Needed: staffmodegui.strengthmenu
-  title: '&8Strength Menu'
+  title: '&bStrength Menu'
   lore: '&7Strength Effects'
   openGUI: '&7Opened The Strength Effects Menu!'
   # Strength Menu Items
@@ -443,7 +443,7 @@ strengthMenu: #Permission Needed: staffmodegui.strengthmenu
 #========================================================
 # Jump Menu Messages
 jumpMenu: #Permission Needed: staffmodegui.jumpmenu
-  title: '&8Jump Menu'
+  title: '&bJump Menu'
   lore: '&7Jump Effects'
   openGUI: '&7Opened The Jump Effects Menu!'
   # Jump Menu Items
