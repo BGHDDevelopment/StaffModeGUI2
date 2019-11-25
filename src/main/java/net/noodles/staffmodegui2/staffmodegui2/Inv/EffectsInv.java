@@ -28,7 +28,7 @@ public class EffectsInv implements Listener {
     }
 
     private String getTitle() {
-        return ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Mob Control";
+        return ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Effects Control";
     }
 
     private int getSize() {
