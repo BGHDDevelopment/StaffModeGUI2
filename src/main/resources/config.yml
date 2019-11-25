@@ -44,7 +44,7 @@ mainMenuReturn:
 #=======================================================
 # Whitelist Menu Messages
 whitelistMenu: # Permission Needed: staffmodegui.whitelistmenu
-  title: '&bWhitelist Control"
+  title: '&bWhitelist Control'
   lore: '&7Control the server whitelist'
   openGUI: '&7Opened the whitelist control panel.'
   # Whitelist Menu Items
