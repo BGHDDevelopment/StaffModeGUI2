@@ -9,6 +9,7 @@ Update:
 #=======================================================
 defaultMessages:
   noPermission: "&cSorry you don't have permission!"
+  reloadMessage: "&aConfig reloaded. Changes should be live in game!"
 
 mainMenuReturn:
   # Main Menu return title
