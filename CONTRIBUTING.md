@@ -93,12 +93,13 @@ import java.util.Arrays;
 // Change Example to you're class name
 public class ExampleInvItems {
 
-    public static ItemStack exampleMenu() {
-        return new ItemBuilder(Material.COMPASS)
-                // setName sets the name of the Inventory that the player is entering Ex. Time Control
-                .setName(StaffModeGUI2.getPlugin().getConfig().getString("exampleMenu.title").replace("&", "§"))
-                .setLore(Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("exampleMenu.lore").replace("&", "§")
+    public static ItemStack potionWater() {
+        return new ItemBuilder ( Material.GLASS_BOTTLE)
+                // .setName Sets the name of the item
+                .setName( StaffModeGUI2.getPlugin().getConfig().getString("exampleMenu.titleItemExample").replace("&", "§"))
+                // .setLore Sets the lore of the item
+                .setLore( Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("eexampleMenu.loreItemExample").replace("&", "§")
                 ))
                 .toItemStack();
     }
