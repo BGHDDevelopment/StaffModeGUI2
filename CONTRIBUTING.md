@@ -90,7 +90,8 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.Arrays;
 
-public class MainInvItems {
+// Change Example to you're class name
+public class ExampleInvItems {
 
     public static ItemStack exampleMenu() {
         return new ItemBuilder(Material.COMPASS)
