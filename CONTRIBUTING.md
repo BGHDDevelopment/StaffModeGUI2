@@ -114,7 +114,7 @@ import java.util.Arrays;
 // Change Example to you're class name
 public class ExampleInvItems {
 
-    public static ItemStack potionWater() {
+    public static ItemStack menu() {
         return new ItemBuilder ( Material.GLASS_BOTTLE)
                 // .setName Sets the name of the item
                 .setName( StaffModeGUI2.getPlugin().getConfig().getString("exampleMenu.titleItemExample").replace("&", "§"))
