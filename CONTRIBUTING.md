@@ -75,7 +75,26 @@ public class ExampleInv implements Listener {
         if (event.getCurrentItem ().getType () == Material.AIR) return;
         event.setCancelled ( true );
         // CLICK EVENTS
-        
+               if (event.getCurrentItem().isSimilar(VanishInvItems.VanishON())) {
+            for (Player players : Bukkit.getOnlinePlayers()) {
+                players.hidePlayer(player);
+                player.setAllowFlight(true);
+                player.setFlying(true);
+            }
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.messageItemON").replace("&", "§"));
+            player.closeInventory();
+        } else if (event.getCurrentItem().isSimilar(VanishInvItems.VanishOFF())) {
+            for (Player players : Bukkit.getOnlinePlayers()) {
+                players.showPlayer(player);
+                player.setAllowFlight(false);
+                player.setFlying(false);
+            }
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.messageItemOFF").replace("&", "§"));
+            player.closeInventory();
+        } else if (event.getCurrentItem().isSimilar(VanishInvItems.menuReturn())) {
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message3").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getToolsInv().getInventory());
+        }
     }
 }
 ```
