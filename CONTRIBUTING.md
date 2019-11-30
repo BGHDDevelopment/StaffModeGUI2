@@ -36,8 +36,9 @@ public class ExampleInv implements Listener {
         return ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "TITLE";
     }
 
+    // size = 9-54(Each row is 9 so if you did 17 it would send an error to console if you tried running the gui in game and if you did 18 then it would work)
     private int getSize() {
-        return 54;
+        return size;
     }
 
     public Inventory getInventory() {
@@ -46,7 +47,8 @@ public class ExampleInv implements Listener {
         // number = 0-53
         // menu = the menu name variable you set in the InvItems class
         inv.setItem ( number , InvNameInvItems.menu () );
-        for (int i = 0; i < 54; ++i) {
+        // size is the size you chose for getSize() return size;
+        for (int i = 0; i < size; ++i) {
             if (inv.getItem ( i ) == null) {
                 inv.setItem ( i , Glass () );
             }
