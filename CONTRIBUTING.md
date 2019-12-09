@@ -36,7 +36,7 @@ public class ExampleInv implements Listener {
         return ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "TITLE";
     }
 
-    // size = 9-54(Each row is 9 so if you did 17 it would send an error to console if you tried running the gui in game and if you did 18 then it would work)
+    // size = 9-53(Each row is 9 so if you did 17 it would send an error to console if you tried running the gui in game and if you did 18 then it would work)
     private int getSize() {
         return size;
     }
