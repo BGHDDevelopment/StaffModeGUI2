@@ -4,4 +4,4 @@ Plugin: https://www.spigotmc.org/resources/60960
 
 Bstats: https://bstats.org/plugin/bukkit/StaffModeGUI2
 
-Support Discord: https://discord.gg/VB8kB8P
+Support Discord: https://bghddevelopment.com/discord
