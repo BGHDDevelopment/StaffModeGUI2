@@ -4,7 +4,7 @@ StaffModeGUI2 is the second generation of StaffModeGUI which has many handy feat
 
 ## Normal Installation
 
-If you are not a developer, you can download LuckPermsGUI for free on [SpigotMC](https://www.spigotmc.org/resources/60960/)!  
+If you are not a developer, you can download StaffModeGUI2 for free on [SpigotMC](https://www.spigotmc.org/resources/60960/)!  
 
 You can find information on how to use the plugin on our [Wiki](https://wiki.bghddevelopment.com) website!
 ## Developer Installation
