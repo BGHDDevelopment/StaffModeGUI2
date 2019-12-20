@@ -19,6 +19,8 @@ Please make sure to test changes as appropriate.
 
 To view user's suggestions check out our [Feedback](https://feedback.bghddevelopment.com) website!
 
+View the contrubuiting information and format in the  [CONTRIBUTING.md](CONTRIBUTING.md) file.  
+
 ## License
 License information can be found in the [LICENSE.md](LICENSE.md) file.  
 
