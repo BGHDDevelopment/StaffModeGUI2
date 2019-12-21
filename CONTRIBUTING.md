@@ -2,12 +2,13 @@
 
 #### Please follow these formats when contributing to StaffModeGUI2.
 
-## Format for StaffModeGUI2 inventory classes
+## Format for StaffModeGUI2 Inventory class
 
 ```java
 package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
-import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
+// Change Example to you're invitems class name
+import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.ExampleInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -36,7 +37,7 @@ public class ExampleInv implements Listener {
         return ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "TITLE";
     }
 
-    // size = 9-53(Each row is 9 so if you did 17 it would send an error to console if you tried running the gui in game and if you did 18 then it would work)
+    // size = 9-54(Each row is 9 so if you did 17 it would send an error to console if you tried running the gui in game and if you did 18 then it would work)
     private int getSize() {
         return size;
     }
@@ -44,10 +45,10 @@ public class ExampleInv implements Listener {
     public Inventory getInventory() {
         Inventory inv = Bukkit.createInventory ( null , getSize () , getTitle () );
         // InvName = You're InvItems class name
-        // number = 0-53
+        // number = 9-53
         // menu = the menu name variable you set in the InvItems class
         inv.setItem ( number , InvNameInvItems.menu () );
-        // size is the size you chose for getSize() return size;
+        // size is the size you chose for getSize()
         for (int i = 0; i < size; ++i) {
             if (inv.getItem ( i ) == null) {
                 inv.setItem ( i , Glass () );
@@ -56,7 +57,7 @@ public class ExampleInv implements Listener {
         return inv;
     }
 
-
+    // This places glass in every empty slot within the GUI
     private ItemStack Glass() {
         ItemStack stone = new ItemStack ( Material.STAINED_GLASS_PANE , 1 , (short) 8 );
         ItemMeta stonem = stone.getItemMeta ();
@@ -99,7 +100,7 @@ public class ExampleInv implements Listener {
 }
 ```
 
-## Format for StaffModeGUI2 invname classes
+## Format for StaffModeGUI2 InvItems classes
 
 ```java
 package net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems;
@@ -120,7 +121,7 @@ public class ExampleInvItems {
                 .setName( StaffModeGUI2.getPlugin().getConfig().getString("exampleMenu.titleItemExample").replace("&", "§"))
                 // .setLore Sets the lore of the item
                 .setLore( Arrays.asList(
-                        StaffModeGUI2.getPlugin().getConfig().getString("eexampleMenu.loreItemExample").replace("&", "§")
+                        StaffModeGUI2.getPlugin().getConfig().getString("exampleMenu.loreItemExample").replace("&", "§")
                 ))
                 .toItemStack();
     }
