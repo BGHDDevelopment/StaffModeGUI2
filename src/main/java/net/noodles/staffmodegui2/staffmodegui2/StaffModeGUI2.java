@@ -88,19 +88,17 @@ public final class StaffModeGUI2 extends JavaPlugin {
         this.setEnabled ( true );
         Logger.log ( Logger.LogLevel.OUTLINE , "********************" );
         Logger.log ( Logger.LogLevel.INFO , "Checking for updates..." );
-        this.checker = new UpdateChecker ( this );
-        if (this.checker.isConnected ()) {
-            if (this.checker.hasUpdate ()) {
-                Logger.log ( Logger.LogLevel.OUTLINE , "********************" );
-                Logger.log ( Logger.LogLevel.WARNING , ("StaffModeGUI2 is outdated!") );
-                Logger.log ( Logger.LogLevel.WARNING , ("Newest version: " + this.checker.getLatestVersion ()) );
-                Logger.log ( Logger.LogLevel.WARNING , ("Your version: " + Settings.VERSION) );
-                Logger.log ( Logger.LogLevel.WARNING , ("Please Update Here: " + Settings.PLUGIN_URL) );
-                Logger.log ( Logger.LogLevel.OUTLINE , "********************" );
+        new UpdateChecker(this, 60960).getLatestVersion(version -> {
+            if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
+                Logger.log(Logger.LogLevel.SUCCESS,("StaffModeGUI2 is up to date!"));
             } else {
-                Logger.log ( Logger.LogLevel.SUCCESS , "StaffModeGUI2 is up to date!" );
-            }
-        }
+                Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
+                Logger.log(Logger.LogLevel.WARNING,("StaffModeGUI2 is outdated!"));
+                Logger.log(Logger.LogLevel.WARNING,("Newest version: " + version));
+                Logger.log(Logger.LogLevel.WARNING,("Your version: " + Settings.VERSION));
+                Logger.log(Logger.LogLevel.WARNING,("Please Update Here: " + Settings.PLUGIN_URL));
+                Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");			}
+        });
     }
 
 

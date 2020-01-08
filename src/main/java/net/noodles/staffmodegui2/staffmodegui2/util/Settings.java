@@ -10,8 +10,9 @@ public class Settings {
     public static String DEV_MESSAGE2 = ChatColor.GRAY + "If you are worried about what this command does check it out on GitHub here:";
     public static String DEV_MESSAGE3 = ChatColor.GRAY + "https://goo.gl/87ZgJz";
     public static String PLUGIN_URL = "https://spigotmc.org/resources/60960";
-    public static String SUPPORT_DISCORD_URL = "https://discord.gg/VB8kB8P";
-    public static String VERSION = "1.0";
+    public static String SUPPORT_DISCORD_URL = "https://bghddevelopment.com/discord";
+    public static String VERSION = "1.1";
+    public static String NAME = "StaffModeGUI2";
 
 
 }
