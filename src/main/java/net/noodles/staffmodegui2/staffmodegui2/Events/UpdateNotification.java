@@ -27,7 +27,7 @@ public class UpdateNotification implements Listener {
                 new UpdateChecker(StaffModeGUI2.getPlugin(), 60960).getLatestVersion(version -> {
                     if (!StaffModeGUI2.getInstance().getDescription().getVersion().equalsIgnoreCase(version)) {
                         p.sendMessage(ChatColor.GRAY + "****************************************************************");
-                        p.sendMessage(ChatColor.RED + "ReportGUI is outdated!");
+                        p.sendMessage(ChatColor.RED + "StaffModeGUI2 is outdated!");
                         p.sendMessage(ChatColor.RED + "Newest version: " + version);
                         p.sendMessage(ChatColor.RED + "Your version: " + ChatColor.BOLD + Settings.VERSION);
                         p.sendMessage(ChatColor.GOLD + "Please Update Here: " + ChatColor.ITALIC + Settings.PLUGIN_URL);
