@@ -82,24 +82,21 @@ public class StaffModeCommand implements CommandExecutor {
                     return false;
                 }
                 p.sendMessage ( ChatColor.RED + "Checking for updates..." );
-                this.checker = new UpdateChecker ( StaffModeGUI2.plugin );
-                if (this.checker.isConnected ()) {
-                    if (this.checker.hasUpdate ()) {
-                        p.sendMessage ( ChatColor.GRAY + "****************************************************" );
+                new UpdateChecker(staffmodegui2, 60960).getLatestVersion(version -> {
+                    if (staffmodegui2.getDescription ().getVersion ().equalsIgnoreCase ( version )) {
+                        p.sendMessage ( "StaffModeGUI2 is up to date!" );
+                    } else {
                         p.sendMessage ( " " );
                         p.sendMessage ( ChatColor.RED.toString () + ChatColor.BOLD + "StaffModeGUI2 is outdated!" );
-                        p.sendMessage ( ChatColor.GREEN + "Newest version: " + this.checker.getLatestVersion () );
+                        p.sendMessage ( ChatColor.GREEN + "Newest version: " + version );
                         p.sendMessage ( ChatColor.RED + "Your version: " + StaffModeGUI2.plugin.getDescription ().getVersion () );
                         p.sendMessage ( ChatColor.GOLD + "Please update here: " + Settings.PLUGIN_URL );
                         p.sendMessage ( " " );
                         p.sendMessage ( ChatColor.GRAY + "****************************************************" );
-                    } else {
-                        p.sendMessage ( ChatColor.GREEN + "StaffModeGUI2 is up to date!" );
                     }
-                }
-                return false;
+                });
+                return  false;
             }
-            return false;
         }
         return false;
     }
