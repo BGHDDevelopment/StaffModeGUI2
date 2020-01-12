@@ -23,7 +23,7 @@ public class MainInv implements Listener {
     }
 
     private String getTitle() {
-        return ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "StaffModeGUI";
+        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "StaffModeGUI";
     }
 
     private int getSize() {
@@ -40,7 +40,7 @@ public class MainInv implements Listener {
         inv.setItem ( 31 , MainInvItems.toolsMenu () );
         inv.setItem ( 33 , MainInvItems.serverManagerMenu () );
         inv.setItem ( 47 , MainInvItems.effectsMenu () );
-        //inv.setItem(49, MainInvItems.Menu());
+        //inv.setItem ( 49 , MainInvItems.Menu () );
         for (int i = 0; i < 54; ++i) {
             if (inv.getItem ( i ) == null) {
                 inv.setItem ( i , Glass () );
@@ -48,7 +48,6 @@ public class MainInv implements Listener {
         }
         return inv;
     }
-
 
     private ItemStack Glass() {
         ItemStack stone = new ItemStack ( Material.STAINED_GLASS_PANE , 1 , (short) 8 );
@@ -58,12 +57,11 @@ public class MainInv implements Listener {
         return stone;
     }
 
-
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked ();
-        if (event.getClickedInventory () == null) return;
-        if (!event.getClickedInventory ().getTitle ().equals ( getTitle () )) return;
+        if (event.getView() == null) return;
+        if (!event.getView().getTitle ().equals ( getTitle () )) return;
         if (event.getCurrentItem () == null) return;
         if (event.getCurrentItem ().getType () == Material.AIR) return;
         event.setCancelled ( true );

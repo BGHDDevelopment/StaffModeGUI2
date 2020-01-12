@@ -39,8 +39,8 @@ public class ItemBuilder {
         is = new ItemStack(m, amount, durability);
     }
 
-    public ItemBuilder clone()
-    {
+    public ItemBuilder clone() throws CloneNotSupportedException {
+        ItemBuilder clone = (ItemBuilder) super.clone ();
         return new ItemBuilder(is);
     }
 
@@ -218,4 +218,3 @@ public class ItemBuilder {
         return is;
     }
 }
-

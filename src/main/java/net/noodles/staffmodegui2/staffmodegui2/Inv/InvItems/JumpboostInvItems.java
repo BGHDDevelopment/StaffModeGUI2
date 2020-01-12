@@ -35,6 +35,7 @@ public class JumpboostInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack jump3() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.titleItemJump3").replace("&", "§"))
@@ -43,6 +44,7 @@ public class JumpboostInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack jump4() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.titleItemJump4").replace("&", "§"))
@@ -51,6 +53,7 @@ public class JumpboostInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack jump5() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.titleItemJump5").replace("&", "§"))
@@ -59,6 +62,7 @@ public class JumpboostInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack jump6() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.titleItemJump6").replace("&", "§"))
@@ -67,6 +71,7 @@ public class JumpboostInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack jump7() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.titleItemJump7").replace("&", "§"))
@@ -75,6 +80,7 @@ public class JumpboostInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack jump8() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.titleItemJump8").replace("&", "§"))
@@ -83,4 +89,5 @@ public class JumpboostInvItems {
                 ))
                 .toItemStack();
     }
+
 }

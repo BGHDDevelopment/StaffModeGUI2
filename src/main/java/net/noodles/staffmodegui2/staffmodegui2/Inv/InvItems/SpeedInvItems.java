@@ -35,6 +35,7 @@ public class SpeedInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack speed3() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("speedMenu.titleItemSpeed3").replace("&", "§"))
@@ -43,6 +44,7 @@ public class SpeedInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack speed4() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("speedMenu.titleItemSpeed4").replace("&", "§"))
@@ -51,6 +53,7 @@ public class SpeedInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack speed5() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("speedMenu.titleItemSpeed5").replace("&", "§"))
@@ -59,6 +62,7 @@ public class SpeedInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack speed6() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("speedMenu.titleItemSpeed6").replace("&", "§"))
@@ -67,6 +71,7 @@ public class SpeedInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack speed7() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("speedMenu.titleItemSpeed7").replace("&", "§"))
@@ -75,6 +80,7 @@ public class SpeedInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack speed8() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("speedMenu.titleItemSpeed8").replace("&", "§"))
@@ -83,4 +89,5 @@ public class SpeedInvItems {
                 ))
                 .toItemStack();
     }
+
 }

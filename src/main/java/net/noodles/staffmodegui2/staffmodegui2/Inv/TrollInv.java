@@ -18,18 +18,21 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 public class TrollInv implements Listener {
+
     public StaffModeGUI2 main;
+
     public TrollInv(StaffModeGUI2 main) {
         this.main = main;
         main.getServer().getPluginManager().registerEvents( this, main);
     }
     private String getTitle() {
-        return ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Troll Menu";
+        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Troll Menu";
     }
 
     private int getSize() {
         return 9;
     }
+
     public Inventory getInventory() {
         Inventory inv = Bukkit.createInventory(null, getSize(), getTitle());
 
@@ -50,7 +53,6 @@ public class TrollInv implements Listener {
         return inv;
     }
 
-
     private ItemStack Glass() {
         ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
         ItemMeta stonem = stone.getItemMeta();
@@ -59,13 +61,12 @@ public class TrollInv implements Listener {
         return stone;
     }
 
-
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked();
 
-        if (event.getClickedInventory() == null) return;
-        if (!event.getClickedInventory().getTitle().equals(getTitle())) return;
+        if (event.getView() == null) return;
+        if (!event.getView().getTitle().equals(getTitle())) return;
 
         if (event.getCurrentItem() == null) return;
         if (event.getCurrentItem().getType() == Material.AIR) return;
@@ -108,12 +109,9 @@ public class TrollInv implements Listener {
                 players.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 100000, 4));
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.messageItemJumpTroll").replace("&", "§"));
                 player.closeInventory();
-        }} else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
+            }} else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
-
         }
     }
-
-
 }

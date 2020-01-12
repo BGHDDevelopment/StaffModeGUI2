@@ -7,9 +7,9 @@ Update:
   Enabled: true
 # Enables if there is a message on-join when the plugin is outdated.
 #=======================================================
-defaultMessages:
+defaultMessage:
   noPermission: "&cSorry you don't have permission!"
-  reloadMessage: "&aConfig reloaded. Changes should be live in game!"
+  reloadMessage: "&7Config reloaded."
 
 mainMenuReturn:
   # Main Menu return title
@@ -47,7 +47,7 @@ mainMenuReturn:
 whitelistMenu: # Permission Needed: staffmodegui.whitelistmenu
   title: '&bWhitelist Control'
   lore: '&7Control the server whitelist'
-  openGUI: '&7Opened the whitelist control panel.'
+  openGUI: '&7Opened The Whitelist Control panel.'
   # Whitelist Menu Items
   titleItemON: "&bWhitelist ON"
   loreItemON: "&7Click to toggle the whitelist ON"
@@ -60,7 +60,7 @@ whitelistMenu: # Permission Needed: staffmodegui.whitelistmenu
 timeMenu: # Permission Needed: staffmodegui.timemenu
   title: '&8Time Control'
   lore: '&7Control the server time'
-  openGUI: '&7Opened the time control panel.'
+  openGUI: '&7Opened The Time Control panel!'
   # Time Menu Items
   time12AMTitle: "&b12AM"
   time12AMLore: "&7Click to change the server time to 12AM"
@@ -139,7 +139,7 @@ timeMenu: # Permission Needed: staffmodegui.timemenu
 weatherMenu: # Permission Needed: staffmodegui.weathermenu
   title: '&bWeather Control'
   lore: '&7Control the server weather'
-  openGUI: '&7Opened the weather control panel.'
+  openGUI: '&7Opened The Weather Control panel!'
   # Weather Menu Items
   titleClear: "&bClear Weather"
   loreClear: "&7Click to toggle the weather to clear"
@@ -152,7 +152,7 @@ weatherMenu: # Permission Needed: staffmodegui.weathermenu
 gamemodeMenu: # Permission Needed: staffmodegui.gamemodemenu
   title: '&8Gamemode Control'
   lore: '&7Control your Gamemode'
-  openGUI: '&7Opened The Gamemode Menu!'
+  openGUI: '&7Opened The Gamemode Control panel!'
   # Gamemode Menu Items
   titleCreative: "&bCreative"
   loreItemCreative: "&7Click to toggle Gamemode Creative"
@@ -171,7 +171,7 @@ gamemodeMenu: # Permission Needed: staffmodegui.gamemodemenu
 flyMenu: # Permission Needed: staffmodegui.flymenu
   title: '&bFlight Control'
   lore: '&7Control your Flight'
-  openGUI: '&7Opened The Fly Menu!'
+  openGUI: '&7Opened The Flight Control panel!'
   # Fly Menu Items
   titleItemON: "&aFly ON"
   loreItemON: "&7Toggle Fly ON"
@@ -184,7 +184,7 @@ flyMenu: # Permission Needed: staffmodegui.flymenu
 vanishMenu: # Permission Needed: staffmodegui.vanishmenu
   title: '&bVanish Control'
   lore: '&7Control your Vanish'
-  openGUI: '&7Opened The Vanish Menu!'
+  openGUI: '&7Opened The Vanish Control panel!'
   # Vanish Menu Items
   titleItemON: "&aVanish ON"
   loreItemON: "&7Toggle Vanish ON"
@@ -197,7 +197,7 @@ vanishMenu: # Permission Needed: staffmodegui.vanishmenu
 mobMenu: # Permission Needed: staffmodegui.mobmenu
   title: '&8Mob Control'
   lore: '&7Control your Mob Population'
-  openGUI: '&7Opened The Mob Menu!'
+  openGUI: '&7Opened The Mob Control panel!'
   # Mob Menu Items
   titleItemCreeper: "&bCreeper"
   loreItemCreeper: "&7Click to spawn a Creeper"
@@ -276,7 +276,7 @@ mobMenu: # Permission Needed: staffmodegui.mobmenu
 extraMobMenu: # Permission Needed: staffmodegui.extramobmenu
   title: '&bExtra Mob Control'
   lore: '&7Dangerous mobs'
-  openGUI: '&7Opened The Extra Mob Menu!'
+  openGUI: '&7Opened The Extra Mob Control panel!'
   # Extra Mob Menu Items
   titleItemIron: "&bIron Golem"
   loreItemIron: "&7Click to spawn an Iron Golem."
@@ -318,7 +318,7 @@ trollMenu: #Permission Needed: staffmodegui.trollmenu
   titleItemCowTroll: "&bCow Troll"
   loreItemCowTroll: "&7Spawns a Cow on all online players!"
   messageItemCowTroll: "&bSlowness Troll!"
-  titleItemJumpTroll: "&7Jump Troll"
+  titleItemJumpTroll: "&bJump Troll"
   loreItemJumpTroll: "&7Give all online players Jump Boost &c&lForever!"
   messageItemJumpTroll: "&bJump Troll!"
 #========================================================
@@ -338,7 +338,7 @@ toolsMenu: #Permission Needed: staffmodegui.toolsmenu
 # Server Manager Menu Messages
 serverManagerMenu: #Permission Needed: staffmodegui.servermanagermenu
   title: '&8Server Manager Menu'
-  lore: '&7(Whitelist, Weather, Clear Mobs)'
+  lore: '&7(Whitelist, Weather, Clear Mobs, Difficulty)'
   openGUI: '&7Opened The Server Manager Menu!'
   # Server Manager Menu Items
   titleItemClearMobs: "&bClear Mobs"
@@ -360,9 +360,9 @@ feedAndHealMenu: #Permission Needed: staffmodegui.feedandhealmenu
 #========================================================
 # Effects Menu Messages
 effectsMenu: #Permission Needed: staffmodegui.effectsmenu
-  title: '&8Effects Menu'
+  title: '&8Effects Control'
   lore: '&7Potions'
-  openGUI: '&7Opened The Effects Menu!'
+  openGUI: '&7Opened The Effects Control panel!'
   # Effects Menu Items
   titleItemWaterBreathing: "&bWater Breathing"
   loreItemWaterBreathing: "&7Ability to breath under water!"
@@ -472,4 +472,23 @@ jumpMenu: #Permission Needed: staffmodegui.jumpmenu
   titleItemJump8: "&bJump 8"
   loreItemJump8: "&7Ability to jump higher!"
   messageItemJump8: "&7Jump 8 effect applied!"
+#========================================================
+# Difficulty Menu
+difficultyMenu: # Permission Needed: staffmodegui.difficultymenu
+  title: '&bDifficulty Control'
+  lore: '&7Control your Difficulty'
+  openGUI: '&7Opened the Difficulty Control panel!'
+  # Difficulty Menu Items
+  titleItemDifficultyPeace: "&bPeaceful"
+  loreItemDifficultyPeace: "&7Change difficulty to Peaceful"
+  messageItemDifficultyPeace: "&7Difficulty changed to Peaceful!"
+  titleItemDifficultyEasy: "&bEasy"
+  loreItemDifficultyEasy: "&7Change difficulty to Easy"
+  messageItemDifficultyEasy: "&7Difficulty changed to Easy!"
+  titleItemDifficultyNormal: "&bNormal"
+  loreItemDifficultyNormal: "&7Change difficulty to Normal"
+  messageItemDifficultyNormal: "&7Difficulty changed to Normal!"
+  titleItemDifficultyHard: "&bHard"
+  loreItemDifficultyHard: "&7Change difficulty to Hard"
+  messageItemDifficultyHard: "&7Difficulty changed to Hard!"
 #========================================================

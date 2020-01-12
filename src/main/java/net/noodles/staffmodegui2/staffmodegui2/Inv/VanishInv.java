@@ -1,7 +1,6 @@
 package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.VanishInvItems;
-import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -24,7 +23,7 @@ public class VanishInv implements Listener {
     }
 
     private String getTitle() {
-        return ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Vanish Control";
+        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Vanish Control";
     }
 
     private int getSize() {
@@ -35,7 +34,7 @@ public class VanishInv implements Listener {
         Inventory inv = Bukkit.createInventory(null, getSize(), getTitle());
 
         inv.setItem(2, VanishInvItems.VanishON());
-        inv.setItem(6, VanishInvItems.VanishOFF());
+        inv.setItem(4, VanishInvItems.VanishOFF());
         inv.setItem(8, VanishInvItems.menuReturn());
 
         for (int i = 0; i < 9; ++i) {
@@ -47,7 +46,6 @@ public class VanishInv implements Listener {
         return inv;
     }
 
-
     private ItemStack Glass() {
         ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 8);
         ItemMeta stonem = stone.getItemMeta();
@@ -56,13 +54,12 @@ public class VanishInv implements Listener {
         return stone;
     }
 
-
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked();
 
-        if (event.getClickedInventory() == null) return;
-        if (!event.getClickedInventory().getTitle().equals(getTitle())) return;
+        if (event.getView() == null) return;
+        if (!event.getView().getTitle().equals(getTitle())) return;
 
         if (event.getCurrentItem() == null) return;
         if (event.getCurrentItem().getType() == Material.AIR) return;

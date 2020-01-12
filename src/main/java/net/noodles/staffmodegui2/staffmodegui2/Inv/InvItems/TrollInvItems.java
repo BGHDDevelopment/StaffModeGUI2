@@ -65,7 +65,7 @@ public class TrollInvItems {
                 .toItemStack();
     }
 
-        public static ItemStack JumpTroll() {
+    public static ItemStack JumpTroll() {
         return new ItemBuilder(Material.SADDLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.titleItemJumpTroll").replace("&", "§"))
                 .setLore(Arrays.asList(
@@ -74,4 +74,5 @@ public class TrollInvItems {
                 .toItemStack();
 
     }
+
 }

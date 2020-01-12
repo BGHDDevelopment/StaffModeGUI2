@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -46,7 +47,7 @@ public class MetricsLite {
     }
 
     // The version of this bStats class
-    public static final int B_STATS_VERSION = 1;
+    private static final int B_STATS_VERSION = 1;
 
     // The url to which the data is sent
     private static final String URL = "https://bStats.org/submitData/bukkit";
@@ -304,7 +305,7 @@ public class MetricsLite {
         }
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         GZIPOutputStream gzip = new GZIPOutputStream(outputStream);
-        gzip.write(str.getBytes("UTF-8"));
+        gzip.write(str.getBytes( StandardCharsets.UTF_8 ));
         gzip.close();
         return outputStream.toByteArray();
     }

@@ -12,7 +12,8 @@ public class Settings {
     public static String PLUGIN_URL = "https://spigotmc.org/resources/60960";
     public static String SUPPORT_DISCORD_URL = "https://bghddevelopment.com/discord";
     public static String VERSION = "1.1";
+    public static String WIKI = "https://wiki.bghddevelopment.com";
+    public static String FEEDBACK = "https://feedback.bghddevelopment.com";
     public static String NAME = "StaffModeGUI2";
-
 
 }

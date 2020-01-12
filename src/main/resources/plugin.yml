@@ -6,6 +6,8 @@ description: A StaffModeGUI Plugin
 website: stephanbaumharvey.com
 commands:
   staffmodedev:
+    description: StaffModeDev command
+    aliases: [smdev]
   staffmode:
+    description: StaffMode command
     aliases: [sm, smgui]
-

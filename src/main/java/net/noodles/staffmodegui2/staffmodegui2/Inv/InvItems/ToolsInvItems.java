@@ -9,6 +9,15 @@ import java.util.Arrays;
 
 public class ToolsInvItems {
 
+    public static ItemStack menuReturn() {
+        return new ItemBuilder(Material.BOOK)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.title1").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.lore1").replace("&", "§")
+                ))
+                .toItemStack();
+    }
+
     public static ItemStack vanishMenu() {
         return new ItemBuilder (Material.IRON_TRAPDOOR)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.title").replace("&", "§"))
@@ -45,4 +54,5 @@ public class ToolsInvItems {
                 .setLore(StaffModeGUI2.getPlugin().getConfig().getString("feedAndHealMenu.lore").replace ("&", "§"))
                 .toItemStack();
     }
+
 }

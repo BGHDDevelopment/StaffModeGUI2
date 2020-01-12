@@ -9,8 +9,6 @@ import java.util.Arrays;
 
 public class MainInvItems {
 
-
-
     public static ItemStack mainMenuReturn() {
         return new ItemBuilder(Material.BOOK)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.title").replace("&", "§"))
@@ -78,4 +76,5 @@ public class MainInvItems {
                 ))
                 .toItemStack ();
     }
+
 }

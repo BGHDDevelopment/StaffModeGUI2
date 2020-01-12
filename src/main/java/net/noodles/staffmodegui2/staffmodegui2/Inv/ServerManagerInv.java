@@ -15,6 +15,7 @@ import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class ServerManagerInv implements Listener {
+
     @SuppressWarnings("unused")
     private StaffModeGUI2 main;
 
@@ -24,7 +25,7 @@ public class ServerManagerInv implements Listener {
     }
 
     private String getTitle() {
-        return ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Server Manager Menu";
+        return ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + "Server Manager Menu";
     }
 
     private int getSize() {
@@ -34,9 +35,10 @@ public class ServerManagerInv implements Listener {
     public Inventory getInventory() {
         Inventory inv = Bukkit.createInventory(null, getSize(), getTitle());
 
-        inv.setItem(1, ServerManagerInvItems.whitelistMenu());
-        inv.setItem(3, ServerManagerInvItems.weatherMenu());
-        inv.setItem( 5, ServerManagerInvItems.clearMobs());
+        inv.setItem(0, ServerManagerInvItems.whitelistMenu());
+        inv.setItem(2, ServerManagerInvItems.weatherMenu());
+        inv.setItem(4, ServerManagerInvItems.clearMobs());
+        inv.setItem(6, ServerManagerInvItems.difficultyMenu () );
         inv.setItem(8, MainInvItems.mainMenuReturn());
 
         for (int i = 0; i < 9; ++i) {
@@ -48,7 +50,6 @@ public class ServerManagerInv implements Listener {
         return inv;
     }
 
-
     private ItemStack Glass() {
         ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 8);
         ItemMeta stonem = stone.getItemMeta();
@@ -57,13 +58,12 @@ public class ServerManagerInv implements Listener {
         return stone;
     }
 
-
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked();
 
-        if (event.getClickedInventory() == null) return;
-        if (!event.getClickedInventory().getTitle().equals(getTitle())) return;
+        if (event.getView() == null) return;
+        if (!event.getView().getTitle().equals(getTitle())) return;
 
         if (event.getCurrentItem() == null) return;
         if (event.getCurrentItem().getType() == Material.AIR) return;
@@ -83,10 +83,16 @@ public class ServerManagerInv implements Listener {
         } else if (event.getCurrentItem().isSimilar(ServerManagerInvItems.clearMobs ())) {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.messageItemClearMobs").replace("&", "§"));
             player.getInventory().clear();
+            player.closeInventory();
+        } else if (event.getCurrentItem ().isSimilar ( ServerManagerInvItems.difficultyMenu () )) {
+            if (!player.hasPermission ( "staffmodegui.difficultymenu" )) {
+                player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) );
+            }
+            player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "difficultyMenu.openGUI" ).replace ( "&" , "§" ) );
+            player.openInventory ( StaffModeGUI2.getInstance ().getDifficultyInv ().getInventory () );
         } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
-
         }
     }
 }

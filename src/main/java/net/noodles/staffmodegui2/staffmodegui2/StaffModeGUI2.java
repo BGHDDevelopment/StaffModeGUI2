@@ -15,9 +15,8 @@ import java.util.Arrays;
 public final class StaffModeGUI2 extends JavaPlugin {
 
     public static StaffModeGUI2 plugin;
-    private UpdateChecker checker;
+    public UpdateChecker checker;
     private static StaffModeGUI2 instance;
-
 
     //INV
     private MainInv mainInv;
@@ -37,19 +36,22 @@ public final class StaffModeGUI2 extends JavaPlugin {
     private SpeedInv speedInv;
     private StrengthInv strengthInv;
     private JumpboostInv jumpboostInv;
+    private DifficultyInv difficultyInv;
 
     @Override
     public void onEnable() {
-        Logger.log ( Logger.LogLevel.OUTLINE , "********************" );
+        Logger.log ( Logger.LogLevel.OUTLINE , "****************************************************" );
         Logger.log ( Logger.LogLevel.INFO , "Initializing StaffModeGUI2 Version: " + Settings.VERSION );
-        Logger.log ( Logger.LogLevel.INFO , "Created by: " + Settings.DEVELOPER_NAME );
-        Logger.log ( Logger.LogLevel.INFO , "Website: " + Settings.DEVELOPER_URL );
-        Logger.log ( Logger.LogLevel.INFO , "Spigot Link: " + Settings.PLUGIN_URL );
-        Logger.log ( Logger.LogLevel.INFO , "Support Link: " + Settings.SUPPORT_DISCORD_URL );
-        Logger.log ( Logger.LogLevel.OUTLINE , "********************" );
+        Logger.log ( Logger.LogLevel.INFO, "Created by: " + Settings.DEVELOPER_NAME);
+        Logger.log ( Logger.LogLevel.INFO, "Website: " + Settings.DEVELOPER_URL);
+        Logger.log ( Logger.LogLevel.INFO, "Spigot: " + Settings.PLUGIN_URL);
+        Logger.log ( Logger.LogLevel.INFO, "Support: " + Settings.SUPPORT_DISCORD_URL);
+        Logger.log ( Logger.LogLevel.INFO, "Suggestions/Feedback: " + Settings.FEEDBACK);
+        Logger.log ( Logger.LogLevel.INFO, "Wiki: " + Settings.WIKI);
+        Logger.log ( Logger.LogLevel.OUTLINE , "****************************************************" );
         Logger.log ( Logger.LogLevel.INFO , "Plugin Loading..." );
         Logger.log ( Logger.LogLevel.INFO , "Registering Managers..." );
-        this.plugin = this;
+        plugin = this;
         instance = this;
         MetricsLite metrics = new MetricsLite ( this );
         Logger.log ( Logger.LogLevel.INFO , "Managers Registered!" );
@@ -80,37 +82,36 @@ public final class StaffModeGUI2 extends JavaPlugin {
         this.speedInv = new SpeedInv ( this );
         this.strengthInv = new StrengthInv ( this );
         this.jumpboostInv = new JumpboostInv ( this );
+        this.difficultyInv = new DifficultyInv ( this );
         Logger.log ( Logger.LogLevel.INFO , "Inventory's Registered!" );
         Logger.log ( Logger.LogLevel.INFO , "Loading Config's..." );
         this.createConfig ();
         Logger.log ( Logger.LogLevel.INFO , "Config's Registered!" );
         Logger.log ( Logger.LogLevel.SUCCESS , "StaffModeGUI2 Version: " + Settings.VERSION + " Loaded." );
-        this.setEnabled ( true );
         Logger.log ( Logger.LogLevel.OUTLINE , "********************" );
         Logger.log ( Logger.LogLevel.INFO , "Checking for updates..." );
-        new UpdateChecker(this, 60960).getLatestVersion(version -> {
-            if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
-                Logger.log(Logger.LogLevel.SUCCESS,("StaffModeGUI2 is up to date!"));
+        this.checker = new UpdateChecker ( this );
+        if (this.checker.isConnected ()) {
+            if (this.checker.hasUpdate ()) {
+                Logger.log ( Logger.LogLevel.OUTLINE , "****************************************************" );
+                Logger.log ( Logger.LogLevel.WARNING , ("StaffModeGUI2 is outdated!") );
+                Logger.log ( Logger.LogLevel.WARNING , ("Newest version: " + this.checker.getLatestVersion ()) );
+                Logger.log ( Logger.LogLevel.WARNING , ("Your version: " + Settings.VERSION) );
+                Logger.log ( Logger.LogLevel.WARNING , ("Please Update Here: " + Settings.PLUGIN_URL) );
+                Logger.log ( Logger.LogLevel.OUTLINE , "****************************************************" );
             } else {
-                Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
-                Logger.log(Logger.LogLevel.WARNING,("StaffModeGUI2 is outdated!"));
-                Logger.log(Logger.LogLevel.WARNING,("Newest version: " + version));
-                Logger.log(Logger.LogLevel.WARNING,("Your version: " + Settings.VERSION));
-                Logger.log(Logger.LogLevel.WARNING,("Please Update Here: " + Settings.PLUGIN_URL));
-                Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");			}
-        });
+                Logger.log ( Logger.LogLevel.SUCCESS , "StaffModeGUI2 is up to date!" );
+            }
+        }
     }
-
 
     @Override
     public void onDisable() {
     }
 
-
     private void registerListener(Listener... listeners) {
         Arrays.stream ( listeners ).forEach ( l -> getServer ().getPluginManager ().registerEvents ( l , this ) );
     }
-
 
     @SuppressWarnings({"rawtypes" , "unchecked"})
     public static StaffModeGUI2 getPlugin() {
@@ -131,14 +132,11 @@ public final class StaffModeGUI2 extends JavaPlugin {
         }
     }
 
-
     public static StaffModeGUI2 getInstance() {
         return instance;
     }
 
-
     //INV
-
     public MainInv getMainInv() {
         return mainInv;
     }
@@ -205,5 +203,9 @@ public final class StaffModeGUI2 extends JavaPlugin {
 
     public JumpboostInv getJumpboostInv() {
         return jumpboostInv;
+    }
+
+    public DifficultyInv getDifficultyInv() {
+        return difficultyInv;
     }
 }

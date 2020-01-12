@@ -15,6 +15,8 @@ public class StaffModeCommand implements CommandExecutor {
 
     private StaffModeGUI2 staffmodegui2;
 
+    private UpdateChecker checker;
+
     public StaffModeCommand() {
         staffmodegui2 = StaffModeGUI2.getInstance ();
         staffmodegui2.getCommand ( "staffmode" ).setExecutor ( this );
@@ -27,27 +29,78 @@ public class StaffModeCommand implements CommandExecutor {
             return false;
         }
         Player p = (Player) sender;
-
-        if (!p.hasPermission ( "staffmodegui.open" )) {
-            p.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "defaultMessages.noPermission" ).replace ( "&" , "§" ) );
-            return false;
-        }
         if (args.length == 0) {
+            if (!p.hasPermission ( "staffmodegui.open" )) {
+                p.sendMessage ( ChatColor.translateAlternateColorCodes ( '&' , staffmodegui2.getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) ) );
+                return false;
+            }
             p.openInventory ( StaffModeGUI2.getInstance ().getMainInv ().getInventory () );
             return true;
-        }
-                if (args[0].equalsIgnoreCase ( "reload" )) {
-                    if (!p.hasPermission ( "staffmodegui.reload" )) {
-                        p.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "defaultMessages.noPermission" ).replace ( "&" , "§" ) );
-                        return false;
-                    }
-                    if (args.length == 1) {
-                        staffmodegui2.reloadConfig ();
-                        p.sendMessage ( ChatColor.translateAlternateColorCodes ( '&' , staffmodegui2.getConfig ().getString ( "defaultMessages.reloadMessage" ) ) );
-                        return true;
-                    }
+        } else if (args.length == 1) {
+            if (args[0].equalsIgnoreCase ( "reload" )) {
+                if (!p.hasPermission ( "staffmodegui.reload" )) {
+                    p.sendMessage ( ChatColor.translateAlternateColorCodes ( '&' , staffmodegui2.getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) ) );
                     return false;
+                }
+                staffmodegui2.reloadConfig ();
+                p.sendMessage ( ChatColor.translateAlternateColorCodes ( '&' , staffmodegui2.getConfig ().getString ( "defaultMessage.reloadMessage" ).replace ( "&" , "§" ) ) );
+                return true;
+            } else if (args[0].equalsIgnoreCase ( "about" )) {
+                if (!p.hasPermission ( "staffmodegui.about" )) {
+                    p.sendMessage ( ChatColor.translateAlternateColorCodes ( '&' , staffmodegui2.getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) ) );
+                    return false;
+                }
+                p.sendMessage ( ChatColor.GRAY + "****************************************************" );
+                p.sendMessage ( "" );
+                p.sendMessage ( ChatColor.GRAY + "Created by: " + ChatColor.WHITE + Settings.DEVELOPER_NAME );
+                p.sendMessage ( ChatColor.GRAY + "Website: " + ChatColor.WHITE + Settings.DEVELOPER_URL );
+                p.sendMessage ( ChatColor.GRAY + "Feedback: " + ChatColor.WHITE + Settings.FEEDBACK );
+                p.sendMessage ( ChatColor.GRAY + "Spigot Link: " + ChatColor.WHITE + Settings.PLUGIN_URL );
+                p.sendMessage ( ChatColor.GRAY + "Support Link: " + ChatColor.WHITE + Settings.SUPPORT_DISCORD_URL );
+                p.sendMessage ( ChatColor.GRAY + "Version: " + ChatColor.WHITE + Settings.VERSION );
+                p.sendMessage ( "" );
+                p.sendMessage ( ChatColor.GRAY + "****************************************************" );
+                return true;
+            } else if (args[0].equalsIgnoreCase ( "help" )) {
+                if (!p.hasPermission ( "staffmodegui.help" )) {
+                    p.sendMessage ( ChatColor.translateAlternateColorCodes ( '&' , staffmodegui2.getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) ) );
+                    return false;
+                }
+                p.sendMessage ( ChatColor.GRAY + "****************************************************" );
+                p.sendMessage ( "" );
+                p.sendMessage ( ChatColor.translateAlternateColorCodes ( '&' , "&c/staffmode &7- &fOpens the GUI" ) );
+                p.sendMessage ( ChatColor.translateAlternateColorCodes ( '&' , "&c/staffmode help &7- &fThis help page" ) );
+                p.sendMessage ( ChatColor.translateAlternateColorCodes ( '&' , "&c/staffmode about &7- &fThe about page" ) );
+                p.sendMessage ( ChatColor.translateAlternateColorCodes ( '&' , "&c/staffmode update &7- &fChecks for an update on SpigotMC" ) );
+                p.sendMessage ( ChatColor.translateAlternateColorCodes ( '&' , "&c/staffmode reload &7- &fReloads the config file" ) );
+                p.sendMessage ( "" );
+                p.sendMessage ( ChatColor.GRAY + "****************************************************" );
+                return true;
+            } else if (args[0].equalsIgnoreCase ( "update" )) {
+                if (!p.hasPermission ( "staffmodegui.update" )) {
+                    p.sendMessage ( ChatColor.translateAlternateColorCodes ( '&' , staffmodegui2.getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) ) );
+                    return false;
+                }
+                p.sendMessage ( ChatColor.RED + "Checking for updates..." );
+                this.checker = new UpdateChecker ( StaffModeGUI2.plugin );
+                if (this.checker.isConnected ()) {
+                    if (this.checker.hasUpdate ()) {
+                        p.sendMessage ( ChatColor.GRAY + "****************************************************" );
+                        p.sendMessage ( " " );
+                        p.sendMessage ( ChatColor.RED.toString () + ChatColor.BOLD + "StaffModeGUI2 is outdated!" );
+                        p.sendMessage ( ChatColor.GREEN + "Newest version: " + this.checker.getLatestVersion () );
+                        p.sendMessage ( ChatColor.RED + "Your version: " + StaffModeGUI2.plugin.getDescription ().getVersion () );
+                        p.sendMessage ( ChatColor.GOLD + "Please update here: " + Settings.PLUGIN_URL );
+                        p.sendMessage ( " " );
+                        p.sendMessage ( ChatColor.GRAY + "****************************************************" );
+                    } else {
+                        p.sendMessage ( ChatColor.GREEN + "StaffModeGUI2 is up to date!" );
+                    }
                 }
                 return false;
             }
+            return false;
         }
+        return false;
+    }
+}

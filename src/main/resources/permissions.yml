@@ -2,11 +2,17 @@ permissions:
   staffmodegui.open:
     description: Gives you access to /staffmode
     default: op
-  staffmodegui.reload:
-    description: Gives you access to /staffmode reload
+  staffmodegui.about:
+    description: Gives you access to /staffmode about
     default: op
-  staffmodegui.update:
-    description: Gives you access to see update notifications on join
+  staffmodegui.help:
+    description: Gives you access to /staffmode help
+    default: op
+ staffmodegui.update:
+    description: Gives you access to see update notifications on join also gives you access to /staffmode update
+    default: op
+ staffmodegui.reload:
+    description: Gives you access to /staffmode reload
     default: op
   staffmodegui.whitelistmenu:
     description: Gives you access to the Whitelist Menu
@@ -55,4 +61,7 @@ permissions:
     default: op
   staffmodegui.jumpmenu:
     description: Gives you access to the Jump Menu
+    default: op
+  staffmodegui.difficultymenu:
+    description: Gives you access to the Difficulty Menu
     default: op

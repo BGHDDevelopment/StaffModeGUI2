@@ -35,6 +35,7 @@ public class StrengthInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack strength3() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.titleItemStrength3").replace("&", "§"))
@@ -43,6 +44,7 @@ public class StrengthInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack strength4() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.titleItemStrength4").replace("&", "§"))
@@ -51,6 +53,7 @@ public class StrengthInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack strength5() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.titleItemStrength5").replace("&", "§"))
@@ -59,6 +62,7 @@ public class StrengthInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack strength6() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.titleItemStrength6").replace("&", "§"))
@@ -67,6 +71,7 @@ public class StrengthInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack strength7() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.titleItemStrength7").replace("&", "§"))
@@ -75,6 +80,7 @@ public class StrengthInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack strength8() {
         return new ItemBuilder(Material.GLASS_BOTTLE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.titleItemStrength8").replace("&", "§"))
@@ -83,4 +89,5 @@ public class StrengthInvItems {
                 ))
                 .toItemStack();
     }
+
 }

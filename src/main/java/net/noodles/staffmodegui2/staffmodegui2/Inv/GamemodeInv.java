@@ -1,6 +1,5 @@
 package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
-
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.GamemodeInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
 import org.bukkit.Bukkit;
@@ -26,12 +25,13 @@ public class GamemodeInv implements Listener {
     }
 
     private String getTitle() {
-        return ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Gamemodes";
+        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Gamemodes";
     }
 
     private int getSize() {
         return 18;
     }
+
     public Inventory getInventory() {
         Inventory inv = Bukkit.createInventory(null, getSize(), getTitle());
 
@@ -61,8 +61,8 @@ public class GamemodeInv implements Listener {
     public void onInventoryClick(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked();
 
-        if (event.getClickedInventory() == null) return;
-        if (!event.getClickedInventory().getTitle().equals(getTitle())) return;
+        if (event.getView() == null) return;
+        if (!event.getView().getTitle().equals(getTitle())) return;
 
         if (event.getCurrentItem() == null) return;
         if (event.getCurrentItem().getType() == Material.AIR) return;
@@ -91,8 +91,6 @@ public class GamemodeInv implements Listener {
         } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
-
         }
     }
-
 }
