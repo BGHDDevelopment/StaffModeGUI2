@@ -60,8 +60,8 @@ public class MainInv implements Listener {
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked ();
-        if (event.getView() == null) return;
-        if (!event.getView().getTitle ().equals ( getTitle () )) return;
+        if (event.getView () == null) return;
+        if (!event.getView ().getTitle ().equals ( getTitle () )) return;
         if (event.getCurrentItem () == null) return;
         if (event.getCurrentItem ().getType () == Material.AIR) return;
         event.setCancelled ( true );

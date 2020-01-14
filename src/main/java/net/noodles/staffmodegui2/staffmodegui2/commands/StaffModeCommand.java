@@ -1,6 +1,5 @@
 package net.noodles.staffmodegui2.staffmodegui2.commands;
 
-
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import net.noodles.staffmodegui2.staffmodegui2.util.Logger;
 import net.noodles.staffmodegui2.staffmodegui2.util.Settings;
@@ -14,8 +13,6 @@ import org.bukkit.entity.Player;
 public class StaffModeCommand implements CommandExecutor {
 
     private StaffModeGUI2 staffmodegui2;
-
-    private UpdateChecker checker;
 
     public StaffModeCommand() {
         staffmodegui2 = StaffModeGUI2.getInstance ();
@@ -54,7 +51,7 @@ public class StaffModeCommand implements CommandExecutor {
                 p.sendMessage ( "" );
                 p.sendMessage ( ChatColor.GRAY + "Created by: " + ChatColor.WHITE + Settings.DEVELOPER_NAME );
                 p.sendMessage ( ChatColor.GRAY + "Website: " + ChatColor.WHITE + Settings.DEVELOPER_URL );
-                p.sendMessage ( ChatColor.GRAY + "Feedback: " + ChatColor.WHITE + Settings.FEEDBACK );
+                p.sendMessage ( ChatColor.GRAY + "Wiki: " + ChatColor.WHITE + Settings.WIKI );
                 p.sendMessage ( ChatColor.GRAY + "Spigot Link: " + ChatColor.WHITE + Settings.PLUGIN_URL );
                 p.sendMessage ( ChatColor.GRAY + "Support Link: " + ChatColor.WHITE + Settings.SUPPORT_DISCORD_URL );
                 p.sendMessage ( ChatColor.GRAY + "Version: " + ChatColor.WHITE + Settings.VERSION );
@@ -82,19 +79,17 @@ public class StaffModeCommand implements CommandExecutor {
                     return false;
                 }
                 p.sendMessage ( ChatColor.RED + "Checking for updates..." );
-                new UpdateChecker(staffmodegui2, 60960).getLatestVersion(version -> {
-                    if (staffmodegui2.getDescription ().getVersion ().equalsIgnoreCase ( version )) {
-                        p.sendMessage ( "StaffModeGUI2 is up to date!" );
-                    } else {
-                        p.sendMessage ( " " );
-                        p.sendMessage ( ChatColor.RED.toString () + ChatColor.BOLD + "StaffModeGUI2 is outdated!" );
-                        p.sendMessage ( ChatColor.GREEN + "Newest version: " + version );
-                        p.sendMessage ( ChatColor.RED + "Your version: " + StaffModeGUI2.plugin.getDescription ().getVersion () );
-                        p.sendMessage ( ChatColor.GOLD + "Please update here: " + Settings.PLUGIN_URL );
-                        p.sendMessage ( " " );
-                        p.sendMessage ( ChatColor.GRAY + "****************************************************" );
-                    }
-                });
+                new UpdateChecker ( StaffModeGUI2.getPlugin () , 60960 ).getLatestVersion ( version -> {
+                    if (!StaffModeGUI2.getInstance ().getDescription ().getVersion ().equalsIgnoreCase ( version )) {
+                        p.sendMessage ( ChatColor.GRAY + "****************************************************************" );
+                        p.sendMessage ( ChatColor.RED + "StaffModeGUI2 is outdated!" );
+                        p.sendMessage ( ChatColor.RED + "Newest version: " + version );
+                        p.sendMessage ( ChatColor.RED + "Your version: " + ChatColor.BOLD + Settings.VERSION );
+                        p.sendMessage ( ChatColor.GOLD + "Please Update Here: " + ChatColor.ITALIC + Settings.PLUGIN_URL );
+                        p.sendMessage ( ChatColor.GRAY + "****************************************************************" );
+                    } else
+                        p.sendMessage ( ChatColor.GREEN + "StaffModeGUI2 is up to date!" );
+                } );
                 return  false;
             }
         }

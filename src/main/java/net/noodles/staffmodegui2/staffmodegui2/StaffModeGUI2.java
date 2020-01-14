@@ -15,11 +15,10 @@ import java.util.Arrays;
 public final class StaffModeGUI2 extends JavaPlugin {
 
     public static StaffModeGUI2 plugin;
-    private UpdateChecker checker;
     private static StaffModeGUI2 instance;
 
-
     //INV
+    
     private MainInv mainInv;
     private WhitelistInv whitelistInv;
     private TimeInv timeInv;
@@ -50,7 +49,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
         Logger.log ( Logger.LogLevel.OUTLINE , "********************" );
         Logger.log ( Logger.LogLevel.INFO , "Plugin Loading..." );
         Logger.log ( Logger.LogLevel.INFO , "Registering Managers..." );
-        this.plugin = this;
+        plugin = this;
         instance = this;
         MetricsLite metrics = new MetricsLite ( this );
         Logger.log ( Logger.LogLevel.INFO , "Managers Registered!" );
@@ -103,9 +102,9 @@ public final class StaffModeGUI2 extends JavaPlugin {
         });
     }
 
-
     @Override
     public void onDisable() {
+        plugin = null;
     }
 
 
@@ -137,7 +136,6 @@ public final class StaffModeGUI2 extends JavaPlugin {
     public static StaffModeGUI2 getInstance() {
         return instance;
     }
-
 
     //INV
 

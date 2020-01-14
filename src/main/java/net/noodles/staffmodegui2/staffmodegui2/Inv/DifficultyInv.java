@@ -89,7 +89,7 @@ public class DifficultyInv implements Listener {
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(DifficultyInvItems.menuReturn())) {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message1").replace("&", "§"));
-            player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
+            player.openInventory(StaffModeGUI2.getInstance().getServerManagerInv().getInventory());
 
         }
     }

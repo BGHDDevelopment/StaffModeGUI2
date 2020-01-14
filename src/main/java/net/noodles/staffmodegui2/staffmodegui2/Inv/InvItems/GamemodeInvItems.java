@@ -9,7 +9,6 @@ import java.util.Arrays;
 
 public class GamemodeInvItems {
 
-
     public static ItemStack creative() {
         return new ItemBuilder(Material.STONE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("gamemodeMenu.titleCreative").replace("&", "§"))
