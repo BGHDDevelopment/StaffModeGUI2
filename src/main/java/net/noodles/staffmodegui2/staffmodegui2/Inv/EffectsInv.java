@@ -22,16 +22,17 @@ public class EffectsInv implements Listener {
 
     public EffectsInv(StaffModeGUI2 main) {
         this.main = main;
-        main.getServer().getPluginManager().registerEvents( this, main);
+        main.getServer().getPluginManager().registerEvents(this, main);
     }
 
     private String getTitle() {
-        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Effects Control";
+        return ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + "Effects Control";
     }
 
     private int getSize() {
         return 9;
     }
+
     public Inventory getInventory() {
         Inventory inv = Bukkit.createInventory(null, getSize(), getTitle());
 
@@ -55,7 +56,7 @@ public class EffectsInv implements Listener {
     }
 
     private ItemStack Glass() {
-        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
+        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 8);
         ItemMeta stonem = stone.getItemMeta();
         stonem.setDisplayName("");
         stone.setItemMeta(stonem);
@@ -74,31 +75,31 @@ public class EffectsInv implements Listener {
 
         event.setCancelled(true);
         if (event.getCurrentItem().isSimilar(EffectsInvItems.potionWater())) {
-            player.addPotionEffect(new PotionEffect ( PotionEffectType.WATER_BREATHING, 10000000, 0));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, 10000000, 0));
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("effectsMenu.messageItemWaterBreathing").replace("&", "§"));
             event.getWhoClicked().closeInventory();
         } else if (event.getCurrentItem().isSimilar(EffectsInvItems.invis())) {
             player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 10000000, 0));
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("effectsMenu.messageItemInvis").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem ().isSimilar ( EffectsInvItems.jumpboostMenu () )) {
-            if (!player.hasPermission ( "staffmodegui.jumpmenu" )) {
-                player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) );
+        } else if (event.getCurrentItem().isSimilar(EffectsInvItems.jumpboostMenu())) {
+            if (!player.hasPermission("staffmodegui.jumpmenu")) {
+                player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
             }
-            player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "jumpMenu.openGUI" ).replace ( "&" , "§" ) );
-            player.openInventory ( StaffModeGUI2.getInstance ().getJumpboostInv ().getInventory () );
-        } else if (event.getCurrentItem ().isSimilar ( EffectsInvItems.speedMenu () )) {
-            if (!player.hasPermission ( "staffmodegui.speedmenu" )) {
-                player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) );
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.openGUI").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getJumpboostInv().getInventory());
+        } else if (event.getCurrentItem().isSimilar(EffectsInvItems.speedMenu())) {
+            if (!player.hasPermission("staffmodegui.speedmenu")) {
+                player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
             }
-            player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "speedMenu.openGUI" ).replace ( "&" , "§" ) );
-            player.openInventory ( StaffModeGUI2.getInstance ().getSpeedInv ().getInventory () );
-        } else if (event.getCurrentItem ().isSimilar ( EffectsInvItems.strengthMenu () )) {
-            if (!player.hasPermission ( "staffmodegui.strengthmenu" )) {
-                player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) );
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("speedMenu.openGUI").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getSpeedInv().getInventory());
+        } else if (event.getCurrentItem().isSimilar(EffectsInvItems.strengthMenu())) {
+            if (!player.hasPermission("staffmodegui.strengthmenu")) {
+                player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
             }
-            player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "strengthMenu.openGUI" ).replace ( "&" , "§" ) );
-            player.openInventory ( StaffModeGUI2.getInstance ().getStrengthInv ().getInventory () );
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.openGUI").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getStrengthInv().getInventory());
         } else if (event.getCurrentItem().isSimilar(EffectsInvItems.slowness())) {
             player.removePotionEffect(PotionEffectType.JUMP);
             player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 180000000, 0));

@@ -56,6 +56,7 @@ public class TrollInvItems {
                 .toItemStack();
 
     }
+
     public static ItemStack CowTroll() {
         return new ItemBuilder(Material.OBSIDIAN)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.titleItemCowTroll").replace("&", "§"))

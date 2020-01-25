@@ -2,6 +2,7 @@ package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.EffectsInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.StrengthInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -11,7 +12,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -19,12 +19,14 @@ import org.bukkit.potion.PotionEffectType;
 public class StrengthInv implements Listener {
     @SuppressWarnings("unused")
     private StaffModeGUI2 main;
+
     public StrengthInv(StaffModeGUI2 main) {
         this.main = main;
         main.getServer().getPluginManager().registerEvents(this, main);
     }
+
     private String getTitle() {
-        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Strength Control";
+        return ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + "Strength Control";
     }
 
     private int getSize() {
@@ -55,7 +57,7 @@ public class StrengthInv implements Listener {
     }
 
     private ItemStack Glass() {
-        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
+        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 8);
         ItemMeta stonem = stone.getItemMeta();
         stonem.setDisplayName("");
         stone.setItemMeta(stonem);
@@ -75,7 +77,7 @@ public class StrengthInv implements Listener {
         event.setCancelled(true);
         if (event.getCurrentItem().isSimilar(StrengthInvItems.strength1())) {
             player.removePotionEffect(PotionEffectType.INCREASE_DAMAGE);
-            player.addPotionEffect(new PotionEffect (PotionEffectType.INCREASE_DAMAGE, 180000000, 1));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 180000000, 1));
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.messageItemStrength1").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(StrengthInvItems.strength2())) {
@@ -113,7 +115,7 @@ public class StrengthInv implements Listener {
             player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 180000000, 8));
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.messageItemStrength8").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem().isSimilar( EffectsInvItems.removeEffects())) {
+        } else if (event.getCurrentItem().isSimilar(EffectsInvItems.removeEffects())) {
             player.getActivePotionEffects().clear();
             for (PotionEffect pe : player.getActivePotionEffects()) {
                 player.removePotionEffect(pe.getType());

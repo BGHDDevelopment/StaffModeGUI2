@@ -26,6 +26,7 @@ public class GamemodeInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack spectator() {
         return new ItemBuilder(Material.GRASS)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("gamemodeMenu.titleSpectator").replace("&", "§"))
@@ -34,6 +35,7 @@ public class GamemodeInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack adventure() {
         return new ItemBuilder(Material.COBBLESTONE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("gamemodeMenu.titleAdventure").replace("&", "§"))

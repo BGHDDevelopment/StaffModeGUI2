@@ -23,10 +23,11 @@ public class TrollInv implements Listener {
 
     public TrollInv(StaffModeGUI2 main) {
         this.main = main;
-        main.getServer().getPluginManager().registerEvents( this, main);
+        main.getServer().getPluginManager().registerEvents(this, main);
     }
+
     private String getTitle() {
-        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Troll Menu";
+        return ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + "Troll Menu";
     }
 
     private int getSize() {
@@ -54,7 +55,7 @@ public class TrollInv implements Listener {
     }
 
     private ItemStack Glass() {
-        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
+        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 8);
         ItemMeta stonem = stone.getItemMeta();
         stonem.setDisplayName("");
         stone.setItemMeta(stonem);
@@ -79,37 +80,44 @@ public class TrollInv implements Listener {
                 players.getWorld().strikeLightningEffect(players.getLocation());
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.messageItemLightningTroll").replace("&", "§"));
                 player.closeInventory();
-            }} else if (event.getCurrentItem().isSimilar(TrollInvItems.SlownessTroll())) {
+            }
+        } else if (event.getCurrentItem().isSimilar(TrollInvItems.SlownessTroll())) {
             for (Player players : Bukkit.getOnlinePlayers()) {
                 players.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100000, 4));
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.messageItemSlownessTroll").replace("&", "§"));
                 player.closeInventory();
-            }} else if (event.getCurrentItem().isSimilar(TrollInvItems.WeaknessTroll())) {
+            }
+        } else if (event.getCurrentItem().isSimilar(TrollInvItems.WeaknessTroll())) {
             for (Player players : Bukkit.getOnlinePlayers()) {
                 players.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 100000, 4));
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.messageItemWeaknessTroll").replace("&", "§"));
                 player.closeInventory();
-            }} else if (event.getCurrentItem().isSimilar(TrollInvItems.BlindnessTroll())) {
+            }
+        } else if (event.getCurrentItem().isSimilar(TrollInvItems.BlindnessTroll())) {
             for (Player players : Bukkit.getOnlinePlayers()) {
                 players.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100000, 4));
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.messageItemBlindnessTroll").replace("&", "§"));
                 player.closeInventory();
-            }} else if (event.getCurrentItem().isSimilar(TrollInvItems.NauseaTroll())) {
+            }
+        } else if (event.getCurrentItem().isSimilar(TrollInvItems.NauseaTroll())) {
             for (Player players : Bukkit.getOnlinePlayers()) {
                 players.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100000, 4));
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.messageItemNauseaTroll").replace("&", "§"));
                 player.closeInventory();
-            }} else if (event.getCurrentItem().isSimilar(TrollInvItems.CowTroll())) {
+            }
+        } else if (event.getCurrentItem().isSimilar(TrollInvItems.CowTroll())) {
             for (Player players : Bukkit.getOnlinePlayers()) {
                 players.getWorld().spawnEntity(players.getLocation(), EntityType.COW);
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.messageItemCowTroll").replace("&", "§"));
                 player.closeInventory();
-            }} else if (event.getCurrentItem().isSimilar(TrollInvItems.JumpTroll())) {
+            }
+        } else if (event.getCurrentItem().isSimilar(TrollInvItems.JumpTroll())) {
             for (Player players : Bukkit.getOnlinePlayers()) {
                 players.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 100000, 4));
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.messageItemJumpTroll").replace("&", "§"));
                 player.closeInventory();
-            }} else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
+            }
+        } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
         }

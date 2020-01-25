@@ -10,9 +10,9 @@ import java.util.Arrays;
 public class EffectsInvItems {
 
     public static ItemStack potionWater() {
-        return new ItemBuilder ( Material.GLASS_BOTTLE)
-                .setName( StaffModeGUI2.getPlugin().getConfig().getString("effectsMenu.titleItemWaterBreathing").replace("&", "§"))
-                .setLore( Arrays.asList(
+        return new ItemBuilder(Material.GLASS_BOTTLE)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("effectsMenu.titleItemWaterBreathing").replace("&", "§"))
+                .setLore(Arrays.asList(
                         StaffModeGUI2.getPlugin().getConfig().getString("effectsMenu.loreItemWaterBreathing").replace("&", "§")
                 ))
                 .toItemStack();

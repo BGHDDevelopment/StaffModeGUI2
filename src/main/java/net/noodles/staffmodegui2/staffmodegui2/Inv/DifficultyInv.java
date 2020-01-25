@@ -1,13 +1,10 @@
 package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
-import jdk.internal.org.jline.utils.DiffHelper;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.DifficultyInvItems;
-import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,8 +12,6 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
 public class DifficultyInv implements Listener {
     @SuppressWarnings("unused")
@@ -24,7 +19,7 @@ public class DifficultyInv implements Listener {
 
     public DifficultyInv(StaffModeGUI2 main) {
         this.main = main;
-        main.getServer().getPluginManager().registerEvents( this, main);
+        main.getServer().getPluginManager().registerEvents(this, main);
     }
 
     private String getTitle() {
@@ -34,6 +29,7 @@ public class DifficultyInv implements Listener {
     private int getSize() {
         return 9;
     }
+
     public Inventory getInventory() {
         Inventory inv = Bukkit.createInventory(null, getSize(), getTitle());
 
@@ -53,7 +49,7 @@ public class DifficultyInv implements Listener {
     }
 
     private ItemStack Glass() {
-        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
+        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 8);
         ItemMeta stonem = stone.getItemMeta();
         stonem.setDisplayName("");
         stone.setItemMeta(stonem);
@@ -72,20 +68,20 @@ public class DifficultyInv implements Listener {
 
         event.setCancelled(true);
         if (event.getCurrentItem().isSimilar(DifficultyInvItems.DifficultyPeace())) {
-            Bukkit.getServer().dispatchCommand( Bukkit.getConsoleSender() , "difficulty 0");
+            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "difficulty 0");
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("difficultyMenu.messageItemDifficultyPeace").replace("&", "§"));
             event.getWhoClicked().closeInventory();
         } else if (event.getCurrentItem().isSimilar(DifficultyInvItems.DifficultyEasy())) {
-            Bukkit.getServer().dispatchCommand( Bukkit.getConsoleSender() , "difficulty 1");
+            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "difficulty 1");
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("difficultyMenu.messageItemDifficultyEasy").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem ().isSimilar ( DifficultyInvItems.DifficultyNormal () )) {
-            Bukkit.getServer().dispatchCommand( Bukkit.getConsoleSender() , "difficulty 2");
-            player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "difficultyMenu.messageItemDifficultyNormal" ).replace ( "&" , "§" ) );
+        } else if (event.getCurrentItem().isSimilar(DifficultyInvItems.DifficultyNormal())) {
+            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "difficulty 2");
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("difficultyMenu.messageItemDifficultyNormal").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem ().isSimilar ( DifficultyInvItems.DifficultyHard () )) {
-            Bukkit.getServer().dispatchCommand( Bukkit.getConsoleSender() , "difficulty 3");
-            player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "difficultyMenu.messageItemDifficultyHard" ).replace ( "&" , "§" ) );
+        } else if (event.getCurrentItem().isSimilar(DifficultyInvItems.DifficultyHard())) {
+            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "difficulty 3");
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("difficultyMenu.messageItemDifficultyHard").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(DifficultyInvItems.menuReturn())) {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message1").replace("&", "§"));

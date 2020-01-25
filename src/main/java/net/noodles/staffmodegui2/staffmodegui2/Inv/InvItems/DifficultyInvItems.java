@@ -47,9 +47,9 @@ public class DifficultyInvItems {
     }
 
     public static ItemStack DifficultyHard() {
-        return new ItemBuilder ( Material.BEACON)
-                .setName( StaffModeGUI2.getPlugin().getConfig().getString("difficultyMenu.titleItemDifficultyHard").replace("&", "§"))
-                .setLore( Arrays.asList(
+        return new ItemBuilder(Material.BEACON)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("difficultyMenu.titleItemDifficultyHard").replace("&", "§"))
+                .setLore(Arrays.asList(
                         StaffModeGUI2.getPlugin().getConfig().getString("difficultyMenu.loreItemDifficultyHard").replace("&", "§")
                 ))
                 .toItemStack();

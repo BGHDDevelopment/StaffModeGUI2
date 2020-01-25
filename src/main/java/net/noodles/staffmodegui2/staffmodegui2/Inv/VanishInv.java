@@ -1,6 +1,7 @@
 package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.VanishInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -10,7 +11,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class VanishInv implements Listener {
@@ -23,7 +23,7 @@ public class VanishInv implements Listener {
     }
 
     private String getTitle() {
-        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Vanish Control";
+        return ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + "Vanish Control";
     }
 
     private int getSize() {

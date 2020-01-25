@@ -19,9 +19,9 @@ public class StrengthInvItems {
     }
 
     public static ItemStack strength1() {
-        return new ItemBuilder ( Material.GLASS_BOTTLE)
-                .setName( StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.titleItemStrength1").replace("&", "§"))
-                .setLore( Arrays.asList(
+        return new ItemBuilder(Material.GLASS_BOTTLE)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.titleItemStrength1").replace("&", "§"))
+                .setLore(Arrays.asList(
                         StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.loreItemStrength1").replace("&", "§")
                 ))
                 .toItemStack();

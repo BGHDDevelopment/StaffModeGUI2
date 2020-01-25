@@ -1,7 +1,8 @@
 package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
-import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.ToolsInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.ToolsInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -11,7 +12,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class ToolsInv implements Listener {
@@ -25,7 +25,7 @@ public class ToolsInv implements Listener {
     }
 
     private String getTitle() {
-        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Tools Menu";
+        return ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + "Tools Menu";
     }
 
     private int getSize() {
@@ -70,35 +70,35 @@ public class ToolsInv implements Listener {
         if (event.getCurrentItem().getType() == Material.AIR) return;
         event.setCancelled(true);
         if (event.getCurrentItem().isSimilar(ToolsInvItems.vanishMenu())) {
-            if(!player.hasPermission("staffmodegui.vanishmenu")) {
+            if (!player.hasPermission("staffmodegui.vanishmenu")) {
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
             }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.openGUI").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getVanishInv().getInventory());
         } else if (event.getCurrentItem().isSimilar(ToolsInvItems.flyMenu())) {
-            if (!player.hasPermission ( "staffmodegui.flymenu" )) {
-                player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) );
+            if (!player.hasPermission("staffmodegui.flymenu")) {
+                player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
             }
-            player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "flyMenu.openGUI" ).replace ( "&" , "§" ) );
-            player.openInventory ( StaffModeGUI2.getInstance ().getFlyInv ().getInventory () );
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("flyMenu.openGUI").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getFlyInv().getInventory());
         } else if (event.getCurrentItem().isSimilar(ToolsInvItems.invClear())) {
-            player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "toolsMenu.messageItemInvClear" ).replace ( "&" , "§" ) );
-            player.getInventory ().clear ();
-        } else if (event.getCurrentItem().isSimilar(ToolsInvItems.chatClear ())) {
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.messageItemInvClear").replace("&", "§"));
+            player.getInventory().clear();
+        } else if (event.getCurrentItem().isSimilar(ToolsInvItems.chatClear())) {
             for (Player players : Bukkit.getOnlinePlayers()) {
                 for (int i = 0; i < 600; ++i) {
                     players.sendMessage("");
                 }
             }
-            Bukkit.broadcastMessage(StaffModeGUI2.getPlugin ().getConfig ().getString ( "toolsMenu.messageItemClearChat").replace ( "&" , "§" ) );
+            Bukkit.broadcastMessage(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.messageItemClearChat").replace("&", "§"));
             Bukkit.broadcastMessage(" ");
             event.getWhoClicked().closeInventory();
         } else if (event.getCurrentItem().isSimilar(ToolsInvItems.feedAndHealMenu())) {
-            if (!player.hasPermission ( "staffmodegui.feedandhealmenu" )) {
-                player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "defaultMessage.noPermission" ).replace ( "&" , "§" ) );
+            if (!player.hasPermission("staffmodegui.feedandhealmenu")) {
+                player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
             }
-            player.sendMessage ( StaffModeGUI2.getPlugin ().getConfig ().getString ( "feedAndHealMenu.openGUI" ).replace ( "&" , "§" ) );
-            player.openInventory ( StaffModeGUI2.getInstance ().getFeedAndHealInv ().getInventory () );
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("feedAndHealMenu.openGUI").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getFeedAndHealInv().getInventory());
         } else if (event.getCurrentItem().isSimilar(MainInvItems.mainMenuReturn())) {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mainMenuReturn.message").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());

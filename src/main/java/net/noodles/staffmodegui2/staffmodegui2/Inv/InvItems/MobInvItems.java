@@ -225,6 +225,7 @@ public class MobInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack extraMobMenu() {
         return new ItemBuilder(Material.ENDER_CHEST)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.title").replace("&", "§"))

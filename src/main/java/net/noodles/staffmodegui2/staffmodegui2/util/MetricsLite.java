@@ -2,8 +2,8 @@ package net.noodles.staffmodegui2.staffmodegui2.util;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.json.simple.JSONArray;
@@ -27,7 +27,7 @@ import java.util.zip.GZIPOutputStream;
 
 /**
  * bStats collects some data for plugin authors.
- *
+ * <p>
  * Check out https://bStats.org/ to learn more about bStats!
  */
 public class MetricsLite {
@@ -97,7 +97,8 @@ public class MetricsLite {
             ).copyDefaults(true);
             try {
                 config.save(configFile);
-            } catch (IOException ignored) { }
+            } catch (IOException ignored) {
+            }
         }
 
         // Load the data
@@ -111,7 +112,8 @@ public class MetricsLite {
                     service.getField("B_STATS_VERSION"); // Our identifier :)
                     found = true; // We aren't the first
                     break;
-                } catch (NoSuchFieldException ignored) { }
+                } catch (NoSuchFieldException ignored) {
+                }
             }
             // Register our service
             Bukkit.getServicesManager().register(MetricsLite.class, this, plugin, ServicePriority.Normal);
@@ -143,7 +145,7 @@ public class MetricsLite {
                     }
                 });
             }
-        }, 1000*60*5, 1000*60*30);
+        }, 1000 * 60 * 5, 1000 * 60 * 30);
         // Submit the data every 30 minutes, first time after 5 minutes to give other plugins enough time to start
         // WARNING: Changing the frequency has no effect but your plugin WILL be blocked/deleted!
         // WARNING: Just don't do it!
@@ -233,7 +235,8 @@ public class MetricsLite {
                     } catch (NullPointerException | NoSuchMethodException | IllegalAccessException | InvocationTargetException ignored) {
                     }
                 }
-            } catch (NoSuchFieldException ignored) { }
+            } catch (NoSuchFieldException ignored) {
+            }
         }
 
         data.put("plugins", pluginData);
@@ -305,7 +308,7 @@ public class MetricsLite {
         }
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         GZIPOutputStream gzip = new GZIPOutputStream(outputStream);
-        gzip.write(str.getBytes( StandardCharsets.UTF_8 ));
+        gzip.write(str.getBytes(StandardCharsets.UTF_8));
         gzip.close();
         return outputStream.toByteArray();
     }

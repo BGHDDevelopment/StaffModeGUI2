@@ -10,9 +10,9 @@ import java.util.Arrays;
 public class ServerManagerInvItems {
 
     public static ItemStack whitelistMenu() {
-        return new ItemBuilder ( Material.IRON_TRAPDOOR)
-                .setName( StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.title").replace("&", "§"))
-                .setLore( Arrays.asList(
+        return new ItemBuilder(Material.IRON_TRAPDOOR)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.title").replace("&", "§"))
+                .setLore(Arrays.asList(
                         StaffModeGUI2.getPlugin().getConfig().getString("whitelistMenu.lore").replace("&", "§")
                 ))
                 .toItemStack();
@@ -30,17 +30,17 @@ public class ServerManagerInvItems {
     public static ItemStack clearMobs() {
         return new ItemBuilder(Material.DIAMOND_AXE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("serverManagerMenu.titleItemClearMobs").replace("&", "§"))
-                .setLore(StaffModeGUI2.getPlugin().getConfig().getString("serverManagerMenu.loreItemClearMobs").replace ("&", "§"))
+                .setLore(StaffModeGUI2.getPlugin().getConfig().getString("serverManagerMenu.loreItemClearMobs").replace("&", "§"))
                 .toItemStack();
     }
 
     public static ItemStack difficultyMenu() {
         return new ItemBuilder(Material.BEACON)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("difficultyMenu.title").replace("&", "§"))
-                .setLore(Arrays.asList (
+                .setLore(Arrays.asList(
                         StaffModeGUI2.getPlugin().getConfig().getString("difficultyMenu.lore").replace("&", "§")
                 ))
-                .toItemStack ();
+                .toItemStack();
     }
 
 }

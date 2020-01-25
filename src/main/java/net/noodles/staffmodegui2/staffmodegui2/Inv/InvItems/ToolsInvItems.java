@@ -19,7 +19,7 @@ public class ToolsInvItems {
     }
 
     public static ItemStack vanishMenu() {
-        return new ItemBuilder (Material.IRON_TRAPDOOR)
+        return new ItemBuilder(Material.IRON_TRAPDOOR)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.title").replace("&", "§"))
                 .setLore(Arrays.asList(
                         StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.lore").replace("&", "§")
@@ -39,19 +39,21 @@ public class ToolsInvItems {
     public static ItemStack invClear() {
         return new ItemBuilder(Material.DEAD_BUSH)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.titleItemInvClear").replace("&", "§"))
-                .setLore(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.loreItemInvClear").replace ("&", "§"))
-        .toItemStack();
+                .setLore(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.loreItemInvClear").replace("&", "§"))
+                .toItemStack();
     }
+
     public static ItemStack chatClear() {
         return new ItemBuilder(Material.PAPER)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.titleItemClearChat").replace("&", "§"))
-                .setLore(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.loreItemClearChat").replace ("&", "§"))
+                .setLore(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.loreItemClearChat").replace("&", "§"))
                 .toItemStack();
     }
+
     public static ItemStack feedAndHealMenu() {
         return new ItemBuilder(Material.BREAD)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("feedAndHealMenu.title").replace("&", "§"))
-                .setLore(StaffModeGUI2.getPlugin().getConfig().getString("feedAndHealMenu.lore").replace ("&", "§"))
+                .setLore(StaffModeGUI2.getPlugin().getConfig().getString("feedAndHealMenu.lore").replace("&", "§"))
                 .toItemStack();
     }
 

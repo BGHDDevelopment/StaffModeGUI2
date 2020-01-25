@@ -19,9 +19,9 @@ public class SpeedInvItems {
     }
 
     public static ItemStack speed1() {
-        return new ItemBuilder ( Material.GLASS_BOTTLE)
-                .setName( StaffModeGUI2.getPlugin().getConfig().getString("speedMenu.titleItemSpeed1").replace("&", "§"))
-                .setLore( Arrays.asList(
+        return new ItemBuilder(Material.GLASS_BOTTLE)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("speedMenu.titleItemSpeed1").replace("&", "§"))
+                .setLore(Arrays.asList(
                         StaffModeGUI2.getPlugin().getConfig().getString("speedMenu.loreItemSpeed1").replace("&", "§")
                 ))
                 .toItemStack();

@@ -4,7 +4,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 
 
-
 public class Logger {
     public static void log(LogLevel level, String message) {
         if (message == null) return;
@@ -28,5 +27,5 @@ public class Logger {
         }
     }
 
-    public enum LogLevel { ERROR, WARNING, INFO, SUCCESS, OUTLINE }
+    public enum LogLevel {ERROR, WARNING, INFO, SUCCESS, OUTLINE}
 }

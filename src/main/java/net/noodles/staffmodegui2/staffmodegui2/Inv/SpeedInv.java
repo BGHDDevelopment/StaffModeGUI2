@@ -2,6 +2,7 @@ package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.EffectsInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.SpeedInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -11,7 +12,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -19,12 +19,14 @@ import org.bukkit.potion.PotionEffectType;
 public class SpeedInv implements Listener {
     @SuppressWarnings("unused")
     private StaffModeGUI2 main;
+
     public SpeedInv(StaffModeGUI2 main) {
         this.main = main;
         main.getServer().getPluginManager().registerEvents(this, main);
     }
+
     private String getTitle() {
-        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Speed Control";
+        return ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + "Speed Control";
     }
 
     private int getSize() {
@@ -55,7 +57,7 @@ public class SpeedInv implements Listener {
     }
 
     private ItemStack Glass() {
-        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
+        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 8);
         ItemMeta stonem = stone.getItemMeta();
         stonem.setDisplayName("");
         stone.setItemMeta(stonem);
@@ -75,7 +77,7 @@ public class SpeedInv implements Listener {
         event.setCancelled(true);
         if (event.getCurrentItem().isSimilar(SpeedInvItems.speed1())) {
             player.removePotionEffect(PotionEffectType.SPEED);
-            player.addPotionEffect(new PotionEffect (PotionEffectType.SPEED, 180000000, 1));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 180000000, 1));
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("speedMenu.messageItemSpeed1").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(SpeedInvItems.speed2())) {

@@ -36,6 +36,7 @@ public class MainInvItems {
                 .toItemStack();
 
     }
+
     public static ItemStack mobMenu() {
         return new ItemBuilder(Material.MOB_SPAWNER)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.title").replace("&", "§"))
@@ -44,6 +45,7 @@ public class MainInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack trollMenu() {
         return new ItemBuilder(Material.CACTUS)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("trollMenu.title").replace("&", "§"))
@@ -52,6 +54,7 @@ public class MainInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack toolsMenu() {
         return new ItemBuilder(Material.COMMAND)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.title").replace("&", "§"))
@@ -60,21 +63,23 @@ public class MainInvItems {
                 ))
                 .toItemStack();
     }
+
     public static ItemStack serverManagerMenu() {
         return new ItemBuilder(Material.REDSTONE)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("serverManagerMenu.title").replace("&", "§"))
-                .setLore(Arrays.asList (
+                .setLore(Arrays.asList(
                         StaffModeGUI2.getPlugin().getConfig().getString("serverManagerMenu.lore").replace("&", "§")
                 ))
-                .toItemStack ();
+                .toItemStack();
     }
+
     public static ItemStack effectsMenu() {
         return new ItemBuilder(Material.BREWING_STAND_ITEM)
                 .setName(StaffModeGUI2.getPlugin().getConfig().getString("effectsMenu.title").replace("&", "§"))
-                .setLore(Arrays.asList (
+                .setLore(Arrays.asList(
                         StaffModeGUI2.getPlugin().getConfig().getString("effectsMenu.lore").replace("&", "§")
                 ))
-                .toItemStack ();
+                .toItemStack();
     }
 
 }

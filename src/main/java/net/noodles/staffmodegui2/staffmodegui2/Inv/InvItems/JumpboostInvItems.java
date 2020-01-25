@@ -19,9 +19,9 @@ public class JumpboostInvItems {
     }
 
     public static ItemStack jump1() {
-        return new ItemBuilder ( Material.GLASS_BOTTLE)
-                .setName( StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.titleItemJump1").replace("&", "§"))
-                .setLore( Arrays.asList(
+        return new ItemBuilder(Material.GLASS_BOTTLE)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.titleItemJump1").replace("&", "§"))
+                .setLore(Arrays.asList(
                         StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.loreItemJump1").replace("&", "§")
                 ))
                 .toItemStack();

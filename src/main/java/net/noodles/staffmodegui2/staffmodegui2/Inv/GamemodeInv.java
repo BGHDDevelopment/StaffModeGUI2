@@ -2,6 +2,7 @@ package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.GamemodeInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
+import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -12,7 +13,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class GamemodeInv implements Listener {
@@ -25,7 +25,7 @@ public class GamemodeInv implements Listener {
     }
 
     private String getTitle() {
-        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Gamemodes";
+        return ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + "Gamemodes";
     }
 
     private int getSize() {
@@ -50,7 +50,7 @@ public class GamemodeInv implements Listener {
     }
 
     private ItemStack Glass() {
-        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
+        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 8);
         ItemMeta stonem = stone.getItemMeta();
         stonem.setDisplayName("");
         stone.setItemMeta(stonem);

@@ -14,7 +14,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-
 public class TimeInv implements Listener {
 
     private StaffModeGUI2 main;
@@ -25,7 +24,7 @@ public class TimeInv implements Listener {
     }
 
     private String getTitle() {
-        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Time Control";
+        return ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + "Time Control";
     }
 
     private int getSize() {
@@ -73,7 +72,7 @@ public class TimeInv implements Listener {
     }
 
     private ItemStack Glass() {
-        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
+        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 8);
         ItemMeta stonem = stone.getItemMeta();
         stonem.setDisplayName("");
         stone.setItemMeta(stonem);

@@ -21,11 +21,11 @@ public class MobInv implements Listener {
 
     public MobInv(StaffModeGUI2 main) {
         this.main = main;
-        main.getServer().getPluginManager().registerEvents( this, main);
+        main.getServer().getPluginManager().registerEvents(this, main);
     }
 
     private String getTitle() {
-        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Mob Control";
+        return ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + "Mob Control";
     }
 
     private int getSize() {
@@ -72,7 +72,7 @@ public class MobInv implements Listener {
     }
 
     private ItemStack Glass() {
-        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
+        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 8);
         ItemMeta stonem = stone.getItemMeta();
         stonem.setDisplayName("");
         stone.setItemMeta(stonem);
@@ -186,8 +186,8 @@ public class MobInv implements Listener {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.VILLAGER);
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("mobMenu.messageItemVillager").replace("&", "§"));
             player.closeInventory();
-        } else if (event.getCurrentItem().isSimilar( MobInvItems.extraMobMenu())) {
-            if(!player.hasPermission("staffmodegui.extramobmenu")) {
+        } else if (event.getCurrentItem().isSimilar(MobInvItems.extraMobMenu())) {
+            if (!player.hasPermission("staffmodegui.extramobmenu")) {
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
             }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("extraMobMenu.openGUI").replace("&", "§"));

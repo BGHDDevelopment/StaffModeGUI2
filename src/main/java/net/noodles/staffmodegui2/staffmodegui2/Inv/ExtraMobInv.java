@@ -1,7 +1,6 @@
 package net.noodles.staffmodegui2.staffmodegui2.Inv;
 
 import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.ExtraMobInvItems;
-import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.MainInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -22,11 +21,11 @@ public class ExtraMobInv implements Listener {
 
     public ExtraMobInv(StaffModeGUI2 main) {
         this.main = main;
-        main.getServer().getPluginManager().registerEvents( this, main);
+        main.getServer().getPluginManager().registerEvents(this, main);
     }
 
     private String getTitle() {
-        return ChatColor.DARK_GRAY.toString () + ChatColor.BOLD + "Extra Mobs Control";
+        return ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + "Extra Mobs Control";
     }
 
     private int getSize() {
@@ -53,7 +52,7 @@ public class ExtraMobInv implements Listener {
     }
 
     private ItemStack Glass() {
-        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)8);
+        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 8);
         ItemMeta stonem = stone.getItemMeta();
         stonem.setDisplayName("");
         stone.setItemMeta(stonem);
