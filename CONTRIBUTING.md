@@ -45,7 +45,7 @@ public class ExampleInv implements Listener {
     public Inventory getInventory() {
         Inventory inv = Bukkit.createInventory ( null , getSize () , getTitle () );
         // InvName = You're InvItems class name
-        // number = 9-53
+        // number = 9-54
         // menu = the menu name variable you set in the InvItems class
         inv.setItem ( number , InvNameInvItems.menu () );
         // size is the size you chose for getSize()
@@ -70,8 +70,8 @@ public class ExampleInv implements Listener {
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked ();
-        if (event.getClickedInventory () == null) return;
-        if (!event.getClickedInventory ().getTitle ().equals ( getTitle () )) return;
+        if (event.getView () == null) return;
+        if (!event.getView ().getTitle ().equals ( getTitle () )) return;
         if (event.getCurrentItem () == null) return;
         if (event.getCurrentItem ().getType () == Material.AIR) return;
         event.setCancelled ( true );
