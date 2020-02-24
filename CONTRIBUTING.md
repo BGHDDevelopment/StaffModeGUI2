@@ -45,7 +45,7 @@ public class ExampleInv implements Listener {
     public Inventory getInventory() {
         Inventory inv = Bukkit.createInventory ( null , getSize () , getTitle () );
         // InvName = You're InvItems class name
-        // number = 9-54
+        // number = 0-53
         // menu = the menu name variable you set in the InvItems class
         inv.setItem ( number , InvNameInvItems.menu () );
         // size is the size you chose for getSize()
