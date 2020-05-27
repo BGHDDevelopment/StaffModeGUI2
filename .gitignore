@@ -211,7 +211,9 @@ build.xml
 ### Github ###
 .github
 CODE_OF_CONDUCT.md
+CONTRIBUTING.md
 README.md
+LICENSE.md
 LICENSE
 
 # End of https://www.gitignore.io/api/java,maven,eclipse,intellij+iml,git
