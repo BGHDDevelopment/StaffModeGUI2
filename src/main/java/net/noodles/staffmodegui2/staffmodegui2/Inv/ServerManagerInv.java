@@ -6,6 +6,8 @@ import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.World;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -13,6 +15,8 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import java.util.List;
 
 public class ServerManagerInv implements Listener {
 
@@ -81,9 +85,17 @@ public class ServerManagerInv implements Listener {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("weatherMenu.openGUI").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getWeatherInv().getInventory());
         } else if (event.getCurrentItem().isSimilar(ServerManagerInvItems.clearMobs())) {
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("toolsMenu.messageItemClearMobs").replace("&", "§"));
-            player.getInventory().clear();
-            player.closeInventory();
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("serverManagerMenu.messageItemClearMobs").replace("&", "§"));
+            World[] array;
+            for (int length = (array = Bukkit.getServer().getWorlds().toArray(new World[0])).length, i = 0; i < length; ++i) {
+                final World world = array[i];
+                for (final LivingEntity mobs : world.getLivingEntities()) {
+                    if (!(mobs instanceof Player)) {
+                        mobs.remove();
+                    }
+                }
+                player.closeInventory();
+            }
         } else if (event.getCurrentItem().isSimilar(ServerManagerInvItems.difficultyMenu())) {
             if (!player.hasPermission("staffmodegui.difficultymenu")) {
                 player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));

@@ -78,42 +78,42 @@ public class JumpboostInv implements Listener {
         if (event.getCurrentItem().isSimilar(JumpboostInvItems.jump1())) {
             player.removePotionEffect(PotionEffectType.JUMP);
             player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 180000000, 1));
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpboostMenu.messageItemJump1").replace("&", "§"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.messageItemJump1").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(JumpboostInvItems.jump2())) {
             player.removePotionEffect(PotionEffectType.JUMP);
             player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 180000000, 2));
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpboostMenu.messageItemJump2").replace("&", "§"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.messageItemJump2").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(JumpboostInvItems.jump3())) {
             player.removePotionEffect(PotionEffectType.JUMP);
             player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 180000000, 3));
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpboostMenu.messageItemJump3").replace("&", "§"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.messageItemJump3").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(JumpboostInvItems.jump4())) {
             player.removePotionEffect(PotionEffectType.JUMP);
             player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 180000000, 4));
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpboostMenu.messageItemJump4").replace("&", "§"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.messageItemJump4").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(JumpboostInvItems.jump5())) {
             player.removePotionEffect(PotionEffectType.JUMP);
             player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 180000000, 5));
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpboostMenu.messageItemJump5").replace("&", "§"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.messageItemJump5").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(JumpboostInvItems.jump6())) {
             player.removePotionEffect(PotionEffectType.JUMP);
             player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 180000000, 6));
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpboostMenu.messageItemJump6").replace("&", "§"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.messageItemJump6").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(JumpboostInvItems.jump7())) {
             player.removePotionEffect(PotionEffectType.JUMP);
             player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 180000000, 7));
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpboostMenu.messageItemJump7").replace("&", "§"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.messageItemJump7").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(JumpboostInvItems.jump8())) {
             player.removePotionEffect(PotionEffectType.JUMP);
             player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 180000000, 8));
-            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpboostMenu.messageItemJump8").replace("&", "§"));
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("jumpMenu.messageItemJump8").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(EffectsInvItems.removeEffects())) {
             player.getActivePotionEffects().clear();

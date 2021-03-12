@@ -302,25 +302,25 @@ trollMenu: #Permission Needed: staffmodegui.trollmenu
   # Troll Menu Items
   titleItemLightningTroll: "&bLightning Troll"
   loreItemLightningTroll: "&7Strike all online players with Lightning!"
-  messageItemLightningTroll: "&bLightning Troll!"
+  messageItemLightningTroll: "&7Lightning Troll!"
   titleItemSlownessTroll: "&bSlowness Troll"
   loreItemSlownessTroll: "&7Give all online players Slowness &c&lForever!"
-  messageItemSlownessTroll: "&bSlowness Troll!"
+  messageItemSlownessTroll: "&7Slowness Troll!"
   titleItemWeaknessTroll: "&bWeakness Troll"
   loreItemWeaknessTroll: "&7Give all online players Weakness &c&lForever!"
-  messageItemWeaknessTroll: "&bWeakness Troll!"
+  messageItemWeaknessTroll: "&7Weakness Troll!"
   titleItemBlindnessTroll: "&bBlindness Troll"
   loreItemBlindnessTroll: "&7Give all online players Blindness &c&lForever!"
-  messageItemBlindnessTroll: "&bBlindness Troll!"
+  messageItemBlindnessTroll: "&7Blindness Troll!"
   titleItemNauseaTroll: "&bNausea Troll"
   loreItemNauseaTroll: "&7Give all online players Nausea!"
-  messageItemNauseaTroll: "&bJump Troll!"
+  messageItemNauseaTroll: "&7Jump Troll!"
   titleItemCowTroll: "&bCow Troll"
   loreItemCowTroll: "&7Spawns a Cow on all online players!"
-  messageItemCowTroll: "&bSlowness Troll!"
+  messageItemCowTroll: "&7Slowness Troll!"
   titleItemJumpTroll: "&bJump Troll"
   loreItemJumpTroll: "&7Give all online players Jump Boost &c&lForever!"
-  messageItemJumpTroll: "&bJump Troll!"
+  messageItemJumpTroll: "&7Jump Troll!"
 #========================================================
 # Tools Menu Messages
 toolsMenu: #Permission Needed: staffmodegui.toolsmenu
@@ -343,7 +343,7 @@ serverManagerMenu: #Permission Needed: staffmodegui.servermanagermenu
   # Server Manager Menu Items
   titleItemClearMobs: "&bClear Mobs"
   loreItemClearMobs: "&7Clears all mobs/monsters!"
-  messageItemClearMobs: "&bCleared all mobs!"
+  messageItemClearMobs: "&7Cleared all mobs!"
 #========================================================
 # Feed And Heal Menu Messages
 feedAndHealMenu: #Permission Needed: staffmodegui.feedandhealmenu
@@ -353,10 +353,10 @@ feedAndHealMenu: #Permission Needed: staffmodegui.feedandhealmenu
   # Feed And Heal Menu Items
   titleItemHeal: "&bHeal"
   loreItemHeal: "&7Heals you!"
-  messageItemHeal: "&bYou're health has been set to max!"
+  messageItemHeal: "&7You're health has been set to max!"
   titleItemFeed: "&bFeed"
   loreItemFeed: "&7Feeds you're hunger!"
-  messageItemFeed: "&bYou're hunger has been set to max!"
+  messageItemFeed: "&7You're hunger has been set to max!"
 #========================================================
 # Effects Menu Messages
 effectsMenu: #Permission Needed: staffmodegui.effectsmenu
@@ -366,10 +366,10 @@ effectsMenu: #Permission Needed: staffmodegui.effectsmenu
   # Effects Menu Items
   titleItemWaterBreathing: "&bWater Breathing"
   loreItemWaterBreathing: "&7Ability to breath under water!"
-  messageItemWaterBreathing: "&bWater Breathing effect applied!"
+  messageItemWaterBreathing: "&7Water Breathing effect applied!"
   titleItemInvis: "&bInvisibility"
   loreItemInvis: "&7Ability to be invisible!"
-  messageItemInvis: "&bInvisibility effect applied!"
+  messageItemInvis: "&7Invisibility effect applied!"
   titleItemSlowness: "&bSlowness"
   loreItemSlowness: "&7Ability to walk slower!"
   messageItemSlowness: "&7Slowness effect applied!"
@@ -382,16 +382,16 @@ effectsMenu: #Permission Needed: staffmodegui.effectsmenu
 #========================================================
 # Speed Menu Messages
 speedMenu: #Permission Needed: staffmodegui.speedmenu
-  title: '&bSpeed Menu'
+  title: '&bSpeed Control'
   lore: '&7Speed Effects'
-  openGUI: '&7Opened The Speed Effects Menu!'
+  openGUI: '&7Opened The Speed Effects Control panel!'
   # Speed Menu Items
   titleItemSpeed1: "&bSpeed 1"
   loreItemSpeed1: "&7Ability to run faster!"
-  messageItemSpeed1: "&bSpeed 1 effect applied!"
+  messageItemSpeed1: "&7Speed 1 effect applied!"
   titleItemSpeed2: "&bSpeed 2"
   loreItemSpeed2: "&7Ability to run faster!"
-  messageItemSpeed2: "&bSpeed 2 effect applied!"
+  messageItemSpeed2: "&7Speed 2 effect applied!"
   titleItemSpeed3: "&bSpeed 3"
   loreItemSpeed3: "&7Ability to run faster!"
   messageItemSpeed3: "&7Speed 3 effect applied!"
@@ -413,16 +413,16 @@ speedMenu: #Permission Needed: staffmodegui.speedmenu
 #========================================================
 # Strength Menu Messages
 strengthMenu: #Permission Needed: staffmodegui.strengthmenu
-  title: '&bStrength Menu'
+  title: '&bStrength Control'
   lore: '&7Strength Effects'
-  openGUI: '&7Opened The Strength Effects Menu!'
+  openGUI: '&7Opened The Strength Effects Control panel!'
   # Strength Menu Items
   titleItemStrength1: "&bStrength 1"
   loreItemStrength1: "&7Ability to deal more damage!"
-  messageItemSpeed1: "&bStrength 1 effect applied!"
+  messageItemSpeed1: "&7Strength 1 effect applied!"
   titleItemStrength2: "&bStrength 2"
   loreItemStrength2: "&7Ability to deal more damage!"
-  messageItemStrength2: "&bStrength 2 effect applied!"
+  messageItemStrength2: "&7Strength 2 effect applied!"
   titleItemStrength3: "&bStrength 3"
   loreItemStrength3: "&7Ability to deal more damage!"
   messageItemStrength3: "&7Strength 3 effect applied!"
@@ -444,16 +444,16 @@ strengthMenu: #Permission Needed: staffmodegui.strengthmenu
 #========================================================
 # Jump Menu Messages
 jumpMenu: #Permission Needed: staffmodegui.jumpmenu
-  title: '&bJump Menu'
+  title: '&bJump Control'
   lore: '&7Jump Effects'
-  openGUI: '&7Opened The Jump Effects Menu!'
+  openGUI: '&7Opened The Jump Effects Control panel!'
   # Jump Menu Items
   titleItemJump1: "&bJump 1"
   loreItemJump1: "&7Ability to jump higher!"
-  messageItemJump1: "&bJump 1 effect applied!"
+  messageItemJump1: "&7Jump 1 effect applied!"
   titleItemJump2: "&bJump 2"
   loreItemJump2: "&7Ability to jump higher!"
-  messageItemJump2: "&bJump 2 effect applied!"
+  messageItemJump2: "&7Jump 2 effect applied!"
   titleItemJump3: "&bJump 3"
   loreItemJump3: "&7Ability to jump higher!"
   messageItemJump3: "&7Jump 3 effect applied!"
@@ -473,7 +473,7 @@ jumpMenu: #Permission Needed: staffmodegui.jumpmenu
   loreItemJump8: "&7Ability to jump higher!"
   messageItemJump8: "&7Jump 8 effect applied!"
 #========================================================
-# Difficulty Menu
+# Difficulty Menu Messages
 difficultyMenu: # Permission Needed: staffmodegui.difficultymenu
   title: '&bDifficulty Control'
   lore: '&7Control your Difficulty'
