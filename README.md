@@ -22,7 +22,7 @@ To view user's suggestions check out our [Feedback](https://feedback.bghddevelop
 View the contrubuiting information and format in the  [CONTRIBUTING.md](CONTRIBUTING.md) file.  
 
 ## License
-License information can be found in the [LICENSE.md](LICENSE.md) file.  
+License information can be found in the [LICENSE](LICENSE) file.  
 
 
-Any questions regarding this license can be asked on [Discord](https://bghddevelopment.com/discord) or message directly to [ceo@bghddevelopment.com](mailto:ceo@bghddevelopment.com).
+Any questions regarding this license can be asked on [Discord](https://bghddevelopment.com/discord) or messaged directly to [ceo@bghddevelopment.com](mailto:ceo@bghddevelopment.com).
