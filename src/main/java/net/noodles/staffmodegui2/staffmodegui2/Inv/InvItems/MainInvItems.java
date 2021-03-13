@@ -82,4 +82,22 @@ public class MainInvItems {
                 .toItemStack();
     }
 
+    public static ItemStack adminItemsMenu() {
+        return new ItemBuilder(Material.DIAMOND_SWORD)
+                .setName(StaffModeGUI2.getPlugin().getConfig().getString("adminItemsMenu.title").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        StaffModeGUI2.getPlugin().getConfig().getString("adminItemsMenu.lore").replace("&", "§")
+                ))
+                .toItemStack();
+    }
+
+    public static ItemStack support() {
+        return new ItemBuilder(Material.BOOK)
+                .setName("&8Support".replace("&", "§"))
+                .setLore(Arrays.asList(
+                        "&7Click for Support link".replace("&", "§")
+                ))
+                .toItemStack();
+    }
+
 }

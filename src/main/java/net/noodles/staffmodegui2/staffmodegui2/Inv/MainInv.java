@@ -40,7 +40,8 @@ public class MainInv implements Listener {
         inv.setItem(31, MainInvItems.toolsMenu());
         inv.setItem(33, MainInvItems.serverManagerMenu());
         inv.setItem(47, MainInvItems.effectsMenu());
-        //inv.setItem ( 49 , MainInvItems.Menu () );
+        inv.setItem(49, MainInvItems.adminItemsMenu());
+        inv.setItem(53, MainInvItems.support());
         for (int i = 0; i < 54; ++i) {
             if (inv.getItem(i) == null) {
                 inv.setItem(i, Glass());
@@ -108,6 +109,15 @@ public class MainInv implements Listener {
             }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("effectsMenu.openGUI").replace("&", "§"));
             player.openInventory(StaffModeGUI2.getInstance().getEffectsInv().getInventory());
+        } else if (event.getCurrentItem().isSimilar(MainInvItems.adminItemsMenu())) {
+            if (!player.hasPermission("staffmodegui.adminitemsmenu")) {
+                player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("defaultMessage.noPermission").replace("&", "§"));
+            }
+            player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("adminItemsMenu.openGUI").replace("&", "§"));
+            player.openInventory(StaffModeGUI2.getInstance().getAdminItemsInv().getInventory());
+        } else if (event.getCurrentItem().isSimilar(MainInvItems.support())) {
+            player.sendMessage("&7Support Link: &fhttps://bghddevelopment.com/discord".replace("&", "§"));
+            player.closeInventory();
         }
     }
 }

@@ -38,6 +38,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
     private StrengthInv strengthInv;
     private JumpboostInv jumpboostInv;
     private DifficultyInv difficultyInv;
+    private AdminItemsInv adminItemsInv;
 
     @Override
     public void onEnable() {
@@ -82,6 +83,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
         this.strengthInv = new StrengthInv(this);
         this.jumpboostInv = new JumpboostInv(this);
         this.difficultyInv = new DifficultyInv(this);
+        this.adminItemsInv = new AdminItemsInv(this);
         Logger.log(Logger.LogLevel.INFO, "Inventory's Registered!");
         Logger.log(Logger.LogLevel.INFO, "Loading Config's...");
         this.createConfig();
@@ -211,5 +213,9 @@ public final class StaffModeGUI2 extends JavaPlugin {
 
     public DifficultyInv getDifficultyInv() {
         return difficultyInv;
+    }
+
+    public AdminItemsInv getAdminItemsInv() {
+        return adminItemsInv;
     }
 }
