@@ -339,7 +339,7 @@ toolsMenu: #Permission Needed: staffmodegui.toolsmenu
 serverManagerMenu: #Permission Needed: staffmodegui.servermanagermenu
   title: '&8Server Manager Menu'
   lore: '&7(Whitelist, Weather, Clear Mobs, Difficulty)'
-  openGUI: '&7Opened The Server Manager Menu!'
+  openGUI: '&7Opened the Server Manager Menu!'
   # Server Manager Menu Items
   titleItemClearMobs: "&bClear Mobs"
   loreItemClearMobs: "&7Clears all mobs/monsters!"
@@ -491,4 +491,22 @@ difficultyMenu: # Permission Needed: staffmodegui.difficultymenu
   titleItemDifficultyHard: "&bHard"
   loreItemDifficultyHard: "&7Change difficulty to Hard"
   messageItemDifficultyHard: "&7Difficulty changed to Hard!"
+#========================================================
+# Admin Items Menu Messages
+adminItemsMenu: # Permission Needed: staffmodegui.adminitemsmenu
+  title: '&8Admin Items Menu'
+  lore: '&7Admin Items'
+  openGUI: '&7Opened the Admin Items Menu!'
+  # Admin Items Menu Items
+  titleItemAdminStick: "&bAdmin Stick"
+  loreItemAdminStick: "&7Very Dangerous!"
+  messageItemAdminStick: "&7You have received a Admin Stick!"
+  titleItemAdminBow: "&bAdmin Bow"
+  loreItemAdminBow: "&7Very Dangerous!"
+  messageItemAdminBow: "&7You have received a Admin Bow!"
+  titleItemAdminArrow: "&bAdmin Arrow"
+  loreItemAdminArrow: "&7Very Dangerous!"
+  titleItemAdminSword: "&bAdmin Sword"
+  loreItemAdminSword: "&7Very Dangerous!"
+  messageItemAdminSword: "&7You have received a Admin Sword!"
 #========================================================

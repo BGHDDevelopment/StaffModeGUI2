@@ -65,3 +65,6 @@ permissions:
   staffmodegui.difficultymenu:
     description: Gives you access to the Difficulty Menu
     default: op
+  staffmodegui.adminitemsmenu:
+    description: Gives you access to the Admin Items Menu
+    default: op
