@@ -4,6 +4,7 @@ import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.VanishInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -68,15 +69,16 @@ public class VanishInv implements Listener {
             for (Player players : Bukkit.getOnlinePlayers()) {
                 players.hidePlayer(player);
                 player.setAllowFlight(true);
-                player.setFlying(true);
             }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.messageItemON").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(VanishInvItems.VanishOFF())) {
             for (Player players : Bukkit.getOnlinePlayers()) {
                 players.showPlayer(player);
-                player.setAllowFlight(false);
-                player.setFlying(false);
+                if (player.getGameMode() != GameMode.CREATIVE) {
+                    player.setAllowFlight(false);
+                    player.setFlying(false);
+                }
             }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("vanishMenu.messageItemOFF").replace("&", "§"));
             player.closeInventory();

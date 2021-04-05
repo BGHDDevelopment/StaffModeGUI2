@@ -106,7 +106,6 @@ public class EffectsInv implements Listener {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("effectsMenu.messageItemSlowness").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(EffectsInvItems.removeEffects())) {
-            player.getActivePotionEffects().clear();
             for (PotionEffect pe : player.getActivePotionEffects()) {
                 player.removePotionEffect(pe.getType());
             }
