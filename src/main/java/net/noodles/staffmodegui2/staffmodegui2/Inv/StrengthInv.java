@@ -116,7 +116,6 @@ public class StrengthInv implements Listener {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("strengthMenu.messageItemStrength8").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(EffectsInvItems.removeEffects())) {
-            player.getActivePotionEffects().clear();
             for (PotionEffect pe : player.getActivePotionEffects()) {
                 player.removePotionEffect(pe.getType());
             }

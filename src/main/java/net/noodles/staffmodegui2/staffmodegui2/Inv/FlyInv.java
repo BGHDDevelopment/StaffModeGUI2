@@ -67,7 +67,6 @@ public class FlyInv implements Listener {
         event.setCancelled(true);
         if (event.getCurrentItem().isSimilar(FlyInvItems.FlyON())) {
             player.setAllowFlight(true);
-            player.setFlying(true);
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("flyMenu.messageItemON").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(FlyInvItems.FlyOFF())) {

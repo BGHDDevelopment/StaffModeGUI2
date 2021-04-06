@@ -7,9 +7,13 @@ Update:
   Enabled: true
 # Enables if there is a message on-join when the plugin is outdated.
 #=======================================================
+SilentStart:
+  Enabled: false
+#Removes startup messages.
+#=======================================================
 defaultMessage:
   noPermission: "&cSorry you don't have permission!"
-  reloadMessage: "&7Config reloaded."
+  reloadMessage: "&7Config reloaded. Changes should be live in-game!"
 
 mainMenuReturn:
   # Main Menu return title
