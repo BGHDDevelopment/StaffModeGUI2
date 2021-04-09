@@ -14,6 +14,9 @@ permissions:
   staffmodegui.reload:
     description: Gives you access to /staffmode reload
     default: op
+  staffmodegui.staff:
+    description: Get all online staff members with this permission
+    default: op
   staffmodegui.whitelistmenu:
     description: Gives you access to the Whitelist Menu
     default: op

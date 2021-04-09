@@ -6,6 +6,7 @@ import net.noodles.staffmodegui2.staffmodegui2.commands.StaffModeDev;
 import net.noodles.staffmodegui2.staffmodegui2.util.Logger;
 import net.noodles.staffmodegui2.staffmodegui2.util.MetricsLite;
 import net.noodles.staffmodegui2.staffmodegui2.util.Settings;
+import net.noodles.staffmodegui2.staffmodegui2.util.StaffModeGUIExpansion;
 import net.noodles.staffmodegui2.staffmodegui2.util.UpdateChecker.UpdateChecker;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
@@ -44,6 +45,11 @@ public final class StaffModeGUI2 extends JavaPlugin {
     @Override
     public void onEnable() {
         this.createConfig();
+
+        if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null){
+            new StaffModeGUIExpansion(this).register();
+        }
+
         if (getConfig().getBoolean("SilentStart.Enabled")) {
             plugin = this;
             instance = this;

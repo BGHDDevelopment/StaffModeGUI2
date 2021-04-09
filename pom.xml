@@ -6,7 +6,7 @@
 
     <groupId>net.noodles.staffmodegui2</groupId>
     <artifactId>StaffModeGUI2</artifactId>
-    <version>1.3</version>
+    <version>1.3.1</version>
     <packaging>jar</packaging>
 
     <name>StaffModeGUI2</name>
@@ -63,6 +63,10 @@
             <id>FL-Releases</id>
             <url>http://repo.gamerking195.com/artifactory/FL-Releases</url>
         </repository>
+        <repository>
+            <id>placeholderapi</id>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
 
     </repositories>
 
@@ -71,6 +75,12 @@
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.8.8-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.10.5</version>
             <scope>provided</scope>
         </dependency>
 
