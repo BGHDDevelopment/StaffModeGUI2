@@ -4,6 +4,7 @@ import net.noodles.staffmodegui2.staffmodegui2.Inv.InvItems.FlyInvItems;
 import net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -70,8 +71,10 @@ public class FlyInv implements Listener {
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("flyMenu.messageItemON").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(FlyInvItems.FlyOFF())) {
-            player.setAllowFlight(false);
-            player.setFlying(false);
+            if (player.getGameMode() != GameMode.CREATIVE) {
+                player.setAllowFlight(false);
+                player.setFlying(false);
+            }
             player.sendMessage(StaffModeGUI2.getPlugin().getConfig().getString("flyMenu.messageItemOFF").replace("&", "§"));
             player.closeInventory();
         } else if (event.getCurrentItem().isSimilar(FlyInvItems.menuReturn())) {
