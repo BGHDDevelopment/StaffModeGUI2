@@ -39,7 +39,7 @@ public class StaffModeCommand implements CommandExecutor {
                     p.sendMessage(ChatColor.translateAlternateColorCodes('&', staffmodegui2.getConfig().getString("defaultMessage.noPermission").replace("&", "§")));
                     return false;
                 }
-                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&eThis has been moved to &f/staffmodereload"));
+                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&eThis command has been moved to &f/staffmodereload"));
                 return true;
             } else if (args[0].equalsIgnoreCase("about")) {
                 if (!p.hasPermission("staffmodegui.about")) {
