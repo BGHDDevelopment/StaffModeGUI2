@@ -11,3 +11,6 @@ commands:
   staffmode:
     description: StaffMode command
     aliases: [sm, smgui]
+  staffmodereload:
+    description: StaffModeReload command
+    aliases: smreload

@@ -12,7 +12,10 @@ permissions:
     description: Gives you access to see update notifications on join also gives you access to /staffmode update
     default: op
   staffmodegui.reload:
-    description: Gives you access to /staffmode reload
+    description: Gives you access to /staffmodereload
+    default: op
+  staffmodegui.staff:
+    description: Get all online staff members with this permission
     default: op
   staffmodegui.whitelistmenu:
     description: Gives you access to the Whitelist Menu

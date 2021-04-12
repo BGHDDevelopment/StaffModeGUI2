@@ -39,8 +39,7 @@ public class StaffModeCommand implements CommandExecutor {
                     p.sendMessage(ChatColor.translateAlternateColorCodes('&', staffmodegui2.getConfig().getString("defaultMessage.noPermission").replace("&", "§")));
                     return false;
                 }
-                staffmodegui2.reloadConfig();
-                p.sendMessage(ChatColor.translateAlternateColorCodes('&', staffmodegui2.getConfig().getString("defaultMessage.reloadMessage").replace("&", "§")));
+                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&eThis command has been moved to &f/staffmodereload"));
                 return true;
             } else if (args[0].equalsIgnoreCase("about")) {
                 if (!p.hasPermission("staffmodegui.about")) {
@@ -69,7 +68,7 @@ public class StaffModeCommand implements CommandExecutor {
                 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c/staffmode help &7- &fThis help page"));
                 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c/staffmode about &7- &fThe about page"));
                 p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c/staffmode update &7- &fChecks for an update on SpigotMC"));
-                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c/staffmode reload &7- &fReloads the config file"));
+                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c/staffmodereload &7- &fReloads the config file"));
                 p.sendMessage("");
                 p.sendMessage(ChatColor.GRAY + "****************************************************");
                 return true;

@@ -1,6 +1,11 @@
 package net.noodles.staffmodegui2.staffmodegui2.util;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Settings {
 
@@ -14,5 +19,17 @@ public class Settings {
     public static String VERSION = "1.3.1";
     public static String WIKI = "https://wiki.bghddevelopment.com";
     public static String NAME = "StaffModeGUI2";
+
+    public static List<Player> getOnlineStaff() {
+        List<Player> players = new ArrayList<>();
+
+        for (Player player : Bukkit.getServer().getOnlinePlayers()) {
+            if (player.hasPermission("staffmodegui.staff")) {
+                players.add(player);
+            }
+        }
+
+        return players;
+    }
 
 }

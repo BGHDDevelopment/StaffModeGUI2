@@ -3,9 +3,11 @@ package net.noodles.staffmodegui2.staffmodegui2;
 import net.noodles.staffmodegui2.staffmodegui2.Inv.*;
 import net.noodles.staffmodegui2.staffmodegui2.commands.StaffModeCommand;
 import net.noodles.staffmodegui2.staffmodegui2.commands.StaffModeDev;
+import net.noodles.staffmodegui2.staffmodegui2.commands.StaffModeReload;
 import net.noodles.staffmodegui2.staffmodegui2.util.Logger;
 import net.noodles.staffmodegui2.staffmodegui2.util.MetricsLite;
 import net.noodles.staffmodegui2.staffmodegui2.util.Settings;
+import net.noodles.staffmodegui2.staffmodegui2.util.StaffModeGUIExpansion;
 import net.noodles.staffmodegui2.staffmodegui2.util.UpdateChecker.UpdateChecker;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
@@ -44,6 +46,11 @@ public final class StaffModeGUI2 extends JavaPlugin {
     @Override
     public void onEnable() {
         this.createConfig();
+
+        if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null){
+            new StaffModeGUIExpansion(this).register();
+        }
+
         if (getConfig().getBoolean("SilentStart.Enabled")) {
             plugin = this;
             instance = this;
@@ -55,6 +62,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
 
             new StaffModeCommand();
             new StaffModeDev();
+            new StaffModeReload();
 
             this.mainInv = new MainInv(this);
             this.whitelistInv = new WhitelistInv(this);
@@ -113,6 +121,7 @@ public final class StaffModeGUI2 extends JavaPlugin {
             Logger.log(Logger.LogLevel.INFO, "Registering Commands...");
             new StaffModeCommand();
             new StaffModeDev();
+            new StaffModeReload();
             Logger.log(Logger.LogLevel.INFO, "Commands Registered!");
             Logger.log(Logger.LogLevel.INFO, "Loading Inventory's...");
             this.mainInv = new MainInv(this);
