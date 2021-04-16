@@ -34,14 +34,7 @@ public class StaffModeCommand implements CommandExecutor {
             p.openInventory(StaffModeGUI2.getInstance().getMainInv().getInventory());
             return true;
         } else if (args.length == 1) {
-            if (args[0].equalsIgnoreCase("reload")) {
-                if (!p.hasPermission("staffmodegui.reload")) {
-                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', staffmodegui2.getConfig().getString("defaultMessage.noPermission").replace("&", "§")));
-                    return false;
-                }
-                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&eThis command has been moved to &f/staffmodereload"));
-                return true;
-            } else if (args[0].equalsIgnoreCase("about")) {
+            if (args[0].equalsIgnoreCase("about")) {
                 if (!p.hasPermission("staffmodegui.about")) {
                     p.sendMessage(ChatColor.translateAlternateColorCodes('&', staffmodegui2.getConfig().getString("defaultMessage.noPermission").replace("&", "§")));
                     return false;

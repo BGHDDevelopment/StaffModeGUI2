@@ -3,7 +3,7 @@ version: ${project.version}
 main: net.noodles.staffmodegui2.staffmodegui2.StaffModeGUI2
 authors: [BGHDDevelopment, Noodles]
 description: A StaffModeGUI Plugin
-website: stephanbaumharvey.com
+website: bghddevelopment.com
 commands:
   staffmodedev:
     description: StaffModeDev command
@@ -13,4 +13,4 @@ commands:
     aliases: [sm, smgui]
   staffmodereload:
     description: StaffModeReload command
-    aliases: smreload
+    aliases: [smreload]
