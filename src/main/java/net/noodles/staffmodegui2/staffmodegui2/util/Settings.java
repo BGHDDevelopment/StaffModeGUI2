@@ -16,7 +16,7 @@ public class Settings {
     public static String DEV_MESSAGE3 = ChatColor.GRAY + "https://goo.gl/87ZgJz";
     public static String PLUGIN_URL = "https://spigotmc.org/resources/60960";
     public static String SUPPORT_DISCORD_URL = "https://bghddevelopment.com/discord";
-    public static String VERSION = "1.3.1";
+    public static String VERSION = "1.4";
     public static String WIKI = "https://wiki.bghddevelopment.com";
     public static String NAME = "StaffModeGUI2";
 
