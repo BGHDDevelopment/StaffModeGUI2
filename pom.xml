@@ -15,7 +15,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <url>stephanbaumharvey.com</url>
 
     <build>
         <defaultGoal>clean package</defaultGoal>
@@ -67,7 +66,6 @@
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
-
     </repositories>
 
     <dependencies>
@@ -80,9 +78,8 @@
         <dependency>
             <groupId>me.clip</groupId>
             <artifactId>placeholderapi</artifactId>
-            <version>2.10.5</version>
+            <version>2.10.3</version>
             <scope>provided</scope>
         </dependency>
-
     </dependencies>
 </project>
