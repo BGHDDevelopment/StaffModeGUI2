@@ -15,9 +15,7 @@ If you are a developer, you can fork this project to make a custom version for y
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue or contact us on [Discord](https://bghddevelopment.com/discord) first to discuss what you would like to change.
 
-Please make sure to test changes as appropriate.  
-
-To view user's suggestions check out our [Feedback](https://feedback.bghddevelopment.com) website!
+Please make sure to test changes as appropriate.
 
 View the contrubuiting information and format in the  [CONTRIBUTING.md](CONTRIBUTING.md) file.  
 
